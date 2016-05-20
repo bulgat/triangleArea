@@ -1,0 +1,9 @@
+c:\users\kol\documents\visual studio 2015\Projects\TriangleArea\UnitTestTriangleArea\bin\Debug\UnitTestTriangleArea.dll
+c:\users\kol\documents\visual studio 2015\Projects\TriangleArea\UnitTestTriangleArea\bin\Debug\UnitTestTriangleArea.pdb
+c:\users\kol\documents\visual studio 2015\Projects\TriangleArea\UnitTestTriangleArea\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+c:\users\kol\documents\visual studio 2015\Projects\TriangleArea\UnitTestTriangleArea\bin\Debug\ru\Microsoft.VisualStudio.QualityTools.UnitTestFramework.resources.dll
+c:\users\kol\documents\visual studio 2015\Projects\TriangleArea\UnitTestTriangleArea\obj\Debug\UnitTestTriangleArea.csprojResolveAssemblyReference.cache
+c:\users\kol\documents\visual studio 2015\Projects\TriangleArea\UnitTestTriangleArea\obj\Debug\UnitTestTriangleArea.dll
+c:\users\kol\documents\visual studio 2015\Projects\TriangleArea\UnitTestTriangleArea\obj\Debug\UnitTestTriangleArea.pdb
+c:\Users\kol\Documents\Visual Studio 2015\Projects\TriangleArea\UnitTestTriangleArea\bin\Debug\LibraryTriangleArea.dll
+c:\Users\kol\Documents\Visual Studio 2015\Projects\TriangleArea\UnitTestTriangleArea\bin\Debug\LibraryTriangleArea.pdb

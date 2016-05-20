@@ -1,0 +1,5 @@
+c:\Users\kol\Documents\Visual Studio 2015\Projects\TriangleArea\LibraryTriangleArea\bin\Debug\LibraryTriangleArea.dll
+c:\Users\kol\Documents\Visual Studio 2015\Projects\TriangleArea\LibraryTriangleArea\bin\Debug\LibraryTriangleArea.pdb
+c:\Users\kol\Documents\Visual Studio 2015\Projects\TriangleArea\LibraryTriangleArea\obj\Debug\LibraryTriangleArea.csprojResolveAssemblyReference.cache
+c:\Users\kol\Documents\Visual Studio 2015\Projects\TriangleArea\LibraryTriangleArea\obj\Debug\LibraryTriangleArea.dll
+c:\Users\kol\Documents\Visual Studio 2015\Projects\TriangleArea\LibraryTriangleArea\obj\Debug\LibraryTriangleArea.pdb
