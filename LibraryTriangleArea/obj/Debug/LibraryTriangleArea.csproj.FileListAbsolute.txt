@@ -3,3 +3,9 @@ c:\Users\kol\Documents\Visual Studio 2015\Projects\TriangleArea\LibraryTriangleA
 c:\Users\kol\Documents\Visual Studio 2015\Projects\TriangleArea\LibraryTriangleArea\obj\Debug\LibraryTriangleArea.csprojResolveAssemblyReference.cache
 c:\Users\kol\Documents\Visual Studio 2015\Projects\TriangleArea\LibraryTriangleArea\obj\Debug\LibraryTriangleArea.dll
 c:\Users\kol\Documents\Visual Studio 2015\Projects\TriangleArea\LibraryTriangleArea\obj\Debug\LibraryTriangleArea.pdb
+C:\Users\bulga\Documents\GitHub\triangleArea\LibraryTriangleArea\bin\Debug\LibraryTriangleArea.dll
+C:\Users\bulga\Documents\GitHub\triangleArea\LibraryTriangleArea\bin\Debug\LibraryTriangleArea.pdb
+C:\Users\bulga\Documents\GitHub\triangleArea\LibraryTriangleArea\obj\Debug\LibraryTriangleArea.csproj.AssemblyReference.cache
+C:\Users\bulga\Documents\GitHub\triangleArea\LibraryTriangleArea\obj\Debug\LibraryTriangleArea.csproj.CoreCompileInputs.cache
+C:\Users\bulga\Documents\GitHub\triangleArea\LibraryTriangleArea\obj\Debug\LibraryTriangleArea.dll
+C:\Users\bulga\Documents\GitHub\triangleArea\LibraryTriangleArea\obj\Debug\LibraryTriangleArea.pdb
