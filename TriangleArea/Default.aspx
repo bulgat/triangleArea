@@ -9,6 +9,7 @@
     <br>
     <br>
     <img src="../image/triangle.png" />
+    <script type="text/javascript" src="../Scripts/indexT.js"></script>
     <br>
 
     <table>

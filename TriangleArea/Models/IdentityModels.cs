@@ -95,6 +95,7 @@ namespace TriangleArea
                 response.Redirect("~/");
             }
         }
+   
     }
 }
 #endregion
