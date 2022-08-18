@@ -10,6 +10,7 @@
     <br>
     <img src="../image/triangle.png" />
     <script type="text/javascript" src="../Scripts/indexT.js"></script>
+    <div id="test"></div>
     <br>
 
     <table>
