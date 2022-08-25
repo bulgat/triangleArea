@@ -10,7 +10,9 @@
     <br>
     <img src="../image/triangle.png" />
     <script type="text/javascript" src="../Scripts/indexT.js"></script>
-    <div id="test"></div>
+    <div id="test" onclick="alert('stop')">
+        <button id='but0000' onclick='event.stopPropagation()'>but0000</button>
+    </div>
     <br>
 
     <table>
