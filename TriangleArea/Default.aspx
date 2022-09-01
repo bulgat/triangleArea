@@ -35,9 +35,14 @@
         </tr>
     </table>
     <br>
-    <button type="submit"><b>Подсчитать</b></button>
-
-
+    <button class="button buttonkol_size" type="submit"><b>Подсчитать</b></button>
+    <div class="green blue">cathetus</div>
+    <div class="green blue">hypotenuse</div>
+    <ul class="ulkol">
+        <li class="likol">cathetus</li>
+        <li class="likol">cathetus</li>
+        <li class="likol">hypotenuse</li>
+    </ul>
     <asp:PlaceHolder ID="PlaceHolder1"
         runat="server" />
 

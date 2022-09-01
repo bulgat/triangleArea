@@ -1,0 +1,26 @@
+﻿.buttonkol
+{
+    background-color:red;
+}
+.buttonkol_size {
+    font-size:18px;
+}
+
+.blue 
+{
+    color:blue;
+}
+.green {
+    color: green;
+}
+.ulkol{
+    list-style:none;
+    display:flex;
+    flex-direction:row;
+    font-size:15px;
+}
+.likol {
+    background-color:red;
+    font-family:serif;
+    margin:5px 1px 5px 1px;
+}
