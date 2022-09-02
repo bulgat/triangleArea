@@ -10,11 +10,17 @@ document.addEventListener('DOMContentLoaded', function () {
 
     var but0 = document.querySelector("#but0");
 
-    console.log(this+" l     but0 = " + but0);
-    but0.addEventListener("click", RemoveButton);
     
+    but0.addEventListener("click", RemoveButton);
+
+    function printLog() {
+        console.log(" l    t0 = ");
+        
+    }
+    printLog();
 });
 function RemoveButton(event) {
+
 
     event.stopPropagation();
     

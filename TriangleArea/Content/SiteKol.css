@@ -13,6 +13,14 @@
 .green {
     color: green;
 }
+#butYellow {
+    color: yellow;
+    background-color:yellowgreen;
+}
+div.greed {
+    color: red;
+    background-color: aqua;
+}
 .ulkol{
     list-style:none;
     display:flex;
