@@ -5,6 +5,10 @@
 .buttonkol_size {
     font-size:18px;
 }
+.color:hover {
+        background: #53ea93;
+        color: green;
+ }
 
 .blue 
 {
@@ -17,6 +21,8 @@
     color: yellow;
     background-color:yellowgreen;
 }
+
+
 div.greed {
     color: red;
     background-color: aqua;
@@ -31,4 +37,12 @@ div.greed {
     background-color:red;
     font-family:serif;
     margin:5px 1px 5px 1px;
+}
+ul li{
+    color:red;
+    margin: 10px;
+}
+ul li:hover {
+        background: #53ea93;
+        color: green;
 }

@@ -37,11 +37,21 @@
     <button class="button buttonkol_size" type="submit"><b>Подсчитать</b></button>
     <div class="green blue">cathetus</div>
     <div class="green blue">hypotenuse</div>
-    <ul class="ulkol" onclick="console.log('--02')">
-        <li class="likol" onclick="console.log('--01')">cathetus</li>
-        <li class="likol">cathetus</li>
-        <li class="likol">hypotenuse</li>
+    <ul onclick="console.log('--02')">
+        <li onclick="console.log('--01')">cathetus
+            <ul>
+                <li>cathetus
+                    <ul>
+                        <li>hypotenuse</li>
+
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        
+        
     </ul>
+   
     <asp:PlaceHolder ID="PlaceHolder1"
         runat="server" />
 
