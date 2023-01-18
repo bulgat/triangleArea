@@ -390,7 +390,14 @@
     <Compile Include="HomeWebForm.aspx.designer.cs">
       <DependentUpon>HomeWebForm.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Models\AdapterProgram.cs" />
+    <Compile Include="Models\Auto.cs" />
+    <Compile Include="Models\Camel.cs" />
+    <Compile Include="Models\CamelToTransportAdapter.cs" />
+    <Compile Include="Models\Driver.cs" />
+    <Compile Include="Models\IAnimal.cs" />
     <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\ITransport.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>

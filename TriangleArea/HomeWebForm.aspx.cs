@@ -4,6 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using LibraryTriangleArea;
+
 
 namespace TriangleArea
 {
@@ -11,6 +13,8 @@ namespace TriangleArea
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            System.Diagnostics.Debug.WriteLine("---- start ----- ");
+            var kol =  new Models.AdapterProgram();
 
         }
     }

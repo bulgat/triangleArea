@@ -26,7 +26,7 @@ namespace TriangleArea
             }
             else
             {
-
+                
             }
         }
     }
