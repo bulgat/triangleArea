@@ -10,7 +10,9 @@ namespace TriangleArea.Models
       
         public AdapterProgram()
         {
-            System.Diagnostics.Debug.WriteLine("---My error message. ");
+            LinkedListMain();
+
+
             // путешественник
             Driver driver = new Driver();
             // машина
@@ -24,9 +26,29 @@ namespace TriangleArea.Models
             // продолжаем путь по пескам пустыни
             driver.Travel(camelTransport);
 
+
+
             Console.Read();
+            
         }
-        
+        private void LinkedListMain() { 
+            System.Diagnostics.Debug.WriteLine("--- error message. ");
+            var employees = new List<string> { "Tom", "Sam", "Bob" };
+
+            LinkedList<string> people = new LinkedList<string>(employees);
+            foreach (string person in people)
+            {
+                System.Diagnostics.Debug.WriteLine("---  person = " + person);
+            }
+            char[] strList = "zzzasdaf".ToCharArray();
+             Array.Reverse(strList);
+            strList = strList.Distinct().ToArray();
+            for(int i=0; i< strList.Length;i++)
+            {
+                System.Diagnostics.Debug.WriteLine("---  p  = " + strList[i]);
+            }
+
+        }
     }
 
     // класс машины
