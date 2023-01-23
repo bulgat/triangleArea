@@ -28,7 +28,7 @@ namespace TriangleArea.Models
 
 
 
-            Console.Read();
+            //Console.Read();
             
         }
         private void LinkedListMain() { 

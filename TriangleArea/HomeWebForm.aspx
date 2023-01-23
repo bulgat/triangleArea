@@ -9,6 +9,7 @@
 </head>
 <body>
     <h5>Test</h5>
+    <button onclick="alert('TTTT');">Click</button>
     <form id="form1" runat="server">
         <div>
         </div>
