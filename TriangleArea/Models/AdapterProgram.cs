@@ -39,6 +39,14 @@ namespace TriangleArea.Models
             System.Diagnostics.Debug.WriteLine("--- 2 erro ssag = " + enumerator.MoveNext());
             
             System.Diagnostics.Debug.WriteLine("--- 3 erro = " + enumerator.Current);
+
+            dynamic a = "123";
+            dynamic c = 50;
+            dynamic kol = a + c;//.toString();
+            string result = (string)kol;
+
+            System.Diagnostics.Debug.WriteLine("---4  er  = " + result);
+            System.Diagnostics.Debug.WriteLine("---5  erro = " );
         }
 
         static IEnumerator<int> Fill(int i)
@@ -55,7 +63,7 @@ namespace TriangleArea.Models
                 yield return i;
            // }
         }
-
+     
         void MyMethod<T>(List<T> list)
         {
             //Do stuff
