@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Reflection;
 
 namespace TriangleArea.Models
 {
@@ -21,6 +22,18 @@ namespace TriangleArea.Models
             driver.Travel(auto);
             // встретились пески, надо использовать верблюда
             Camel camel = new Camel();
+            camel.Cry="Noooo";
+            Type type = camel.GetType();
+            var test = camel.GetType();
+            Type test0 = typeof(Camel);
+            FieldInfo myFieldInfo = test0.GetField("Noise");
+            System.Diagnostics.Debug.WriteLine("0001 r   test = ["+ test.GetField("Cry") +"]  ="+ test);
+            System.Diagnostics.Debug.WriteLine("0002 erro = " + test0+ " test0 =  [" + test0.GetField("Cry")+"]");
+            System.Diagnostics.Debug.WriteLine("0003 er  = " + myFieldInfo.Name+" == "+ myFieldInfo.GetValue(camel));
+            foreach (Type itype in type.GetInterfaces())
+            {
+                System.Diagnostics.Debug.WriteLine("=="+ itype.Name);
+            }
             // используем адаптер
             ITransport camelTransport = new CamelToTransportAdapter(camel);
             // продолжаем путь по пескам пустыни
@@ -44,9 +57,12 @@ namespace TriangleArea.Models
             dynamic c = 50;
             dynamic kol = a + c;//.toString();
             string result = (string)kol;
-
             System.Diagnostics.Debug.WriteLine("---4  er  = " + result);
-            System.Diagnostics.Debug.WriteLine("---5  erro = " );
+            result = null;
+            var koll = result ?? "---5  erro = ";
+
+            
+            System.Diagnostics.Debug.WriteLine("---5  erro = " + koll);
         }
 
         static IEnumerator<int> Fill(int i)
