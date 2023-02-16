@@ -21,7 +21,7 @@ namespace TriangleArea.Models
             // отправляемся в путешествие
             driver.Travel(auto);
             // встретились пески, надо использовать верблюда
-            Camel camel = new Camel();
+            Camel camel = new Camel("Camel_Noise",999,666);
             camel.Cry="Noooo";
             Type type = camel.GetType();
             var test = camel.GetType();

@@ -392,6 +392,7 @@
     </Compile>
     <Compile Include="Models\AdapterProgram.cs" />
     <Compile Include="Models\Auto.cs" />
+    <Compile Include="Models\Beast.cs" />
     <Compile Include="Models\Camel.cs" />
     <Compile Include="Models\CamelToTransportAdapter.cs" />
     <Compile Include="Models\Driver.cs" />

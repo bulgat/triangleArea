@@ -7,3 +7,14 @@ c:\users\kol\documents\visual studio 2015\Projects\TriangleArea\UnitTestTriangle
 c:\users\kol\documents\visual studio 2015\Projects\TriangleArea\UnitTestTriangleArea\obj\Debug\UnitTestTriangleArea.pdb
 c:\Users\kol\Documents\Visual Studio 2015\Projects\TriangleArea\UnitTestTriangleArea\bin\Debug\LibraryTriangleArea.dll
 c:\Users\kol\Documents\Visual Studio 2015\Projects\TriangleArea\UnitTestTriangleArea\bin\Debug\LibraryTriangleArea.pdb
+C:\Users\bulga\Documents\GitHub\triangleArea\UnitTestTriangleArea\bin\Debug\UnitTestTriangleArea.dll
+C:\Users\bulga\Documents\GitHub\triangleArea\UnitTestTriangleArea\bin\Debug\UnitTestTriangleArea.pdb
+C:\Users\bulga\Documents\GitHub\triangleArea\UnitTestTriangleArea\bin\Debug\LibraryTriangleArea.dll
+C:\Users\bulga\Documents\GitHub\triangleArea\UnitTestTriangleArea\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Users\bulga\Documents\GitHub\triangleArea\UnitTestTriangleArea\bin\Debug\LibraryTriangleArea.pdb
+C:\Users\bulga\Documents\GitHub\triangleArea\UnitTestTriangleArea\bin\Debug\ru\Microsoft.VisualStudio.QualityTools.UnitTestFramework.resources.dll
+C:\Users\bulga\Documents\GitHub\triangleArea\UnitTestTriangleArea\obj\Debug\UnitTestTriangleArea.csproj.AssemblyReference.cache
+C:\Users\bulga\Documents\GitHub\triangleArea\UnitTestTriangleArea\obj\Debug\UnitTestTriangleArea.csproj.CoreCompileInputs.cache
+C:\Users\bulga\Documents\GitHub\triangleArea\UnitTestTriangleArea\obj\Debug\UnitTestTriangleArea.csproj.CopyComplete
+C:\Users\bulga\Documents\GitHub\triangleArea\UnitTestTriangleArea\obj\Debug\UnitTestTriangleArea.dll
+C:\Users\bulga\Documents\GitHub\triangleArea\UnitTestTriangleArea\obj\Debug\UnitTestTriangleArea.pdb
