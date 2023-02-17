@@ -13,7 +13,7 @@ namespace TriangleArea.Models
         {
             LinkedListMain();
 
-
+            Tourist tourist = new Tourist();
             // путешественник
             Driver driver = new Driver();
             // машина
@@ -57,7 +57,8 @@ namespace TriangleArea.Models
             dynamic c = 50;
             dynamic kol = a + c;//.toString();
             string result = (string)kol;
-            System.Diagnostics.Debug.WriteLine("---4  er  = " + result);
+            double d = 465.97443464564;
+            System.Diagnostics.Debug.WriteLine("---4   = " + result);
             result = null;
             var koll = result ?? "---5  erro = ";
 

@@ -6,7 +6,7 @@ using System.Web;
 namespace TriangleArea.Models
 {
     public class Camel : Beast
-    {
+    { 
         public string Noise;
         private string Name;
         public Camel(string name) : base(name)
