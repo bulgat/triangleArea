@@ -3,12 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Reflection;
+using System.Threading.Tasks;
+using System.Threading;
 
 namespace TriangleArea.Models
 {
     public class AdapterProgram
     {
-      
+
         public AdapterProgram()
         {
             LinkedListMain();
@@ -21,26 +23,26 @@ namespace TriangleArea.Models
             // отправляемся в путешествие
             driver.Travel(auto);
             // встретились пески, надо использовать верблюда
-            Camel camel = new Camel("Camel_Noise",999,666);
-            camel.Cry="Noooo";
+            Camel camel = new Camel("Camel_Noise", 999, 666);
+            camel.Cry = "Noooo";
             Type type = camel.GetType();
             var test = camel.GetType();
             Type test0 = typeof(Camel);
             FieldInfo myFieldInfo = test0.GetField("Noise");
-            System.Diagnostics.Debug.WriteLine("0001 r   test = ["+ test.GetField("Cry") +"]  ="+ test);
-            System.Diagnostics.Debug.WriteLine("0002 erro = " + test0+ " test0 =  [" + test0.GetField("Cry")+"]");
-            System.Diagnostics.Debug.WriteLine("0003 er  = " + myFieldInfo.Name+" == "+ myFieldInfo.GetValue(camel));
+            System.Diagnostics.Debug.WriteLine("0001 r   test = [" + test.GetField("Cry") + "]  =" + test);
+            System.Diagnostics.Debug.WriteLine("0002 erro = " + test0 + " test0 =  [" + test0.GetField("Cry") + "]");
+            System.Diagnostics.Debug.WriteLine("0003 er  = " + myFieldInfo.Name + " == " + myFieldInfo.GetValue(camel));
             foreach (Type itype in type.GetInterfaces())
             {
-                System.Diagnostics.Debug.WriteLine("=="+ itype.Name);
+                System.Diagnostics.Debug.WriteLine("==" + itype.Name);
             }
             // используем адаптер
             ITransport camelTransport = new CamelToTransportAdapter(camel);
             // продолжаем путь по пескам пустыни
             driver.Travel(camelTransport);
 
-            MyMethod(new List<string>() {"ko","test" });
-            MyMethod(new List<int>() { 1, 4,7,8 });
+            MyMethod(new List<string>() { "ko", "test" });
+            MyMethod(new List<int>() { 1, 4, 7, 8 });
             //Console.Read();
             var i = 5;
             var enumerator = Fill(i);
@@ -50,7 +52,7 @@ namespace TriangleArea.Models
             System.Diagnostics.Debug.WriteLine("--- 1 erro ssag = " + enumerator.MoveNext());
             System.Diagnostics.Debug.WriteLine("--- 3 erro = " + enumerator.Current);
             System.Diagnostics.Debug.WriteLine("--- 2 erro ssag = " + enumerator.MoveNext());
-            
+
             System.Diagnostics.Debug.WriteLine("--- 3 erro = " + enumerator.Current);
 
             dynamic a = "123";
@@ -62,8 +64,37 @@ namespace TriangleArea.Models
             result = null;
             var koll = result ?? "---5  erro = ";
 
-            
-            System.Diagnostics.Debug.WriteLine("---5  erro = " + koll);
+            int n1 = 4, n2 = 5;
+            Task<int> sumTask = new Task<int>(() => n1 + n2);
+            sumTask.Start();
+            var tt = sumTask.Result;
+            System.Diagnostics.Debug.WriteLine("5  er  = " + tt);
+            //krik().Start();
+
+
+            Task[] tasks1 = new Task[3]
+            {
+                new Task(() => {
+                    Thread.Sleep(2000);
+                    System.Diagnostics.Debug.WriteLine("First Task"); }) ,
+                new Task(() => { 
+                    Thread.Sleep(2000);
+                    System.Diagnostics.Debug.WriteLine("Second Task"); }),
+                new Task(() => { 
+                    Thread.Sleep(2000);
+                    System.Diagnostics.Debug.WriteLine("Third Task"); })
+            };
+            foreach (var item in tasks1)
+            {
+              item.Start();
+            }
+            //Task.WaitAll(tasks1);
+            Task.WaitAny(tasks1);
+
+            Thread.Sleep(4000);
+            var t = krik().Result;
+            System.Diagnostics.Debug.WriteLine("6  er  = " + t);
+
         }
 
         static IEnumerator<int> Fill(int i)
@@ -80,7 +111,11 @@ namespace TriangleArea.Models
                 yield return i;
            // }
         }
-     
+        private static async Task<int> krik()
+        {
+            return 999;
+        }
+
         void MyMethod<T>(List<T> list)
         {
             //Do stuff
