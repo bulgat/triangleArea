@@ -400,6 +400,7 @@
     <Compile Include="Models\IBrute.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ITransport.cs" />
+    <Compile Include="Models\stream\StreamTread.cs" />
     <Compile Include="Models\Tourist.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site.Master.cs">

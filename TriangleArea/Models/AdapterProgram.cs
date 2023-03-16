@@ -5,6 +5,7 @@ using System.Web;
 using System.Reflection;
 using System.Threading.Tasks;
 using System.Threading;
+using TriangleArea.Models.stream;
 
 namespace TriangleArea.Models
 {
@@ -64,36 +65,9 @@ namespace TriangleArea.Models
             result = null;
             var koll = result ?? "---5  erro = ";
 
-            int n1 = 4, n2 = 5;
-            Task<int> sumTask = new Task<int>(() => n1 + n2);
-            sumTask.Start();
-            var tt = sumTask.Result;
-            System.Diagnostics.Debug.WriteLine("5  er  = " + tt);
-            //krik().Start();
+            var kol22 = new StreamTread();
 
-
-            Task[] tasks1 = new Task[3]
-            {
-                new Task(() => {
-                    Thread.Sleep(2000);
-                    System.Diagnostics.Debug.WriteLine("First Task"); }) ,
-                new Task(() => { 
-                    Thread.Sleep(2000);
-                    System.Diagnostics.Debug.WriteLine("Second Task"); }),
-                new Task(() => { 
-                    Thread.Sleep(2000);
-                    System.Diagnostics.Debug.WriteLine("Third Task"); })
-            };
-            foreach (var item in tasks1)
-            {
-              item.Start();
-            }
-            //Task.WaitAll(tasks1);
-            Task.WaitAny(tasks1);
-
-            Thread.Sleep(4000);
-            var t = krik().Result;
-            System.Diagnostics.Debug.WriteLine("6  er  = " + t);
+            
 
         }
 
@@ -111,10 +85,7 @@ namespace TriangleArea.Models
                 yield return i;
            // }
         }
-        private static async Task<int> krik()
-        {
-            return 999;
-        }
+      
 
         void MyMethod<T>(List<T> list)
         {
