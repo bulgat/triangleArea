@@ -15,3 +15,9 @@ C:\Users\TikTok\Documents\GitHub\triangleArea\LibraryTriangleArea\obj\Debug\Libr
 C:\Users\TikTok\Documents\GitHub\triangleArea\LibraryTriangleArea\obj\Debug\LibraryTriangleArea.csproj.CoreCompileInputs.cache
 C:\Users\TikTok\Documents\GitHub\triangleArea\LibraryTriangleArea\obj\Debug\LibraryTriangleArea.dll
 C:\Users\TikTok\Documents\GitHub\triangleArea\LibraryTriangleArea\obj\Debug\LibraryTriangleArea.pdb
+C:\Users\Citadel\Documents\GitHub\triangleArea\LibraryTriangleArea\bin\Debug\LibraryTriangleArea.dll
+C:\Users\Citadel\Documents\GitHub\triangleArea\LibraryTriangleArea\bin\Debug\LibraryTriangleArea.pdb
+C:\Users\Citadel\Documents\GitHub\triangleArea\LibraryTriangleArea\obj\Debug\LibraryTriangleArea.csproj.AssemblyReference.cache
+C:\Users\Citadel\Documents\GitHub\triangleArea\LibraryTriangleArea\obj\Debug\LibraryTriangleArea.csproj.CoreCompileInputs.cache
+C:\Users\Citadel\Documents\GitHub\triangleArea\LibraryTriangleArea\obj\Debug\LibraryTriangleArea.dll
+C:\Users\Citadel\Documents\GitHub\triangleArea\LibraryTriangleArea\obj\Debug\LibraryTriangleArea.pdb

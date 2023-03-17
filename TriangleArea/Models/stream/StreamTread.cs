@@ -52,6 +52,10 @@ namespace TriangleArea.Models.stream
             var napalm = new Napalm<Break,IDisposable>();
             System.Diagnostics.Debug.WriteLine("604 r  = " + napalm.Army(new Break()));
 
+            string s = "Hello Extension Methods";
+            int i = s.WordCount();
+            System.Diagnostics.Debug.WriteLine("605 r  = " + i);
+           
         }
 
         
@@ -59,6 +63,15 @@ namespace TriangleArea.Models.stream
         {
             return 999;
         }
+    }
+    public static class MyExtensions
+    {
+        
+        public static int WordCount(this string str)
+        {
+            return str.Length;
+        }
+        
     }
     public class Stop <T>
     {
