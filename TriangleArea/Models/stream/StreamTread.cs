@@ -43,8 +43,15 @@ namespace TriangleArea.Models.stream
             System.Diagnostics.Debug.WriteLine("6  er  = " + t);
             var tttt = new Stop<int> ();
             var sssss = new Stop<string>();
-            System.Diagnostics.Debug.WriteLine("601  er  = " + tttt.Krik(100));
+
+            decimal kol = 444.56M;
+            System.Diagnostics.Debug.WriteLine("601 "+ kol + "  = " + tttt.Krik(100));
             System.Diagnostics.Debug.WriteLine("602  er  = " + sssss.Krik("jjjjj"));
+            var stop = new DeStop<Break> ();
+            System.Diagnostics.Debug.WriteLine("603  er  = " + stop.Army(new Break()));
+            var napalm = new Napalm<Break,IDisposable>();
+            System.Diagnostics.Debug.WriteLine("604 r  = " + napalm.Army(new Break()));
+
         }
 
         
@@ -56,6 +63,35 @@ namespace TriangleArea.Models.stream
     public class Stop <T>
     {
         public T Krik(T x)
+        {
+            return x;
+        }
+        
+    }
+    public class DeStop<T>where T:IDisposable
+    {
+        public T Army(T x)
+        {
+            return x;
+        }
+    }
+    public class Break : IDisposable
+    {
+        public void Dispose()
+        {
+            throw new NotImplementedException();
+        }
+    }
+    public class UnBreak : IDisposable
+    {
+        public void Dispose()
+        {
+            throw new NotImplementedException();
+        }
+    }
+    public class Napalm<T,U> where T : U
+    {
+        public U Army(U x)
         {
             return x;
         }
