@@ -51,10 +51,12 @@ namespace TriangleArea.Models.stream
             System.Diagnostics.Debug.WriteLine("603  er  = " + stop.Army(new Break()));
             var napalm = new Napalm<Break,IDisposable>();
             System.Diagnostics.Debug.WriteLine("604 r  = " + napalm.Army(new Break()));
+            var stop0 = new AAAstop();
+    
 
         }
 
-        
+
         private static async Task<int> krik()
         {
             return 999;
@@ -95,5 +97,31 @@ namespace TriangleArea.Models.stream
         {
             return x;
         }
+    }
+    public class AAAstop : Akol
+    {
+        
+        public AAAstop() : base()
+        {
+            System.Diagnostics.Debug.WriteLine("63333  = ");
+        }
+        /*
+        protected override void Akol(): base("kol")
+        {
+
+        }*/
+        
+        protected override void Foo()
+        {
+            System.Diagnostics.Debug.WriteLine("64444 r  = "  );
+        }
+    }
+    public abstract class Akol
+    {
+        protected Akol()
+        {
+            Foo();
+        }
+        protected abstract void Foo();
     }
 }
