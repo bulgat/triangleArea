@@ -57,7 +57,17 @@ namespace TriangleArea.Models.stream
             string s = "Hello Extension Methods";
             int i = s.WordCount();
             System.Diagnostics.Debug.WriteLine("605 r  = " + i);
-           
+            Lazy<AAAstop> lazyLoad = new Lazy<AAAstop>();
+            Lazy<AAAstop> lazyL = new Lazy<AAAstop>(() => new AAAstop());
+            Thread tStop = new Thread(()=>Console.WriteLine( "6552 oooooooooo  {0}==={1}",lazyL.Value.GetValue(), lazyL.IsValueCreated));
+            System.Diagnostics.Debug.WriteLine("6553 r  = " );
+
+            System.Diagnostics.Debug.WriteLine("6554 r  = " + lazyLoad.IsValueCreated);
+            System.Diagnostics.Debug.WriteLine("6555 r  = "+ lazyLoad.Value.GetValue());
+            System.Diagnostics.Debug.WriteLine("6556 r  = " + lazyLoad.IsValueCreated);
+            tStop.Start();
+            tStop.Join();
+            System.Diagnostics.Debug.WriteLine("6557   "  );
         }
 
 
@@ -127,6 +137,10 @@ namespace TriangleArea.Models.stream
         protected override void Foo()
         {
             System.Diagnostics.Debug.WriteLine("64444 r  = "  );
+        }
+        public int GetValue()
+        {
+            return 999;
         }
     }
     public abstract class Akol
