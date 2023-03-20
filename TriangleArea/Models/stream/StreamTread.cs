@@ -54,6 +54,10 @@ namespace TriangleArea.Models.stream
             var stop0 = new AAAstop();
     
 
+            string s = "Hello Extension Methods";
+            int i = s.WordCount();
+            System.Diagnostics.Debug.WriteLine("605 r  = " + i);
+           
         }
 
 
@@ -61,6 +65,15 @@ namespace TriangleArea.Models.stream
         {
             return 999;
         }
+    }
+    public static class MyExtensions
+    {
+        
+        public static int WordCount(this string str)
+        {
+            return str.Length;
+        }
+        
     }
     public class Stop <T>
     {
