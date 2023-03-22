@@ -83,6 +83,7 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
     <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
@@ -213,6 +214,7 @@
     </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="HomeWebForm.aspx" />
+    <Content Include="image\pot.jpg" />
     <Content Include="Scripts\ai.0.15.0-build58334.js" />
     <Content Include="Scripts\ai.0.15.0-build58334.min.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -429,8 +431,8 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="image\" />
     <Folder Include="js\" />
+    <Folder Include="Models\taskList\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\LibraryTriangleArea\LibraryTriangleArea.csproj">

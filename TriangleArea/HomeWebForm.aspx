@@ -9,6 +9,8 @@
 </head>
 <body>
     <h5>Test</h5>
+    <image src="/image/pot.jpg" width="100px" />
+    <br />
     <button onclick="alert('TTTT');">Click</button>
     <form id="form1" runat="server">
         <div>
