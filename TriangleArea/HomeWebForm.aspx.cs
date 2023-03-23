@@ -13,6 +13,9 @@ namespace TriangleArea
 {
     public partial class HomeWebForm : System.Web.UI.Page
     {
+        public enum Route { Home, Web, Triangle };
+        IEnumerable<string> RouteList;
+
         [WebMethod]
         public static string Result()
         {
@@ -20,8 +23,16 @@ namespace TriangleArea
         }
         protected void Page_Load(object sender, EventArgs e)
         {
-            System.Diagnostics.Debug.WriteLine("---- start ----- ");
+            RouteList = new[] { Route.Home.ToString(), Route.Web.ToString() } ;
+
+            RouteList = new List<string>() { Route.Home.ToString(), Route.Web.ToString(), Route.Triangle.ToString()};
+
+         
+
+            System.Diagnostics.Debug.WriteLine("---- start ----- "+ Route.Home.ToString());
             var adapter=  new Models.AdapterProgram();
+
+
 
            // var client = new HttpClient();
         }

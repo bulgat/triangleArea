@@ -21,6 +21,7 @@ namespace TriangleArea.Models
             Driver driver = new Driver();
             // машина
             Auto auto = new Auto();
+            Jeep jeep = new Jeep();
             // отправляемся в путешествие
             driver.Travel(auto);
             // встретились пески, надо использовать верблюда
@@ -30,7 +31,7 @@ namespace TriangleArea.Models
             var test = camel.GetType();
             Type test0 = typeof(Camel);
             FieldInfo myFieldInfo = test0.GetField("Noise");
-            System.Diagnostics.Debug.WriteLine("0001 r   test = [" + test.GetField("Cry") + "]  =" + test);
+            System.Diagnostics.Debug.WriteLine("0001 r   test = [" + test.GetField("Cry") + "]  ="  );
             System.Diagnostics.Debug.WriteLine("0002 erro = " + test0 + " test0 =  [" + test0.GetField("Cry") + "]");
             System.Diagnostics.Debug.WriteLine("0003 er  = " + myFieldInfo.Name + " == " + myFieldInfo.GetValue(camel));
             foreach (Type itype in type.GetInterfaces())
@@ -54,7 +55,7 @@ namespace TriangleArea.Models
             System.Diagnostics.Debug.WriteLine("--- 3 erro = " + enumerator.Current);
             System.Diagnostics.Debug.WriteLine("--- 2 erro ssag = " + enumerator.MoveNext());
 
-            System.Diagnostics.Debug.WriteLine("--- 3 erro = " + enumerator.Current);
+            
 
             dynamic a = "123";
             dynamic c = 50;
