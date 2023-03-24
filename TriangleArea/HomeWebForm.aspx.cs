@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
@@ -31,10 +32,25 @@ namespace TriangleArea
 
             System.Diagnostics.Debug.WriteLine("---- start ----- "+ Route.Home.ToString());
             var adapter=  new Models.AdapterProgram();
+            System.Diagnostics.Debug.WriteLine("---- end ----- " );
+            Hashtable openWith = new Hashtable();
 
+            openWith.Add("txt", "notepad.exe");
+            openWith.Add("bmp", "0paint.exe");
+           
+            openWith.Add("dib", "paint.exe");
+            openWith.Add("rtf", "wordpad.exe");
 
-
-           // var client = new HttpClient();
+            try
+            {
+                openWith.Add("txt", "winword.exe");
+            }
+            catch
+            {
+                System.Diagnostics.Debug.WriteLine("An element with Key = \"txt\" already exists.");
+            }
+            System.Diagnostics.Debug.WriteLine("For key = \"rtf\", value = {0}.", openWith["bmp"]);
+            // var client = new HttpClient();
         }
       
     }

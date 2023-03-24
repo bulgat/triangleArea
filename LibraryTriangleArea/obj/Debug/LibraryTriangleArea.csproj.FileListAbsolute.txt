@@ -21,3 +21,9 @@ C:\Users\Citadel\Documents\GitHub\triangleArea\LibraryTriangleArea\obj\Debug\Lib
 C:\Users\Citadel\Documents\GitHub\triangleArea\LibraryTriangleArea\obj\Debug\LibraryTriangleArea.csproj.CoreCompileInputs.cache
 C:\Users\Citadel\Documents\GitHub\triangleArea\LibraryTriangleArea\obj\Debug\LibraryTriangleArea.dll
 C:\Users\Citadel\Documents\GitHub\triangleArea\LibraryTriangleArea\obj\Debug\LibraryTriangleArea.pdb
+C:\Users\bulga\Documents\GitHub2\LibraryTriangleArea\bin\Debug\LibraryTriangleArea.dll
+C:\Users\bulga\Documents\GitHub2\LibraryTriangleArea\bin\Debug\LibraryTriangleArea.pdb
+C:\Users\bulga\Documents\GitHub2\LibraryTriangleArea\obj\Debug\LibraryTriangleArea.csproj.AssemblyReference.cache
+C:\Users\bulga\Documents\GitHub2\LibraryTriangleArea\obj\Debug\LibraryTriangleArea.csproj.CoreCompileInputs.cache
+C:\Users\bulga\Documents\GitHub2\LibraryTriangleArea\obj\Debug\LibraryTriangleArea.dll
+C:\Users\bulga\Documents\GitHub2\LibraryTriangleArea\obj\Debug\LibraryTriangleArea.pdb
