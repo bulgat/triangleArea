@@ -31,9 +31,7 @@ namespace TriangleArea.Models
             var test = camel.GetType();
             Type test0 = typeof(Camel);
             FieldInfo myFieldInfo = test0.GetField("Noise");
-            System.Diagnostics.Debug.WriteLine("0001 r   test = [" + test.GetField("Cry") + "]  ="  );
-            System.Diagnostics.Debug.WriteLine("0002 erro = " + test0 + " test0 =  [" + test0.GetField("Cry") + "]");
-            System.Diagnostics.Debug.WriteLine("0003 er  = " + myFieldInfo.Name + " == " + myFieldInfo.GetValue(camel));
+            
             foreach (Type itype in type.GetInterfaces())
             {
                 System.Diagnostics.Debug.WriteLine("==" + itype.Name);
@@ -48,12 +46,7 @@ namespace TriangleArea.Models
             //Console.Read();
             var i = 5;
             var enumerator = Fill(i);
-            System.Diagnostics.Debug.WriteLine("--- 3 erro = " + enumerator.Current);
-            System.Diagnostics.Debug.WriteLine("--- 0 erro ssag = " + enumerator.MoveNext());
-            System.Diagnostics.Debug.WriteLine("--- 3 erro = " + enumerator.Current);
-            System.Diagnostics.Debug.WriteLine("--- 1 erro ssag = " + enumerator.MoveNext());
-            System.Diagnostics.Debug.WriteLine("--- 3 erro = " + enumerator.Current);
-            System.Diagnostics.Debug.WriteLine("--- 2 erro ssag = " + enumerator.MoveNext());
+
 
             
 
