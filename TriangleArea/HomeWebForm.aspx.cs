@@ -8,7 +8,7 @@ using System.Web.Services;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using LibraryTriangleArea;
-
+using TriangleArea.Models;
 
 namespace TriangleArea
 {
@@ -33,6 +33,9 @@ namespace TriangleArea
             System.Diagnostics.Debug.WriteLine("---- start ----- "+ Route.Home.ToString());
             var adapter=  new Models.AdapterProgram();
             System.Diagnostics.Debug.WriteLine("---- end ----- " );
+
+            ThreadMain threadMain = new ThreadMain();
+
             Hashtable openWith = new Hashtable();
 
             openWith.Add("txt", "notepad.exe");
