@@ -404,6 +404,7 @@
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ITransport.cs" />
     <Compile Include="Models\adapter\Jeep.cs" />
+    <Compile Include="Models\LockAsyncSemaphore.cs" />
     <Compile Include="Models\stream\StreamTread.cs" />
     <Compile Include="Models\adapter\Tourist.cs" />
     <Compile Include="Models\ThreadMain.cs" />
