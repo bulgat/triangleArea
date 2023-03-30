@@ -54,6 +54,10 @@ namespace TriangleArea
             }
             System.Diagnostics.Debug.WriteLine("For key = \"rtf\", value = {0}.", openWith["bmp"]);
             // var client = new HttpClient();
+            ThreadWait.Main();
+            ThreadMutex.Main();
+            ThreadSemaphore.Main();
+
         }
       
     }

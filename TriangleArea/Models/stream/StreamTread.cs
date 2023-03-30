@@ -126,7 +126,7 @@ namespace TriangleArea.Models.stream
         
         public AAAstop() : base()
         {
-            System.Diagnostics.Debug.WriteLine("63333  = ");
+            
         }
         /*
         protected override void Akol(): base("kol")

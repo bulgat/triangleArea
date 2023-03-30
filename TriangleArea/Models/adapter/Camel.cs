@@ -18,8 +18,7 @@ namespace TriangleArea.Models
         public Camel(string name, params int[] argument_ar) : this(name)
         {
             System.Diagnostics.Debug.WriteLine("020--" + argument_ar[0]);
-            System.Diagnostics.Debug.WriteLine("021--" + argument_ar[1]);
-            System.Diagnostics.Debug.WriteLine("022--" + name);
+   
         }
 
         public override void Move()

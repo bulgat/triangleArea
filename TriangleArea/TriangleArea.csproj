@@ -408,6 +408,9 @@
     <Compile Include="Models\stream\StreamTread.cs" />
     <Compile Include="Models\adapter\Tourist.cs" />
     <Compile Include="Models\ThreadMain.cs" />
+    <Compile Include="Models\ThreadMutex.cs" />
+    <Compile Include="Models\ThreadSemaphore.cs" />
+    <Compile Include="Models\ThreadWait.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
