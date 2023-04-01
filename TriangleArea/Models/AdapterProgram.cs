@@ -32,10 +32,10 @@ namespace TriangleArea.Models
             Type test0 = typeof(Camel);
             FieldInfo myFieldInfo = test0.GetField("Noise");
             
-            foreach (Type itype in type.GetInterfaces())
-            {
-                System.Diagnostics.Debug.WriteLine("==" + itype.Name);
-            }
+            //foreach (Type itype in type.GetInterfaces())
+            //{
+                
+            //}
             // используем адаптер
             ITransport camelTransport = new CamelToTransportAdapter(camel);
             // продолжаем путь по пескам пустыни
@@ -55,7 +55,7 @@ namespace TriangleArea.Models
             dynamic kol = a + c;//.toString();
             string result = (string)kol;
             double d = 465.97443464564;
-            System.Diagnostics.Debug.WriteLine("---4   = " + result);
+            
             result = null;
             var koll = result ?? "---5  erro = ";
 
@@ -84,7 +84,7 @@ namespace TriangleArea.Models
         void MyMethod<T>(List<T> list)
         {
             //Do stuff
-            System.Diagnostics.Debug.WriteLine("--- erro ss = "+ list[0]);
+            
         }
 
         private void LinkedListMain() { 

@@ -407,6 +407,7 @@
     <Compile Include="Models\LockAsyncSemaphore.cs" />
     <Compile Include="Models\stream\StreamTread.cs" />
     <Compile Include="Models\adapter\Tourist.cs" />
+    <Compile Include="Models\ThreadCancelation.cs" />
     <Compile Include="Models\ThreadMain.cs" />
     <Compile Include="Models\ThreadMutex.cs" />
     <Compile Include="Models\ThreadSemaphore.cs" />
