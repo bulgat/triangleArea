@@ -22,7 +22,7 @@ namespace TriangleArea.Models
             }
             catch (Exception)
             {
-                System.Diagnostics.Debug.WriteLine("---4   = " );
+               
             }
         }
         public static async Task ProcessTask(CancellationToken CancelTask) {
