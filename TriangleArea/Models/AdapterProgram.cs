@@ -34,7 +34,7 @@ namespace TriangleArea.Models
             
             foreach (Type itype in type.GetInterfaces())
             {
-                System.Diagnostics.Debug.WriteLine("==" + itype.Name);
+                
             }
             // используем адаптер
             ITransport camelTransport = new CamelToTransportAdapter(camel);
