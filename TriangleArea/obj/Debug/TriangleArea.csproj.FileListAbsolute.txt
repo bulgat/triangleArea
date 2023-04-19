@@ -578,3 +578,4 @@ D:\Project\triangleArea\TriangleArea\obj\Debug\TriangleArea.csproj.CoreCompileIn
 D:\Project\triangleArea\TriangleArea\obj\Debug\TriangleArea.csproj.CopyComplete
 D:\Project\triangleArea\TriangleArea\obj\Debug\TriangleArea.dll
 D:\Project\triangleArea\TriangleArea\obj\Debug\TriangleArea.pdb
+C:\Users\bulga\Documents\GitHub2\TriangleArea\bin\LibraryTriangleArea.dll.config

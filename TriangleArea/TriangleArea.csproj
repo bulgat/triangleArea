@@ -400,6 +400,7 @@
     <Compile Include="Models\adapter\CamelToTransportAdapter.cs" />
     <Compile Include="Models\adapter\Driver.cs" />
     <Compile Include="Models\adapter\IAnimal.cs" />
+    <Compile Include="Models\autofacBusiness\AutofacBusiness.cs" />
     <Compile Include="Models\IBrute.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ITransport.cs" />

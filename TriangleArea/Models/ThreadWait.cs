@@ -38,6 +38,28 @@ namespace TriangleArea.Models
                 }
 
             }
+            for (int i = 0; i < 6; i++)
+            {
+                ThreadPool.QueueUserWorkItem(CountQueue);
+                Thread.Sleep(200);
+            }
+            Action action = () =>
+            {
+
+                while (true)
+                {
+                    System.Diagnostics.Debug.WriteLine($"0244444--{DateTime.Now.ToLongDateString()} ==  Action = ");
+                    Thread.Sleep(1000);
+                }
+            };
+            //Task task = new Task(action);
+            //task.Start();
+
+            Task task1 = Task.Factory.StartNew(action);
+
+            Task<bool> task0 = Task<bool>.Factory.StartNew(CountBool);
+            bool result = task0.Result;
+            task0.ContinueWith(t=>Console.WriteLine("26 Complite"));
         }
         public static void Count()
         {
@@ -51,6 +73,14 @@ namespace TriangleArea.Models
                 Thread.Sleep(100);
             }
             waitHandler.Set();
+        }
+        public static void CountQueue(object i) {
+            System.Diagnostics.Debug.WriteLine($"02333333--{Thread.CurrentThread.Name} ==    Queue = {i}");
+        }
+        public static bool CountBool()
+        {
+            System.Diagnostics.Debug.WriteLine($"02555555--{Thread.CurrentThread.Name} ==   Bool = ");
+            return true;
         }
         public static void CountSecond()
         {
