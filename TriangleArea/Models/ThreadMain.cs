@@ -20,19 +20,41 @@ namespace TriangleArea.Models
             thread.Start();
             #region
             object lockTask = new object();
-             Task.Run(()=> {
+            Task<bool> carMove;
 
-                lock (lockTask)
+            try
+            {
+                carMove =Task.Run(() =>
                 {
-                    for (var i = 0; i < 10; i++)
+
+                    lock (lockTask)
                     {
-                        Thread.Sleep(1000);
-                        System.Diagnostics.Debug.WriteLine($"0001 - едет по {i} = " + Thread.CurrentThread.GetHashCode());
+                        int i = 0;
+                        for (i = 0; i < 10; i++)
+                        {
+                            Thread.Sleep(1000);
+                            System.Diagnostics.Debug.WriteLine($"0001 - едет по {i} = " + Thread.CurrentThread.GetHashCode());
+                            if (i == 9)
+                            {
+                                System.Diagnostics.Debug.WriteLine($"  TASK = STOP");
+                                throw new Exception("STOP!!!!");
+                            }
+                        }
+                        System.Diagnostics.Debug.WriteLine($"0001 -------- END TASK = " + Thread.CurrentThread.GetHashCode());
+
+                        //return 34;
                     }
-                    System.Diagnostics.Debug.WriteLine($"0001 -------- END TASK = " + Thread.CurrentThread.GetHashCode());
-                    return 34;
-                }
-            });
+                    return true;
+                });
+               // var koll =await carMove;
+            } catch (Exception e)
+            {
+                throw;
+            }
+            
+            System.Diagnostics.Debug.WriteLine($"0056 --carMove-{carMove.IsCanceled} = {carMove.IsFaulted} = {carMove.IsCompleted}"  );
+    
+
             try { 
                 LockSlim.EnterReadLock();
                 for (var i = 0; i < 10; i++)

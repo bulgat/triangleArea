@@ -70,7 +70,11 @@ namespace TriangleArea.Models
                 System.Diagnostics.Debug.WriteLine($"021--{Thread.CurrentThread.Name} == {x}     stop= {stop}     kol = {kol}");
                 
                 x++;
-                Thread.Sleep(100);
+                //Thread.Sleep(100);
+               // if (i == 5)
+                //{
+                //    throw new Exception("Мне не нравится 6!!!!");
+               // }
             }
             waitHandler.Set();
         }

@@ -26,12 +26,12 @@ namespace TriangleArea.Models
             }
         }
         public static async Task ProcessTask(CancellationToken CancelTask) {
-            var i = 0;
+            //var i = 0;
             while (true)
             {
                 CancelTask.ThrowIfCancellationRequested();
                 await Task.Delay(500);
-                System.Diagnostics.Debug.WriteLine("9999 =="  );
+                //System.Diagnostics.Debug.WriteLine("9999 =="  );
             }
         }
     }
