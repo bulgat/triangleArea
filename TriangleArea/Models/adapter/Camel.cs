@@ -17,7 +17,7 @@ namespace TriangleArea.Models
 
         public Camel(string name, params int[] argument_ar) : this(name)
         {
-            System.Diagnostics.Debug.WriteLine("020--" + argument_ar[0]);
+            
    
         }
 

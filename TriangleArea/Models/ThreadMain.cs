@@ -9,11 +9,13 @@ namespace TriangleArea.Models
 {
     public class ThreadMain
     {
+        List<int> testList = new List<int>() { 2, 5, 6 };
         ReaderWriterLockSlim LockSlim = new ReaderWriterLockSlim();
 
         public ThreadMain()
         {
-
+            var resultSum = testList.AsParallel().Sum();
+            System.Diagnostics.Debug.WriteLine("02   resultSum -" + resultSum);
 
             ThreadStart writeSecond = new ThreadStart(WriteSecond);
             Thread thread = new Thread(WriteSecond);

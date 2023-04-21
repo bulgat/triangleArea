@@ -29,12 +29,14 @@ namespace TriangleArea.Models.stream
                     System.Diagnostics.Debug.WriteLine("Second Task"); }),
                 new Task(() => {
                     Thread.Sleep(2000);
-                    System.Diagnostics.Debug.WriteLine("Third Task"); })
+                    System.Diagnostics.Debug.WriteLine("Third Task"); }
+                )
             };
             foreach (var item in tasks1)
             {
                 item.Start();
             }
+
             //Task.WaitAll(tasks1);
             Task.WaitAny(tasks1);
 
