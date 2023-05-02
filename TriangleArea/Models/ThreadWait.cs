@@ -15,7 +15,7 @@ namespace TriangleArea.Models
         static bool kol;
         public static void Main()
         {
-            for(int i = 0; i < 6; i++)
+            for(int i = 0; i < 5; i++)
             {
                 Thread thread = new Thread(Count);
                 thread.Name = $" name  {i}";
@@ -31,14 +31,14 @@ namespace TriangleArea.Models
                 Task task = new Task(myDelegate);
                 task.RunSynchronously();
 
-                for (int z = 0; z < 6; z++)
+                for (int z = 0; z < 5; z++)
                 {
                     Thread.Sleep(100);
                     System.Diagnostics.Debug.WriteLine("=Main="+z );
                 }
 
             }
-            for (int i = 0; i < 6; i++)
+            for (int i = 0; i < 5; i++)
             {
                 ThreadPool.QueueUserWorkItem(CountQueue);
                 Thread.Sleep(200);
@@ -55,7 +55,7 @@ namespace TriangleArea.Models
             //Task task = new Task(action);
             //task.Start();
 
-            Task task1 = Task.Factory.StartNew(action);
+            //Task task1 = Task.Factory.StartNew(action);
 
             Task<bool> task0 = Task<bool>.Factory.StartNew(CountBool);
             bool result = task0.Result;
@@ -65,7 +65,7 @@ namespace TriangleArea.Models
         {
             waitHandler.WaitOne();
             x = 1;
-            for (int i = 0; i < 6; i++)
+            for (int i = 0; i < 5; i++)
             {
                 System.Diagnostics.Debug.WriteLine($"021--{Thread.CurrentThread.Name} == {x}     stop= {stop}     kol = {kol}");
                 
@@ -90,7 +90,7 @@ namespace TriangleArea.Models
         {
             waitHandler.WaitOne();
             x = 1;
-            for (int i = 0; i < 6; i++)
+            for (int i = 0; i < 5; i++)
             {
                 System.Diagnostics.Debug.WriteLine($"022222221--{Thread.CurrentThread.Name} == {x}     stop= {stop}     kol = {kol}");
 

@@ -30,7 +30,7 @@ namespace TriangleArea.Models
             while (true)
             {
                 CancelTask.ThrowIfCancellationRequested();
-                await Task.Delay(500);
+                await Task.Delay(400);
                 //System.Diagnostics.Debug.WriteLine("9999 =="  );
             }
         }

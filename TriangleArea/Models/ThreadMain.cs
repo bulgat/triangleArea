@@ -32,7 +32,7 @@ namespace TriangleArea.Models
                     lock (lockTask)
                     {
                         int i = 0;
-                        for (i = 0; i < 10; i++)
+                        for (i = 0; i < 9; i++)
                         {
                             Thread.Sleep(1000);
                             System.Diagnostics.Debug.WriteLine($"0001 - едет по {i} = " + Thread.CurrentThread.GetHashCode());
@@ -59,7 +59,7 @@ namespace TriangleArea.Models
 
             try { 
                 LockSlim.EnterReadLock();
-                for (var i = 0; i < 10; i++)
+                for (var i = 0; i < 9; i++)
                 {
                     Task.Delay(1000);
                     System.Diagnostics.Debug.WriteLine($"0005  едет {i}  = " + Thread.CurrentThread.GetHashCode());
@@ -74,7 +74,7 @@ namespace TriangleArea.Models
             Task.Run(async () => {
                 //lock (lockTask)
                 //{
-                    for (var i = 0; i < 10; i++)
+                    for (var i = 0; i < 9; i++)
                     {
                         await Task.Delay(1000);
                         System.Diagnostics.Debug.WriteLine($"0002  едет {i}  = " + Thread.CurrentThread.GetHashCode());
@@ -120,7 +120,7 @@ namespace TriangleArea.Models
             {
                 System.Diagnostics.Debug.WriteLine("-  MONITOR = " );
                 Monitor.Enter(lockTask, ref _lockMonitor);
-                    for (var i = 0; i < 10; i++)
+                    for (var i = 0; i < 9; i++)
                     {
                         Thread.Sleep(5000);
                         System.Diagnostics.Debug.WriteLine($"0003 - ед {i}  =  _lockMonitor =  {_lockMonitor}            " + Thread.CurrentThread.GetHashCode());

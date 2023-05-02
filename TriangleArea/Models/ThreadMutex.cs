@@ -12,7 +12,7 @@ namespace TriangleArea.Models
         static int x = 0;
         public static void Main()
         {
-            for (int i = 0; i < 6; i++)
+            for (int i = 0; i < 5; i++)
             {
                 Thread thread = new Thread(Count);
                 thread.Name = $" name  {i}";
@@ -23,7 +23,7 @@ namespace TriangleArea.Models
         {
             mutexObj.WaitOne();
             x = 1;
-            for (int i = 0; i < 6; i++)
+            for (int i = 0; i < 5; i++)
             {
                 System.Diagnostics.Debug.WriteLine($"031-mutex-{Thread.CurrentThread.Name} == {x}");
                 

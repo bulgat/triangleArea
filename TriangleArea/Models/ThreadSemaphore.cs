@@ -12,13 +12,13 @@ namespace TriangleArea.Models
         static int count= 0;
         public static void Main()
         {
-            for (int i = 0; i < 6; i++)
+            for (int i = 0; i < 5; i++)
             {
                 Thread thread = new Thread(Count);
                 thread.Name = $" name  {i}";
                 thread.Start();
             }
-            System.Diagnostics.Debug.WriteLine("633  SSSSSSSSSSSSSSSSSSSS = ");
+            
         }
         public static void Count()
         {

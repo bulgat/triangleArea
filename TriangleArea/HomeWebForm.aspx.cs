@@ -59,6 +59,7 @@ namespace TriangleArea
             ThreadSemaphore.Main();
             ThreadCancelation.Main();
             ThreadDelegate.Main();
+            TaskFactory.Main();
         }
       
     }
