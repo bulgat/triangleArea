@@ -10,6 +10,8 @@
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
     <UseGlobalApplicationHostFile />
+=======
+>>>>>>> parent of ea00b2b (Web Forms)
   </PropertyGroup>
   <ProjectExtensions>
     <VisualStudio>

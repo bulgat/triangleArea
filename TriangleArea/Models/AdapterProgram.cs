@@ -7,8 +7,6 @@ using System.Threading.Tasks;
 using System.Threading;
 using TriangleArea.Models.stream;
 
-
-
 namespace TriangleArea.Models
 {
     public class AdapterProgram
@@ -34,7 +32,17 @@ namespace TriangleArea.Models
             Type test0 = typeof(Camel);
             FieldInfo myFieldInfo = test0.GetField("Noise");
             
-
+<<<<<<< HEAD
+            foreach (Type itype in type.GetInterfaces())
+            {
+                
+            }
+=======
+            //foreach (Type itype in type.GetInterfaces())
+            //{
+                
+            //}
+>>>>>>> 9992a8c4308ee536299aa688cda39f640fc2bb59
             // используем адаптер
             ITransport camelTransport = new CamelToTransportAdapter(camel);
             // продолжаем путь по пескам пустыни
@@ -60,11 +68,9 @@ namespace TriangleArea.Models
 
             var kol22 = new StreamTread();
 
-
+            
 
         }
-
-
 
         static IEnumerator<int> Fill(int i)
         {
