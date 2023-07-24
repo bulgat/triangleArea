@@ -22,6 +22,8 @@ namespace TriangleArea
         {
             return "TTTTTTT";
         }
+     
+
         protected void Page_Load(object sender, EventArgs e)
         {
             RouteList = new[] { Route.Home.ToString(), Route.Web.ToString() } ;

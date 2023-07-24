@@ -51,8 +51,11 @@
         
         
     </ul>
+    <button id="CreateReport">Create Report</button>
+    <br>
+    <br>
     <a href="/HomeWebForm">sort link</a>
-
+    
 
     <asp:PlaceHolder ID="PlaceHolder1"
         runat="server" />

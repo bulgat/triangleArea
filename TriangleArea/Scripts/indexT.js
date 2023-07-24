@@ -14,10 +14,14 @@ document.addEventListener('DOMContentLoaded', function () {
     but0.addEventListener("click", RemoveButton);
 
     function printLog() {
-        console.log(" l    t0 = ");
+       
         
     }
     printLog();
+
+    var buttonCreateReport = document.querySelector("#CreateReport");
+    console.log(" l    t  = " + buttonCreateReport);
+    buttonCreateReport.addEventListener("click", CreateReport);
 });
 function RemoveButton(event) {
 
@@ -30,6 +34,19 @@ function RemoveButton(event) {
     kol.removeChild(but0);
     kol.innerHTML += "<button>but2</button>";
 }
+function CreateReport() {
+    console.log("001 CreateReport    Test");
+    const req = new XMLHttpRequest;
+    req.open("GET", "CreateReport");
+    req.send();
+    req.addEventListener('readystatechange', function () {
+        if (req.readyState == 4) {
+            console.log(req.response);
+        }
+    });
+    console.log("002 CreateReport    Test");
+}
+
 console.log("Test" + funDeclaration());
 
 function funDeclaration() {

@@ -7,16 +7,18 @@
 // </автоматически создаваемое>
 //------------------------------------------------------------------------------
 
-namespace TriangleArea {
-    
-    
-    public partial class _Default {
-        
+namespace TriangleArea
+{
+
+
+    public partial class _Default
+    {
+
         /// <summary>
         /// PlaceHolder1 элемент управления.
         /// </summary>
         /// <remarks>
-        /// Автоматически создаваемое поле.
+        /// Автоматически созданное поле.
         /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
         /// </remarks>
         protected global::System.Web.UI.WebControls.PlaceHolder PlaceHolder1;
