@@ -6,8 +6,7 @@ using System.Reflection;
 using System.Threading.Tasks;
 using System.Threading;
 using TriangleArea.Models.stream;
-
-
+using System.Collections.Concurrent;
 
 namespace TriangleArea.Models
 {
@@ -60,8 +59,28 @@ namespace TriangleArea.Models
 
             var kol22 = new StreamTread();
 
+            ConcurrentQueue<int> number_ar = new ConcurrentQueue<int>();
+            number_ar.Enqueue(1);
+            number_ar.Enqueue(999);
+            number_ar.Enqueue(400);
+            number_ar.Enqueue(3);
 
+         
+            int item;
+            bool isSuccessful = number_ar.TryDequeue(out item);
 
+            System.Diagnostics.Debug.WriteLine("-00--  per = " + isSuccessful);
+            System.Diagnostics.Debug.WriteLine("-01--  per = " + item);
+
+            bool isSuccessful_0 = number_ar.TryDequeue(out item);
+            System.Diagnostics.Debug.WriteLine("-02--  per = " + isSuccessful_0);
+            System.Diagnostics.Debug.WriteLine("-03--  per = " + item);
+
+            Dictionary<Type,int> map = new Dictionary<Type,int>();
+            map.Add(typeof(int), 1);
+            map.Add(typeof(string), 999);
+
+            System.Diagnostics.Debug.WriteLine(map[typeof(int)] +"-04--  pe = " + map[typeof(string)]);
         }
 
 
