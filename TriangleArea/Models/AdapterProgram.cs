@@ -81,8 +81,18 @@ namespace TriangleArea.Models
             map.Add(typeof(string), 999);
 
             System.Diagnostics.Debug.WriteLine(map[typeof(int)] +"-04--  pe = " + map[typeof(string)]);
-        }
 
+            new Thread(new ThreadStart(Run)).Start();
+
+        }
+        public void Run()
+        {
+            while (true)
+            {
+                Thread.Sleep(10000);
+                System.Diagnostics.Debug.WriteLine("- 777  по дор  = " + Thread.CurrentThread.GetHashCode());
+            }
+        }
 
 
         static IEnumerator<int> Fill(int i)

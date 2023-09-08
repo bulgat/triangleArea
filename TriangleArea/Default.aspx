@@ -34,7 +34,9 @@
         </tr>
     </table>
     <br>
-    <button class="button buttonkol_size" type="submit"><b>Подсчитать</b></button>
+    <div class="tributton">
+        <button class="button buttonkol_size" type="submit"><b>Посчитать</b></button>
+    </div>
     <div class="green blue">cathetus</div>
     <div class="green blue">hypotenuse</div>
     <ul onclick="console.log('--02')">
@@ -55,7 +57,8 @@
     <br>
     <br>
     <a href="/HomeWebForm">sort link</a>
-    
+    <a href="#" class="google"></a>
+    <a href="#" class="youtube"></a>
 
     <asp:PlaceHolder ID="PlaceHolder1"
         runat="server" />

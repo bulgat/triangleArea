@@ -46,3 +46,17 @@ ul li:hover {
         background: #53ea93;
         color: green;
 }
+a {
+    background-image: url(../image/bubble.png);
+    background-repeat: no-repeat;
+    height: 98px;
+    width: 100px;
+    display: inline-block;
+    margin-right: 10px;
+}
+a.google {
+    background-position: -600px top;
+}
+a.youtube {
+    background-position: -200px top;
+}
