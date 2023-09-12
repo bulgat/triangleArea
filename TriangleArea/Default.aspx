@@ -37,8 +37,22 @@
     <div class="tributton">
         <button class="button buttonkol_size" type="submit"><b>Посчитать</b></button>
     </div>
-    <div class="green blue">cathetus</div>
-    <div class="green blue">hypotenuse</div>
+    <div class="green blue" data-price="40">cathetus</div>
+    <div class="green blue" data-kol="Stop">hypotenuse</div>
+    <ul onclick="console.log('--02')">
+        <li onclick="console.log('--01')">cathetus
+            <ul>
+                <li>cathetus
+                    <ul>
+                        <li>hypotenuse</li>
+
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        
+        
+    </ul>
     <ul onclick="console.log('--02')">
         <li onclick="console.log('--01')">cathetus
             <ul>
@@ -59,6 +73,11 @@
     <a href="/HomeWebForm">sort link</a>
     <a href="#" class="google"></a>
     <a href="#" class="youtube"></a>
+    <input list="country" />
+    <datalist id="country">
+        <option value="triangle"></option>
+        <option value="quad"></option>
+    </datalist>
 
     <asp:PlaceHolder ID="PlaceHolder1"
         runat="server" />

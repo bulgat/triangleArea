@@ -55,6 +55,12 @@ function funDeclaration() {
 let express = function funExpression() {
     return "KK";
 }
-console.log("0l = " + express());
+onload = function () {
+    // в скрипте создаётся вспомогательная переменная с именем "_"
+   // alert(_.VERSION); // отображает версию библиотеки
+console.log("0l = " );
+};
+
+
 
 
