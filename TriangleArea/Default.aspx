@@ -68,6 +68,7 @@
         
     </ul>
     <button id="CreateReport">Create Report</button>
+    
     <br>
     <br>
     <a href="/HomeWebForm">sort link</a>

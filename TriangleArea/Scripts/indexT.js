@@ -20,8 +20,10 @@ document.addEventListener('DOMContentLoaded', function () {
     printLog();
 
     var buttonCreateReport = document.querySelector("#CreateReport");
+    //var buttonClickTarget = document.querySelector("#ClickTarget");
     console.log(" l    t  = " + buttonCreateReport);
     buttonCreateReport.addEventListener("click", CreateReport);
+    //buttonClickTarget.addEventListener("click", ClickTarget);
 });
 function RemoveButton(event) {
 
@@ -44,10 +46,10 @@ function CreateReport() {
             console.log(req.response);
         }
     });
-    console.log("002 CreateReport    Test");
+    
 }
 
-console.log("Test" + funDeclaration());
+
 
 function funDeclaration() {
     return "ZZ";
