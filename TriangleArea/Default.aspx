@@ -34,7 +34,7 @@
         </tr>
     </table>
     <br>
-    <div class="tributton">
+    <div title="green" class="tributton">
         <button class="button buttonkol_size" type="submit"><b>Посчитать</b></button>
     </div>
     <div class="green blue" data-price="40">cathetus</div>
