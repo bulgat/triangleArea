@@ -79,7 +79,7 @@
         <option value="triangle"></option>
         <option value="quad"></option>
     </datalist>
-
+    <img align="center" src="../image/block.jpg" loading="lazy" width="100" alt="..." />
     <asp:PlaceHolder ID="PlaceHolder1"
         runat="server" />
 

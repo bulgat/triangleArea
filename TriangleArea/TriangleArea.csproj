@@ -214,6 +214,7 @@
     </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="HomeWebForm.aspx" />
+    <Content Include="image\block.jpg" />
     <Content Include="image\bubble.png" />
     <Content Include="image\pot.jpg" />
     <Content Include="Scripts\ai.0.15.0-build58334.js" />
