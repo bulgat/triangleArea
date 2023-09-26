@@ -74,12 +74,18 @@
     <a href="/HomeWebForm">sort link</a>
     <a href="#" class="google"></a>
     <a href="#" class="youtube"></a>
+    <div style="background-color:blue; width:440px;height:240px;position:relative;">
+       <div class="box" style="background-color:red; border:1px solid black; height:200px; width:400px; margin:20px;margin-top:20px;margin-bottom:20px;
+padding:10px;position:absolute;"></div>
+    </div>
+    
     <input list="country" />
     <datalist id="country">
         <option value="triangle"></option>
         <option value="quad"></option>
     </datalist>
     <img align="center" src="../image/block.jpg" loading="lazy" width="100" alt="..." />
+    
     <asp:PlaceHolder ID="PlaceHolder1"
         runat="server" />
 

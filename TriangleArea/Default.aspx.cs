@@ -6,6 +6,7 @@ using System.Web;
 using System.Web.Services;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Xml;
 
 namespace TriangleArea
 {
@@ -34,6 +35,14 @@ namespace TriangleArea
             {
                 
             }
+            XmlDocument doc = new XmlDocument();
+            System.Diagnostics.Debug.WriteLine("  Default  = "+ doc.ToString());
+            /*
+            using(var a = new object())
+            {
+                System.Diagnostics.Debug.WriteLine("  Def  = " );
+            }
+            */
         }
     }
 }

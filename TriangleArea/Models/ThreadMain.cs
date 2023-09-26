@@ -135,6 +135,11 @@ namespace TriangleArea.Models
                     Monitor.Exit(lockTask);
                 }
             }
+            var kol = 99;
+            lock ("Stop")
+            {
+                System.Diagnostics.Debug.WriteLine("Lock STOP "+ kol);
+            }
 
         }
         static void WriteSecond()
