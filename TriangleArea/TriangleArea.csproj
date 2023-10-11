@@ -396,16 +396,18 @@
       <DependentUpon>HomeWebForm.aspx</DependentUpon>
     </Compile>
     <Compile Include="Models\AdapterProgram.cs" />
+    <Compile Include="Models\adapter\AbstractAuto.cs" />
     <Compile Include="Models\adapter\Auto.cs" />
     <Compile Include="Models\adapter\Beast.cs" />
     <Compile Include="Models\adapter\Camel.cs" />
     <Compile Include="Models\adapter\CamelToTransportAdapter.cs" />
     <Compile Include="Models\adapter\Driver.cs" />
     <Compile Include="Models\adapter\IAnimal.cs" />
+    <Compile Include="Models\adapter\IMoto.cs" />
     <Compile Include="Models\autofacBusiness\AutofacBusiness.cs" />
     <Compile Include="Models\IBrute.cs" />
     <Compile Include="Models\IdentityModels.cs" />
-    <Compile Include="Models\ITransport.cs" />
+    <Compile Include="Models\adapter\ITransport.cs" />
     <Compile Include="Models\adapter\Jeep.cs" />
     <Compile Include="Models\LockAsyncSemaphore.cs" />
     <Compile Include="Models\stream\StreamTread.cs" />

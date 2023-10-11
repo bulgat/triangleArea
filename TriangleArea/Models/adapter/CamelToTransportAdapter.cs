@@ -17,5 +17,10 @@ namespace TriangleArea.Models
         {
             camel.Move();
         }
+
+        public void SuperMove()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
