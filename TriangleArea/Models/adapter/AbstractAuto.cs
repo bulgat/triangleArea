@@ -7,6 +7,9 @@ namespace TriangleArea.Models.adapter
 {
     public abstract class AbstractAuto
     {
-
+        public virtual void CheckKey()
+        {
+            System.Diagnostics.Debug.WriteLine("___CheckKey___");
+        }
     }
 }

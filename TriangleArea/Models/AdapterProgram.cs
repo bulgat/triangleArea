@@ -7,6 +7,9 @@ using System.Threading.Tasks;
 using System.Threading;
 using TriangleArea.Models.stream;
 using System.Collections.Concurrent;
+using System.Collections.ObjectModel;
+using System.Collections.Specialized;
+using System.Collections;
 
 namespace TriangleArea.Models
 {
@@ -15,6 +18,32 @@ namespace TriangleArea.Models
 
         public AdapterProgram()
         {
+            Stack<int> stackList = new Stack<int>();
+            stackList.Push(1);
+            stackList.Push(2);
+            stackList.Push(3);
+            var ttt = stackList.Pop();
+            System.Diagnostics.Debug.WriteLine("-00--  p = " + ttt);
+
+            int[] arrStep = new int[3];
+            Array.Resize(ref arrStep, 10);
+            System.Diagnostics.Debug.WriteLine("-01--  = " + arrStep.Length);
+
+            ObservableCollection<string> people = new ObservableCollection<string>(new string[] { "Tom", "Bob", "Sam" });
+            people.CollectionChanged += People_CollectionChanged;
+            people.Add("Bob");  // добавляем новый элемент
+
+            people.RemoveAt(1);                 // удаляем элемент
+            people[0] = "Eugene";
+
+            System.Diagnostics.Debug.WriteLine("-02--  p  = " + people[0]);
+
+            SortedList mySL = new SortedList();
+            mySL.Add("Third", "!");
+            mySL.Add("Second", "World");
+            mySL.Add("First", "Hello");
+
+
             LinkedListMain();
 
             Tourist tourist = new Tourist();
@@ -69,11 +98,11 @@ namespace TriangleArea.Models
             int item;
             bool isSuccessful = number_ar.TryDequeue(out item);
 
-            System.Diagnostics.Debug.WriteLine("-00--  per = " + isSuccessful);
-            System.Diagnostics.Debug.WriteLine("-01--  per = " + item);
+            
+            
 
             bool isSuccessful_0 = number_ar.TryDequeue(out item);
-            System.Diagnostics.Debug.WriteLine("-02--  per = " + isSuccessful_0);
+            
             System.Diagnostics.Debug.WriteLine("-03--  per = " + item);
 
             Dictionary<Type,int> map = new Dictionary<Type,int>();
@@ -85,12 +114,18 @@ namespace TriangleArea.Models
             new Thread(new ThreadStart(Run)).Start();
 
         }
+        void People_CollectionChanged(object sender, NotifyCollectionChangedEventArgs e)
+        {
+            System.Diagnostics.Debug.WriteLine("- 777  по   = " + e.Action);
+
+            
+        }
         public void Run()
         {
             while (true)
             {
                 Thread.Sleep(10000);
-                System.Diagnostics.Debug.WriteLine("- 777  по дор  = " + Thread.CurrentThread.GetHashCode());
+                
             }
         }
 

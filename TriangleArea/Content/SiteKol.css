@@ -38,14 +38,16 @@ div.greed {
     font-family:serif;
     margin:5px 1px 5px 1px;
 }
-ul li{
-    color:red;
+ul li {
+    color: blue;
     margin: 10px;
+    //transform: rotate(90deg);
 }
-ul li:hover {
+    ul li:hover {
         background: #53ea93;
         color: green;
-}
+        //transform: rotate(90deg);
+    }
 a {
     background-image: url(../image/bubble.png);
     background-repeat: no-repeat;
@@ -53,6 +55,7 @@ a {
     width: 100px;
     display: inline-block;
     margin-right: 10px;
+    transform: rotate(90deg);
 }
 a.google {
     background-position: -600px top;
