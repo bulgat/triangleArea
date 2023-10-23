@@ -23,26 +23,31 @@ namespace TriangleArea.Models
             stackList.Push(2);
             stackList.Push(3);
             var ttt = stackList.Pop();
-            System.Diagnostics.Debug.WriteLine("-00--  p = " + ttt);
+            
 
             int[] arrStep = new int[3];
             Array.Resize(ref arrStep, 10);
             System.Diagnostics.Debug.WriteLine("-01--  = " + arrStep.Length);
 
-            ObservableCollection<string> people = new ObservableCollection<string>(new string[] { "Tom", "Bob", "Sam" });
-            people.CollectionChanged += People_CollectionChanged;
-            people.Add("Bob");  // добавляем новый элемент
+            ObservableCollection<string> peoplelist = new ObservableCollection<string>(new string[] { "Tom", "Bob", "Sam" });
+            peoplelist.CollectionChanged += People_CollectionChanged;
+            peoplelist.Add("Bob");  // добавляем новый элемент
 
-            people.RemoveAt(1);                 // удаляем элемент
-            people[0] = "Eugene";
+            peoplelist.RemoveAt(1);                 // удаляем элемент
+            peoplelist[0] = "Eugene";
 
-            System.Diagnostics.Debug.WriteLine("-02--  p  = " + people[0]);
+System.Diagnostics.Debug.WriteLine("-00--  p = " + ttt+""+ String.Intern("kol"));
+
+
+            System.Diagnostics.Debug.WriteLine("-02--   = " + ("Tom"+String.Intern(peoplelist[0])));
 
             SortedList mySL = new SortedList();
             mySL.Add("Third", "!");
             mySL.Add("Second", "World");
             mySL.Add("First", "Hello");
 
+
+          
 
             LinkedListMain();
 
@@ -69,13 +74,21 @@ namespace TriangleArea.Models
             driver.Travel(camelTransport);
 
             MyMethod(new List<string>() { "ko", "test" });
-            MyMethod(new List<int>() { 1, 4, 7, 8 });
+            List<int> methodlist = new List<int>() { 1, 4, 7, 8 };
+            MyMethod(methodlist);
             //Console.Read();
             var i = 5;
             var enumerator = Fill(i);
 
+            var yyy = methodlist.Where(b => b == 4).FirstOrDefault();
 
+            foreach(var itemF in methodlist.Where(z=>z>0))
+            {
+                System.Diagnostics.Debug.WriteLine("- 777   = " + itemF);
+            }
             
+
+            System.Diagnostics.Debug.WriteLine("-03--  p  = " + yyy);
 
             dynamic a = "123";
             dynamic c = 50;
@@ -103,7 +116,7 @@ namespace TriangleArea.Models
 
             bool isSuccessful_0 = number_ar.TryDequeue(out item);
             
-            System.Diagnostics.Debug.WriteLine("-03--  per = " + item);
+            
 
             Dictionary<Type,int> map = new Dictionary<Type,int>();
             map.Add(typeof(int), 1);
@@ -116,7 +129,7 @@ namespace TriangleArea.Models
         }
         void People_CollectionChanged(object sender, NotifyCollectionChangedEventArgs e)
         {
-            System.Diagnostics.Debug.WriteLine("- 777  по   = " + e.Action);
+            
 
             
         }
