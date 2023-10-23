@@ -1,7 +1,7 @@
 
 
 document.addEventListener('DOMContentLoaded', function () { 
-
+    console.log("000 ** g *");
 });
 
 
@@ -52,7 +52,7 @@ function graphSearch(Graph,Start,End) {
        // console.log("001 ******", End);
       //  console.log("002 ******", Graph[current].includes(End));
         if (Graph[current].includes(End)) {
- console.log("000 ** gg **" );
+
             return true;
         } else { 
             console.log("003 ******", queue, " ==  queue[current] = ", queue[current]);
@@ -61,6 +61,9 @@ function graphSearch(Graph,Start,End) {
     }
     
 }
-//'a', 'g'
+function clickTarget(event) {
+    console.log("Tes ", event.target);
+    console.log("Repo   Test", event.currentTarget);
+}
 console.log("graphSearch ******" + graphSearch(graph, 'a', 'g'));
 

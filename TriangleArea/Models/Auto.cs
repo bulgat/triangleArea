@@ -2,29 +2,20 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using TriangleArea.Models.adapter;
 
 namespace TriangleArea.Models
 {
-    public class Auto : AbstractAuto,ITransport,IMoto
+    public class Auto : ITransport
     {
         protected string Name= "Mers";
 
-        public Auto() {
-            CheckKey();
+        public Auto()
+        {
+            this.Name = "Super Mers";
         }
         public void Drive()
         {
             System.Diagnostics.Debug.WriteLine("--Машина едет по дороге");
-        }
-        public void Drive(string Key)
-        { 
-        
-        }
-
-        public void SuperMove()
-        {
-            throw new NotImplementedException();
         }
     }
 }

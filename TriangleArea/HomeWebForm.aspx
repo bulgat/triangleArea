@@ -12,6 +12,7 @@
     <image src="/image/pot.jpg" width="100px" />
     <br />
     <button onclick="alert('TTTT');">Click</button>
+    <h1 id="target" onclick="clickTarget(event)"><span>test </span>target</h1>
     <form id="form1" runat="server">
         <div>
         </div>

@@ -11,7 +11,7 @@ namespace TriangleArea.Models
         {
             Auto auto = new Auto();
             Jeep jeep = new Jeep();
-            System.Diagnostics.Debug.WriteLine("0003 e car = " + jeep.Name);
+            System.Diagnostics.Debug.WriteLine(jeep.Equals(auto) +" =0003  car = " + jeep.Name); ;
             ;
         }
     }

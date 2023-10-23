@@ -17,7 +17,7 @@ namespace TriangleArea.Models.stream
             var tt = sumTask.Result;
             System.Diagnostics.Debug.WriteLine("5  er  = " + tt);
             //krik().Start();
-
+           
 
             Task[] tasks1 = new Task[3]
             {

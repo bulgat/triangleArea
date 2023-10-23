@@ -4,10 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TriangleArea.Models
+namespace TriangleArea.Models.adapter
 {
-    public interface ITransport
+    internal interface IMoto
     {
-        void Drive();
+        void Drive(string Key);
+        void SuperMove();
     }
+
 }
