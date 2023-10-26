@@ -30,6 +30,22 @@ namespace TriangleArea.Models
             System.Diagnostics.Debug.WriteLine("-01--  = " + arrStep.Length);
 
             ObservableCollection<string> peoplelist = new ObservableCollection<string>(new string[] { "Tom", "Bob", "Sam" });
+            string[] peopleArray = { "Tom", "Sam", "Bob" };
+            IEnumerator peopleEnumerator = peopleArray.GetEnumerator();
+
+            while(peopleEnumerator.MoveNext())
+            {
+               System.Diagnostics.Debug.WriteLine("-02-  p  = " + peopleEnumerator.Current); 
+            }
+
+            var peopleEnum = FillEnumerator(0);
+
+            System.Diagnostics.Debug.WriteLine("-05-  p  = " + peopleEnum.Count());
+
+            var pointEnum = GetEnumerator(3, 6, 7);
+
+            System.Diagnostics.Debug.WriteLine("-06-  p  = " + pointEnum.Count());
+
             peoplelist.CollectionChanged += People_CollectionChanged;
             peoplelist.Add("Bob");  // добавляем новый элемент
 
@@ -46,8 +62,12 @@ System.Diagnostics.Debug.WriteLine("-00--  p = " + ttt+""+ String.Intern("kol"))
             mySL.Add("Second", "World");
             mySL.Add("First", "Hello");
 
+            string[] dinosaurs = { "Compsognathus",
+            "Amargasaurus",   "Oviraptor",      "Velociraptor",
+            "Deinonychus",    "Dilophosaurus",  "Gallimimus",
+            "Triceratops" };
 
-          
+            //Array.FindIndex(dinosaurs, 0);
 
             LinkedListMain();
 
@@ -78,7 +98,7 @@ System.Diagnostics.Debug.WriteLine("-00--  p = " + ttt+""+ String.Intern("kol"))
             MyMethod(methodlist);
             //Console.Read();
             var i = 5;
-            var enumerator = Fill(i);
+            var enumerator = FillEnumerator(i);
 
             var yyy = methodlist.Where(b => b == 4).FirstOrDefault();
 
@@ -143,8 +163,23 @@ System.Diagnostics.Debug.WriteLine("-00--  p = " + ttt+""+ String.Intern("kol"))
         }
 
 
-        static IEnumerator<int> Fill(int i)
+        private IEnumerable<string> FillEnumerator(int i)
         {
+            System.Diagnostics.Debug.WriteLine("-  person = " );
+            var result = new List<string>();
+
+            string[] peopleArray = { "Tom", "Sam", "Bob" };
+
+            IEnumerable<string> peopleEn = peopleArray.Cast<string>().ToList();
+
+            System.Diagnostics.Debug.WriteLine("-03-  p  = " + peopleEn.Count());
+            foreach (var itemEn in peopleEn)
+            {
+                System.Diagnostics.Debug.WriteLine("-04-  p  = " + itemEn);
+                yield return itemEn;
+            }
+
+
             /*
             if (i % 2==0)
             {
@@ -153,11 +188,16 @@ System.Diagnostics.Debug.WriteLine("-00--  p = " + ttt+""+ String.Intern("kol"))
             */
             //if (i < 3)
             //{
-                i++;
-                yield return i;
+            //i++;
+             //   yield return i;
            // }
         }
-      
+        public IEnumerable<int> GetEnumerator(int X,int Y,int Z)
+        {
+            yield return X;
+            yield return Y;
+            yield return Z;
+        }
 
         void MyMethod<T>(List<T> list)
         {
@@ -172,14 +212,14 @@ System.Diagnostics.Debug.WriteLine("-00--  p = " + ttt+""+ String.Intern("kol"))
             LinkedList<string> people = new LinkedList<string>(employees);
             foreach (string person in people)
             {
-                System.Diagnostics.Debug.WriteLine("---  person = " + person);
+                
             }
             char[] strList = "zzzasdaf".ToCharArray();
              Array.Reverse(strList);
             strList = strList.Distinct().ToArray();
             for(int i=0; i< strList.Length;i++)
             {
-                System.Diagnostics.Debug.WriteLine("---  p  = " + strList[i]);
+                
             }
 
         }
