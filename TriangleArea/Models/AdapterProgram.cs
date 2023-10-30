@@ -63,11 +63,12 @@ System.Diagnostics.Debug.WriteLine("-00--  p = " + ttt+""+ String.Intern("kol"))
             mySL.Add("First", "Hello");
 
             string[] dinosaurs = { "Compsognathus",
-            "Amargasaurus",   "Oviraptor",      "Velociraptor",
+            "Amargasaurus",   "Ovz",      "Velociraptor",
             "Deinonychus",    "Dilophosaurus",  "Gallimimus",
-            "Triceratops" };
+            "Triceratopsz" };
 
-            //Array.FindIndex(dinosaurs, 0);
+            System.Diagnostics.Debug.WriteLine("-033--   = "+Array.FindIndex(dinosaurs, TrueWi));
+            System.Diagnostics.Debug.WriteLine("-033--   = " + Array.FindIndex(dinosaurs, FalseWi));
 
             LinkedListMain();
 
@@ -95,6 +96,9 @@ System.Diagnostics.Debug.WriteLine("-00--  p = " + ttt+""+ String.Intern("kol"))
 
             MyMethod(new List<string>() { "ko", "test" });
             List<int> methodlist = new List<int>() { 1, 4, 7, 8 };
+            System.Diagnostics.Debug.WriteLine("-050--   = " + methodlist.Count+ "   Capacity = " + methodlist.Capacity);
+            methodlist.Capacity=20;
+            System.Diagnostics.Debug.WriteLine("-051--   = " + methodlist.Count+ "   Capacity = " + methodlist.Capacity);
             MyMethod(methodlist);
             //Console.Read();
             var i = 5;
@@ -106,7 +110,10 @@ System.Diagnostics.Debug.WriteLine("-00--  p = " + ttt+""+ String.Intern("kol"))
             {
                 System.Diagnostics.Debug.WriteLine("- 777   = " + itemF);
             }
-            
+            methodlist.Clear();
+            System.Diagnostics.Debug.WriteLine("-052--   = " + methodlist.Count + "   Capacity = " + methodlist.Capacity);
+            methodlist.TrimExcess();
+            System.Diagnostics.Debug.WriteLine("-053--   = " + methodlist.Count + "   Capacity = " + methodlist.Capacity);
 
             System.Diagnostics.Debug.WriteLine("-03--  p  = " + yyy);
 
@@ -147,6 +154,16 @@ System.Diagnostics.Debug.WriteLine("-00--  p = " + ttt+""+ String.Intern("kol"))
             new Thread(new ThreadStart(Run)).Start();
 
         }
+        private static bool TrueWi(String s)
+        {
+            System.Diagnostics.Debug.WriteLine("-041--   = " + s);
+            return s.IndexOf('z')>-1;
+        }
+        private static bool FalseWi(String s)
+        {
+            return false;
+        }
+
         void People_CollectionChanged(object sender, NotifyCollectionChangedEventArgs e)
         {
             
