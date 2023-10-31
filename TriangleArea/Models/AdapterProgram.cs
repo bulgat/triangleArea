@@ -10,12 +10,14 @@ using System.Collections.Concurrent;
 using System.Collections.ObjectModel;
 using System.Collections.Specialized;
 using System.Collections;
+using System.Runtime.CompilerServices;
 
 namespace TriangleArea.Models
 {
+    public delegate void MakeNoise();
     public class AdapterProgram
     {
-
+        public MakeNoise makeNoise;
         public AdapterProgram()
         {
             Stack<int> stackList = new Stack<int>();
@@ -153,7 +155,29 @@ System.Diagnostics.Debug.WriteLine("-00--  p = " + ttt+""+ String.Intern("kol"))
 
             new Thread(new ThreadStart(Run)).Start();
 
+
+
+            Fire();
+            FireFlash();
         }
+        public void Fire()
+        {
+            makeNoise += MakeFlash;
+            makeNoise?.Invoke();
+        }
+        public virtual void FireFlash()
+        {
+            System.Diagnostics.Debug.WriteLine("-105   FireFlash = ");
+        }
+        //public abstract void FireGung();
+        //{
+            //System.Diagnostics.Debug.WriteLine("-105   FireFlash = ");
+        //}
+        public void MakeFlash()
+        {
+            System.Diagnostics.Debug.WriteLine("-104- MakeFlash = ");
+        }
+
         private static bool TrueWi(String s)
         {
             System.Diagnostics.Debug.WriteLine("-041--   = " + s);
