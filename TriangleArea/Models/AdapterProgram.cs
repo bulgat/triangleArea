@@ -11,6 +11,7 @@ using System.Collections.ObjectModel;
 using System.Collections.Specialized;
 using System.Collections;
 using System.Runtime.CompilerServices;
+using System.Diagnostics;
 
 namespace TriangleArea.Models
 {
@@ -30,7 +31,9 @@ namespace TriangleArea.Models
             int[] arrStep = new int[3];
             Array.Resize(ref arrStep, 10);
             System.Diagnostics.Debug.WriteLine("-01--  = " + arrStep.Length);
+            System.Diagnostics.Debug.Assert(arrStep.Length>=3);
 
+            
             ObservableCollection<string> peoplelist = new ObservableCollection<string>(new string[] { "Tom", "Bob", "Sam" });
             string[] peopleArray = { "Tom", "Sam", "Bob" };
             IEnumerator peopleEnumerator = peopleArray.GetEnumerator();
@@ -39,6 +42,38 @@ namespace TriangleArea.Models
             {
                System.Diagnostics.Debug.WriteLine("-02-  p  = " + peopleEnumerator.Current); 
             }
+            System.Diagnostics.Debug.Assert(arrStep.Length >= 4);
+            Queue<string> people = new Queue<string>(new List<string> { "Tom", "Sam", "Bob" });
+            // добавляем элементы
+            people.Enqueue("Tom0");  // people = { Tom }
+            people.Enqueue("Bob0");  // people = { Tom, Bob }
+            people.Enqueue("Sam0");  // people = { Tom, Bob, Sam }
+
+            // получаем элемент из самого начала очереди 
+            var firstPerson = people.Peek();
+            System.Diagnostics.Debug.WriteLine("firstPerson = " + firstPerson); // Tom
+
+            // удаляем элементы
+            System.Diagnostics.Debug.WriteLine("count = " + people.Count);
+            var person1 = people.Dequeue();  // people = { Bob, Sam  }
+            System.Diagnostics.Debug.WriteLine("person1 = " + person1); // Tom
+            var person2 = people.Dequeue();  // people = { Sam  }
+            System.Diagnostics.Debug.WriteLine("person2 = " + person2); // Bob
+            var person3 = people.Dequeue();  // people = {  }
+            System.Diagnostics.Debug.WriteLine("person3 = " + person3); // Sam
+            System.Diagnostics.Debug.WriteLine("count = " + people.Count);
+
+
+            // Create an index for an array.
+            int index;
+
+            // Perform some action that sets the index.
+            index = -40;
+
+            // Test that the index value is valid.
+            Debug.Assert(index > -1);
+
+
 
             var peopleEnum = FillEnumerator(0);
 
