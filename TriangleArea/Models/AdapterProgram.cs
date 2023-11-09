@@ -12,12 +12,23 @@ using System.Collections.Specialized;
 using System.Collections;
 using System.Runtime.CompilerServices;
 using System.Diagnostics;
+using Microsoft.Ajax.Utilities;
+using System.Linq.Expressions;
 
 namespace TriangleArea.Models
 {
     public delegate void MakeNoise();
     public class AdapterProgram
     {
+        [Flags]
+        enum MultiKey 
+        {
+            None = 0,
+            Black = 1,
+            Red = 2,
+            Green = 4,
+            Blue = 8
+        };
         public MakeNoise makeNoise;
         public AdapterProgram()
         {
@@ -30,17 +41,20 @@ namespace TriangleArea.Models
 
             int[] arrStep = new int[3];
             Array.Resize(ref arrStep, 10);
-            System.Diagnostics.Debug.WriteLine("-01--  = " + arrStep.Length);
+            System.Diagnostics.Debug.WriteLine("-01--"+ MultiKey.Red.ToString() + " ____ val = "+ ((MultiKey)5) + " = " + arrStep.Length);
             System.Diagnostics.Debug.Assert(arrStep.Length>=3);
+            Expression<Func<int>> add = () => 1 + 2;
+            var func = add.Compile(); // Create Delegate
+            var answer = func(); // Invoke Delegate
+            System.Diagnostics.Debug.WriteLine("answer = " + answer);
 
-            
             ObservableCollection<string> peoplelist = new ObservableCollection<string>(new string[] { "Tom", "Bob", "Sam" });
             string[] peopleArray = { "Tom", "Sam", "Bob" };
             IEnumerator peopleEnumerator = peopleArray.GetEnumerator();
 
             while(peopleEnumerator.MoveNext())
             {
-               System.Diagnostics.Debug.WriteLine("-02-  p  = " + peopleEnumerator.Current); 
+               System.Diagnostics.Debug.WriteLine("-02-  val = "+ ((MultiKey)8) + "  = " + peopleEnumerator.Current); 
             }
             System.Diagnostics.Debug.Assert(arrStep.Length >= 4);
             Queue<string> people = new Queue<string>(new List<string> { "Tom", "Sam", "Bob" });
@@ -51,10 +65,10 @@ namespace TriangleArea.Models
 
             // получаем элемент из самого начала очереди 
             var firstPerson = people.Peek();
-            System.Diagnostics.Debug.WriteLine("firstPerson = " + firstPerson); // Tom
+            System.Diagnostics.Debug.WriteLine("val =" + ((MultiKey)3) + "    firstPerson = " + firstPerson); // Tom
 
             // удаляем элементы
-            System.Diagnostics.Debug.WriteLine("count = " + people.Count);
+            System.Diagnostics.Debug.WriteLine("VAL= "+ MultiKey.Blue + "    count = " + people.Count);
             var person1 = people.Dequeue();  // people = { Bob, Sam  }
             System.Diagnostics.Debug.WriteLine("person1 = " + person1); // Tom
             var person2 = people.Dequeue();  // people = { Sam  }
