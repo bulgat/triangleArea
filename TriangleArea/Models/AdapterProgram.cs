@@ -14,6 +14,10 @@ using System.Runtime.CompilerServices;
 using System.Diagnostics;
 using Microsoft.Ajax.Utilities;
 using System.Linq.Expressions;
+using System.IO;
+using System.Text;
+using System.IO.Pipes;
+using System.Runtime.InteropServices;
 
 namespace TriangleArea.Models
 {
@@ -30,8 +34,67 @@ namespace TriangleArea.Models
             Blue = 8
         };
         public MakeNoise makeNoise;
+
+
+  
+
         public AdapterProgram()
         {
+            /*
+            Stream inputStream = Console.OpenStandardInput();
+            byte[] bytes = new byte[10];
+            System.Diagnostics.Debug.WriteLine("0000 To decode, type or paste the UTF7 encoded string and press enter:");
+            System.Diagnostics.Debug.WriteLine("0001 (Example: \"M+APw-nchen ist wundervoll\")");
+            int outputLength = inputStream.Read(bytes, 0, 10);
+            char[] chars = Encoding.UTF7.GetChars(bytes, 0, outputLength);
+            System.Diagnostics.Debug.WriteLine("0002 Decoded string:");
+            System.Diagnostics.Debug.WriteLine("0003 _________"+new string(chars));
+            */
+            System.Diagnostics.Debug.WriteLine("=0005 "+DateTime.Now.Millisecond);
+
+            Task.Factory.StartNew(() =>
+            {
+                System.Diagnostics.Debug.WriteLine("__000008  Server");
+                var server = new NamedPipeServerStream("PipesOfPiece");
+                server.WaitForConnection();
+                StreamReader reader = new StreamReader(server);
+                StreamWriter writer = new StreamWriter(server);
+                while (true)
+                {
+                    System.Diagnostics.Debug.WriteLine("__0000092  StartServer  " + reader);
+                    System.Diagnostics.Debug.WriteLine("__0000093  StartServer  " + reader.ReadLine());
+                    string line = reader.ReadLine();
+                    System.Diagnostics.Debug.WriteLine("__0000094 Server line = " + line);
+                    writer.WriteLine(String.Join("", line.Reverse()));
+                    
+                    //writer.Flush();
+                }
+            });
+            System.Diagnostics.Debug.WriteLine("=0005 " + DateTime.Now.Millisecond);
+            //Thread.Sleep(50000);
+            System.Diagnostics.Debug.WriteLine("=0006 " + DateTime.Now.Millisecond);
+            
+
+           
+
+            /*
+            using (var s = new NamedPipeServerStream("pipedream"))
+            {
+                s.WaitForConnection();
+                s.WriteByte(100);
+                System.Diagnostics.Debug.WriteLine("0003 _________" + s.ReadByte());
+            }
+            // Клиент:
+            using (var s = new NamedPipeClientStream("pipedream"))
+            {
+                s.Connect();
+                System.Diagnostics.Debug.WriteLine("0004 _________" + s.ReadByte());
+                s.WriteByte(200);
+            }
+            */
+
+            System.Diagnostics.Debug.WriteLine("0009 " );
+
             Stack<int> stackList = new Stack<int>();
             stackList.Push(1);
             stackList.Push(2);
@@ -42,7 +105,7 @@ namespace TriangleArea.Models
             int[] arrStep = new int[3];
             Array.Resize(ref arrStep, 10);
             System.Diagnostics.Debug.WriteLine("-01--"+ MultiKey.Red.ToString() + " ____ val = "+ ((MultiKey)5) + " = " + arrStep.Length);
-            System.Diagnostics.Debug.Assert(arrStep.Length>=3);
+            //System.Diagnostics.Debug.Assert(arrStep.Length>=3);
             Expression<Func<int>> add = () => 1 + 2;
             var func = add.Compile(); // Create Delegate
             var answer = func(); // Invoke Delegate
@@ -56,7 +119,7 @@ namespace TriangleArea.Models
             {
                System.Diagnostics.Debug.WriteLine("-02-  val = "+ ((MultiKey)8) + "  = " + peopleEnumerator.Current); 
             }
-            System.Diagnostics.Debug.Assert(arrStep.Length >= 4);
+            //System.Diagnostics.Debug.Assert(arrStep.Length >= 4);
             Queue<string> people = new Queue<string>(new List<string> { "Tom", "Sam", "Bob" });
             // добавляем элементы
             people.Enqueue("Tom0");  // people = { Tom }
@@ -85,7 +148,7 @@ namespace TriangleArea.Models
             index = -40;
 
             // Test that the index value is valid.
-            Debug.Assert(index > -1);
+            //Debug.Assert(index > -1);
 
 
 
@@ -200,14 +263,16 @@ System.Diagnostics.Debug.WriteLine("-00--  p = " + ttt+""+ String.Intern("kol"))
             map.Add(typeof(int), 1);
             map.Add(typeof(string), 999);
 
-            System.Diagnostics.Debug.WriteLine(map[typeof(int)] +"-04--  pe = " + map[typeof(string)]);
+            System.Diagnostics.Debug.WriteLine(map[typeof(int)] +"-000010--  pe = " + map[typeof(string)]);
 
-            new Thread(new ThreadStart(Run)).Start();
+            
 
 
 
             Fire();
             FireFlash();
+            System.Diagnostics.Debug.WriteLine(  "-000011--  = " );
+            new Thread(new ThreadStart(RunTest)).Start();
         }
         public void Fire()
         {
@@ -243,12 +308,32 @@ System.Diagnostics.Debug.WriteLine("-00--  p = " + ttt+""+ String.Intern("kol"))
 
             
         }
-        public void Run()
+        public void RunTest()
         {
+            System.Diagnostics.Debug.WriteLine("__000006 ");
+            //Client
+            var client = new NamedPipeClientStream("PipesOfPiece");
+            client.Connect();
+            StreamReader reader = new StreamReader(client);
+            StreamWriter writer = new StreamWriter(client);
+            System.Diagnostics.Debug.WriteLine("__000007 ");
             while (true)
             {
-                Thread.Sleep(10000);
-                
+                string input = Console.ReadLine();
+                System.Diagnostics.Debug.WriteLine("__000003 _________ input = " + input);
+                if (String.IsNullOrEmpty(input)==false)
+                {
+
+                    writer.WriteLine(input);
+                    writer.Flush();
+                    System.Diagnostics.Debug.WriteLine("__000004  " + reader.ReadLine());
+                }
+                else 
+                { 
+
+                    System.Diagnostics.Debug.WriteLine("__000005 Break  ");
+                    break;
+                }
             }
         }
 
