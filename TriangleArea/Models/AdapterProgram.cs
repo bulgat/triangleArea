@@ -40,16 +40,7 @@ namespace TriangleArea.Models
 
         public AdapterProgram()
         {
-            /*
-            Stream inputStream = Console.OpenStandardInput();
-            byte[] bytes = new byte[10];
-            System.Diagnostics.Debug.WriteLine("0000 To decode, type or paste the UTF7 encoded string and press enter:");
-            System.Diagnostics.Debug.WriteLine("0001 (Example: \"M+APw-nchen ist wundervoll\")");
-            int outputLength = inputStream.Read(bytes, 0, 10);
-            char[] chars = Encoding.UTF7.GetChars(bytes, 0, outputLength);
-            System.Diagnostics.Debug.WriteLine("0002 Decoded string:");
-            System.Diagnostics.Debug.WriteLine("0003 _________"+new string(chars));
-            */
+            
             System.Diagnostics.Debug.WriteLine("=0005 "+DateTime.Now.Millisecond);
 
             Task.Factory.StartNew(() =>
@@ -77,21 +68,7 @@ namespace TriangleArea.Models
 
            
 
-            /*
-            using (var s = new NamedPipeServerStream("pipedream"))
-            {
-                s.WaitForConnection();
-                s.WriteByte(100);
-                System.Diagnostics.Debug.WriteLine("0003 _________" + s.ReadByte());
-            }
-            // Клиент:
-            using (var s = new NamedPipeClientStream("pipedream"))
-            {
-                s.Connect();
-                System.Diagnostics.Debug.WriteLine("0004 _________" + s.ReadByte());
-                s.WriteByte(200);
-            }
-            */
+      
 
             System.Diagnostics.Debug.WriteLine("0009 " );
 
