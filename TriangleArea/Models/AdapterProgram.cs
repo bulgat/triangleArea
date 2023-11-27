@@ -114,14 +114,14 @@ namespace TriangleArea.Models
             System.Diagnostics.Debug.WriteLine("val =" + ((MultiKey)3) + "    firstPerson = " + firstPerson); // Tom
 
             // удаляем элементы
-            System.Diagnostics.Debug.WriteLine("VAL= "+ MultiKey.Blue + "    count = " + people.Count);
+            //System.Diagnostics.Debug.WriteLine("VAL= "+ MultiKey.Blue + "    count = " + people.Count);
             var person1 = people.Dequeue();  // people = { Bob, Sam  }
-            System.Diagnostics.Debug.WriteLine("person1 = " + person1); // Tom
+            //System.Diagnostics.Debug.WriteLine("person1 = " + person1); // Tom
             var person2 = people.Dequeue();  // people = { Sam  }
-            System.Diagnostics.Debug.WriteLine("person2 = " + person2); // Bob
+            //System.Diagnostics.Debug.WriteLine("person2 = " + person2); // Bob
             var person3 = people.Dequeue();  // people = {  }
-            System.Diagnostics.Debug.WriteLine("person3 = " + person3); // Sam
-            System.Diagnostics.Debug.WriteLine("count = " + people.Count);
+            //System.Diagnostics.Debug.WriteLine("person3 = " + person3); // Sam
+            //System.Diagnostics.Debug.WriteLine("count = " + people.Count);
 
             int index;
 

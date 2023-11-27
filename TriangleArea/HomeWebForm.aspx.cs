@@ -30,8 +30,6 @@ namespace TriangleArea
 
             RouteList = new List<string>() { Route.Home.ToString(), Route.Web.ToString(), Route.Triangle.ToString()};
 
-         
-
             System.Diagnostics.Debug.WriteLine("---- start ----- "+ Route.Home.ToString());
             var adapter=  new Models.AdapterProgram();
             System.Diagnostics.Debug.WriteLine("---- end ----- " );
@@ -55,7 +53,7 @@ namespace TriangleArea
                 System.Diagnostics.Debug.WriteLine("An element with Key = \"txt\" already exists.");
             }
             System.Diagnostics.Debug.WriteLine("For key = \"rtf\", value = {0}.", openWith["bmp"]);
-            // var client = new HttpClient();
+
 
         }
       
