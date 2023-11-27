@@ -62,6 +62,7 @@ namespace TriangleArea.Models
                 }
             });
             System.Diagnostics.Debug.WriteLine("=0005 " + DateTime.Now.Millisecond);
+
             System.Diagnostics.Debug.WriteLine("=0006 " + DateTime.Now.Millisecond);
             System.Diagnostics.Debug.WriteLine("=0006 " + DateTime.Now.Millisecond);
             System.Diagnostics.Debug.WriteLine("=0006 " + DateTime.Now.Millisecond);
@@ -118,17 +119,9 @@ namespace TriangleArea.Models
             System.Diagnostics.Debug.WriteLine("person3 = " + person3); // Sam
             System.Diagnostics.Debug.WriteLine("count = " + people.Count);
 
-
-            // Create an index for an array.
             int index;
 
-            // Perform some action that sets the index.
             index = -40;
-
-            // Test that the index value is valid.
-            //Debug.Assert(index > -1);
-
-
 
             var peopleEnum = FillEnumerator(0);
 
@@ -226,26 +219,17 @@ System.Diagnostics.Debug.WriteLine("-00--  p = " + ttt+""+ String.Intern("kol"))
             number_ar.Enqueue(400);
             number_ar.Enqueue(3);
 
-         
             int item;
             bool isSuccessful = number_ar.TryDequeue(out item);
 
-            
-            
-
             bool isSuccessful_0 = number_ar.TryDequeue(out item);
-            
-            
+
 
             Dictionary<Type,int> map = new Dictionary<Type,int>();
             map.Add(typeof(int), 1);
             map.Add(typeof(string), 999);
 
             System.Diagnostics.Debug.WriteLine(map[typeof(int)] +"-000010--  pe = " + map[typeof(string)]);
-
-            
-
-
 
             Fire();
             FireFlash();
