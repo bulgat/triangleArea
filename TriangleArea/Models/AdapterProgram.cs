@@ -35,12 +35,16 @@ namespace TriangleArea.Models
         };
         public MakeNoise makeNoise;
 
-
-  
-
         public AdapterProgram()
         {
-            
+
+            ThreadWait.Main();
+            ThreadMutex.Main();
+            ThreadSemaphore.Main();
+            ThreadCancelation.Main();
+            ThreadDelegate.Main();
+            TaskFactory.Main();
+
             System.Diagnostics.Debug.WriteLine("=0005 "+DateTime.Now.Millisecond);
 
             Task.Factory.StartNew(() =>
@@ -185,7 +189,7 @@ System.Diagnostics.Debug.WriteLine("-00--  p = " + ttt+""+ String.Intern("kol"))
             methodlist.Capacity=20;
             System.Diagnostics.Debug.WriteLine("-051--   = " + methodlist.Count+ "   Capacity = " + methodlist.Capacity);
             MyMethod(methodlist);
-            //Console.Read();
+ 
             var i = 5;
             var enumerator = FillEnumerator(i);
 
@@ -245,10 +249,7 @@ System.Diagnostics.Debug.WriteLine("-00--  p = " + ttt+""+ String.Intern("kol"))
         {
             System.Diagnostics.Debug.WriteLine("-105   FireFlash = ");
         }
-        //public abstract void FireGung();
-        //{
-            //System.Diagnostics.Debug.WriteLine("-105   FireFlash = ");
-        //}
+
         public void MakeFlash()
         {
             System.Diagnostics.Debug.WriteLine("-104- MakeFlash = ");
@@ -316,18 +317,6 @@ System.Diagnostics.Debug.WriteLine("-00--  p = " + ttt+""+ String.Intern("kol"))
                 yield return itemEn;
             }
 
-
-            /*
-            if (i % 2==0)
-            {
-                yield break;
-            }
-            */
-            //if (i < 3)
-            //{
-            //i++;
-             //   yield return i;
-           // }
         }
         public IEnumerable<int> GetEnumerator(int X,int Y,int Z)
         {
@@ -361,14 +350,5 @@ System.Diagnostics.Debug.WriteLine("-00--  p = " + ttt+""+ String.Intern("kol"))
 
         }
     }
-
-    // класс машины
-  
-
-    // интерфейс животного
- 
-    // класс верблюда
-
-    // Адаптер от Camel к ITransport
 
 }
