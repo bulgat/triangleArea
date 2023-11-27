@@ -37,7 +37,10 @@ namespace TriangleArea.Models
 
         public AdapterProgram()
         {
-
+            System.Diagnostics.Debug.WriteLine("=0006 " + DateTime.Now.Millisecond);
+            System.Diagnostics.Debug.WriteLine("=0006 " + DateTime.Now.Millisecond);
+            System.Diagnostics.Debug.WriteLine("=0006 " + DateTime.Now.Millisecond);
+            System.Diagnostics.Debug.WriteLine("=0006 " + DateTime.Now.Millisecond);
             ThreadWait.Main();
             ThreadMutex.Main();
             ThreadSemaphore.Main();
@@ -67,10 +70,7 @@ namespace TriangleArea.Models
             });
             System.Diagnostics.Debug.WriteLine("=0005 " + DateTime.Now.Millisecond);
 
-            System.Diagnostics.Debug.WriteLine("=0006 " + DateTime.Now.Millisecond);
-            System.Diagnostics.Debug.WriteLine("=0006 " + DateTime.Now.Millisecond);
-            System.Diagnostics.Debug.WriteLine("=0006 " + DateTime.Now.Millisecond);
-            System.Diagnostics.Debug.WriteLine("=0006 " + DateTime.Now.Millisecond);
+ 
             System.Diagnostics.Debug.WriteLine("=0006 " + DateTime.Now.Millisecond);
             System.Diagnostics.Debug.WriteLine("=0006 " + DateTime.Now.Millisecond);
             System.Diagnostics.Debug.WriteLine("=0006 " + DateTime.Now.Millisecond);
@@ -102,12 +102,12 @@ namespace TriangleArea.Models
             {
                System.Diagnostics.Debug.WriteLine("-02-  val = "+ ((MultiKey)8) + "  = " + peopleEnumerator.Current); 
             }
-            //System.Diagnostics.Debug.Assert(arrStep.Length >= 4);
+            ////System.Diagnostics.Debug.Assert(arrStep.Length >= 4);
             Queue<string> people = new Queue<string>(new List<string> { "Tom", "Sam", "Bob" });
             // добавляем элементы
-            people.Enqueue("Tom0");  // people = { Tom }
-            people.Enqueue("Bob0");  // people = { Tom, Bob }
-            people.Enqueue("Sam0");  // people = { Tom, Bob, Sam }
+            people.Enqueue("Tom0");  
+            people.Enqueue("Bob0"); 
+            people.Enqueue("Sam0"); 
 
             // получаем элемент из самого начала очереди 
             var firstPerson = people.Peek();
