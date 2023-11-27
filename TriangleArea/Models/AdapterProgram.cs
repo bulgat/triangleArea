@@ -62,13 +62,14 @@ namespace TriangleArea.Models
                 }
             });
             System.Diagnostics.Debug.WriteLine("=0005 " + DateTime.Now.Millisecond);
-            //Thread.Sleep(50000);
             System.Diagnostics.Debug.WriteLine("=0006 " + DateTime.Now.Millisecond);
-            
-
-           
-
-      
+            System.Diagnostics.Debug.WriteLine("=0006 " + DateTime.Now.Millisecond);
+            System.Diagnostics.Debug.WriteLine("=0006 " + DateTime.Now.Millisecond);
+            System.Diagnostics.Debug.WriteLine("=0006 " + DateTime.Now.Millisecond);
+            System.Diagnostics.Debug.WriteLine("=0006 " + DateTime.Now.Millisecond);
+            System.Diagnostics.Debug.WriteLine("=0006 " + DateTime.Now.Millisecond);
+            System.Diagnostics.Debug.WriteLine("=0006 " + DateTime.Now.Millisecond);
+            System.Diagnostics.Debug.WriteLine("=0006 " + DateTime.Now.Millisecond);
 
             System.Diagnostics.Debug.WriteLine("0009 " );
 
