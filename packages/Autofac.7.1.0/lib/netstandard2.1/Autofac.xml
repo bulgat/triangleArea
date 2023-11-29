@@ -50,7 +50,7 @@
         </member>
         <member name="T:Autofac.Builder.ContainerBuildOptions">
             <summary>
-            Parameterises the construction of a container by a <see cref="T:Autofac.ContainerBuilder"/>.
+            Behaviors for the construction of a container by a <see cref="T:Autofac.ContainerBuilder"/>.
             </summary>
         </member>
         <member name="F:Autofac.Builder.ContainerBuildOptions.None">
@@ -1232,6 +1232,11 @@
               Looks up a localized string similar to The type &apos;{0}&apos; is not assignable to service &apos;{1}&apos;..
             </summary>
         </member>
+        <member name="P:Autofac.Builder.RegistrationBuilderResources.OnlyRegisterableTypesAllowed">
+            <summary>
+              Looks up a localized string similar to The type &apos;{0}&apos; is not concrete. Only concrete types (no interfaces, abstract classes, open generics, etc.) can be registered by type..
+            </summary>
+        </member>
         <member name="T:Autofac.ContainerBuilder">
              <summary>
              Used to build an <see cref="T:Autofac.IContainer"/> from component registrations.
@@ -1915,7 +1920,7 @@
             </summary>
             <param name="instance">The object instance.</param>
             <param name="p">The parameter that may provide the value.</param>
-            <param name="ctxt">The component context.</param>
+            <param name="context">The component context.</param>
             <returns>True if the parameter could provide a value, and the property was set. False otherwise.</returns>
         </member>
         <member name="T:Autofac.Core.Activators.Reflection.InjectablePropertyState">
@@ -2460,12 +2465,6 @@
             that adds component registrations visible only in the new scope.</param>
             <returns>A new lifetime scope.</returns>
         </member>
-        <member name="M:Autofac.Core.Container.BeginLoadContextLifetimeScope(System.Runtime.Loader.AssemblyLoadContext,System.Action{Autofac.ContainerBuilder})">
-            <inheritdoc />
-        </member>
-        <member name="M:Autofac.Core.Container.BeginLoadContextLifetimeScope(System.Object,System.Runtime.Loader.AssemblyLoadContext,System.Action{Autofac.ContainerBuilder})">
-            <inheritdoc />
-        </member>
         <member name="P:Autofac.Core.Container.DiagnosticSource">
             <inheritdoc/>
         </member>
@@ -2991,7 +2990,7 @@
         </member>
         <member name="P:Autofac.Core.InternalReflectionCaches.AssemblyScanAllowedTypes">
             <summary>
-            Gets the cache used by <see cref="M:Autofac.Util.AssemblyExtensions.GetPermittedTypesForAssemblyScanning(System.Reflection.Assembly)"/>.
+            Gets the cache used by <see cref="M:Autofac.Features.Scanning.AssemblyExtensions.GetPermittedTypesForAssemblyScanning(System.Reflection.Assembly)"/>.
             </summary>
         </member>
         <member name="P:Autofac.Core.InternalReflectionCaches.IsGenericEnumerableInterface">
@@ -3027,6 +3026,11 @@
         <member name="P:Autofac.Core.InternalReflectionCaches.DefaultPublicConstructors">
             <summary>
             Gets a cache used by <see cref="T:Autofac.Core.Activators.Reflection.DefaultConstructorFinder"/>.
+            </summary>
+        </member>
+        <member name="P:Autofac.Core.InternalReflectionCaches.GenericTypeDefinitionByType">
+            <summary>
+            Gets a cache of memoized <see cref="M:System.Type.GetGenericTypeDefinition"/>.
             </summary>
         </member>
         <member name="M:Autofac.Core.InternalReflectionCaches.#ctor(Autofac.Core.ReflectionCacheSet)">
@@ -3363,12 +3367,6 @@
             }
             </code>
             </example>
-        </member>
-        <member name="M:Autofac.Core.Lifetime.LifetimeScope.BeginLoadContextLifetimeScope(System.Runtime.Loader.AssemblyLoadContext,System.Action{Autofac.ContainerBuilder})">
-            <inheritdoc />
-        </member>
-        <member name="M:Autofac.Core.Lifetime.LifetimeScope.BeginLoadContextLifetimeScope(System.Object,System.Runtime.Loader.AssemblyLoadContext,System.Action{Autofac.ContainerBuilder})">
-            <inheritdoc />
         </member>
         <member name="M:Autofac.Core.Lifetime.LifetimeScope.CreateScopeRestrictedRegistry(System.Object,System.Action{Autofac.ContainerBuilder},System.Boolean)">
             <summary>
@@ -5868,7 +5866,7 @@
         </member>
         <member name="P:Autofac.Core.Resolving.Pipeline.ResolveRequestContext.Operation">
             <summary>
-            Gets a reference to the owning resolve operation (which might emcompass multiple nested requests).
+            Gets a reference to the owning resolve operation (which might encompass multiple nested requests).
             </summary>
         </member>
         <member name="P:Autofac.Core.Resolving.Pipeline.ResolveRequestContext.ActivationScope">
@@ -5894,10 +5892,12 @@
         </member>
         <member name="P:Autofac.Core.Resolving.Pipeline.ResolveRequestContext.Instance">
             <summary>
-            Gets or sets the instance that will be returned as the result of the resolve request.
-            On the way back up the pipeline, after calling next(ctxt), this value will be populated
-            with the resolved instance. Check the <see cref="P:Autofac.Core.Resolving.Pipeline.ResolveRequestContext.NewInstanceActivated"/> property to determine
-            whether the object here was a newly activated instance, or a shared instance previously activated.
+            Gets or sets the instance that will be returned as the result of the
+            resolve request. On the way back up the pipeline, after calling the next
+            middleware in the chain, this value will be populated with the resolved
+            instance. Check the <see cref="P:Autofac.Core.Resolving.Pipeline.ResolveRequestContext.NewInstanceActivated"/> property to
+            determine whether the object here was a newly activated instance, or a
+            shared instance previously activated.
             </summary>
         </member>
         <member name="P:Autofac.Core.Resolving.Pipeline.ResolveRequestContext.NewInstanceActivated">
@@ -8664,7 +8664,7 @@
         </member>
         <member name="M:Autofac.Features.OpenGenerics.OpenGenericRegistrationExtensions.RegisterGeneric(Autofac.ContainerBuilder,System.Type)">
             <summary>
-            Register an un-parameterised generic type, e.g. Repository&lt;&gt;.
+            Register an un-parameterized generic type, e.g. Repository&lt;&gt;.
             Concrete types will be made as they are requested, e.g. with Resolve&lt;Repository&lt;int&gt;&gt;().
             </summary>
             <param name="builder">Container builder.</param>
@@ -8673,7 +8673,7 @@
         </member>
         <member name="M:Autofac.Features.OpenGenerics.OpenGenericRegistrationExtensions.RegisterGeneric(Autofac.ContainerBuilder,System.Func{Autofac.IComponentContext,System.Type[],System.Collections.Generic.IEnumerable{Autofac.Core.Parameter},System.Object})">
             <summary>
-            Register an un-parameterised generic type, e.g. Repository&lt;&gt;.
+            Register an un-parameterized generic type, e.g. Repository&lt;&gt;.
             Concrete types will be made as they are requested, e.g. with Resolve&lt;Repository&lt;int&gt;&gt;().
             </summary>
             <param name="builder">Container builder.</param>
@@ -8682,7 +8682,7 @@
         </member>
         <member name="M:Autofac.Features.OpenGenerics.OpenGenericRegistrationExtensions.CreateGenericBuilder(System.Type)">
             <summary>
-            Creates an un-parameterised generic type, e.g. Repository&lt;&gt;, without registering it.
+            Creates an un-parameterized generic type, e.g. Repository&lt;&gt;, without registering it.
             Concrete types will be made as they are requested, e.g. with Resolve&lt;Repository&lt;int&gt;&gt;().
             </summary>
             <param name="implementer">The open generic implementation type.</param>
@@ -8690,7 +8690,7 @@
         </member>
         <member name="M:Autofac.Features.OpenGenerics.OpenGenericRegistrationExtensions.CreateGenericBuilder(System.Func{Autofac.IComponentContext,System.Type[],System.Collections.Generic.IEnumerable{Autofac.Core.Parameter},System.Object})">
             <summary>
-            Creates a registration builder for an un-parameterised generic type, e.g. Repository&lt;&gt;, without registering it.
+            Creates a registration builder for an un-parameterized generic type, e.g. Repository&lt;&gt;, without registering it.
             Concrete types will be made as they are requested, e.g. with Resolve&lt;Repository&lt;int&gt;&gt;().
             </summary>
             <param name="factory">Delegate responsible for generating an instance of a closed generic based on the open generic type being registered.</param>
@@ -9155,6 +9155,33 @@
               Looks up a localized string similar to &quot;Resolve Anything&quot; Support.
             </summary>
         </member>
+        <member name="T:Autofac.Features.Scanning.AssemblyExtensions">
+            <summary>
+            Extensions for assemblies used during assembly scanning operations.
+            </summary>
+        </member>
+        <member name="M:Autofac.Features.Scanning.AssemblyExtensions.GetPermittedTypesForAssemblyScanning(System.Reflection.Assembly)">
+            <summary>
+            Get the set of types that Autofac will allow to be loaded from the given assembly.
+            </summary>
+            <param name="assembly">The assembly to load types from.</param>
+            <returns>The set of loadable types.</returns>
+        </member>
+        <member name="M:Autofac.Features.Scanning.AssemblyExtensions.ScanAssemblies(System.Collections.Generic.IEnumerable{System.Reflection.Assembly},Autofac.Core.Registration.IComponentRegistryBuilder,Autofac.Builder.IRegistrationBuilder{System.Object,Autofac.Features.Scanning.ScanningActivatorData,Autofac.Builder.DynamicRegistrationStyle})">
+            <summary>
+            Given a set of assemblies, locates all the loadable, registerable types and adds them to the component registry.
+            </summary>
+            <param name="assemblies">
+            The set of assemblies to scan for types.
+            </param>
+            <param name="cr">
+            The registry into which registerable types should be added.
+            </param>
+            <param name="rb">
+            A "template" registration builder that is used to provide activator data
+            filters and serve as the basis for individual component registrations.
+            </param>
+        </member>
         <member name="T:Autofac.Features.Scanning.BaseScanningActivatorData`2">
             <summary>
             Base activation data for types located by scanning assemblies.
@@ -9191,15 +9218,12 @@
             Initializes a new instance of the <see cref="T:Autofac.Features.Scanning.OpenGenericScanningActivatorData"/> class.
             </summary>
         </member>
-        <member name="T:Autofac.Features.Scanning.ScanningRegistrationExtensions">
-            <summary>
-            Helper methods to assist in scanning registration.
-            </summary>
+        <member name="T:Autofac.Features.Scanning.OpenGenericScanningRegistrationExtensions">
             <summary>
             Helper methods to assist in scanning registration.
             </summary>
         </member>
-        <member name="M:Autofac.Features.Scanning.ScanningRegistrationExtensions.RegisterOpenGenericAssemblyTypes(Autofac.ContainerBuilder,System.Reflection.Assembly[])">
+        <member name="M:Autofac.Features.Scanning.OpenGenericScanningRegistrationExtensions.ScanAndRegisterOpenGenericAssemblyTypes(Autofac.ContainerBuilder,System.Reflection.Assembly[])">
             <summary>
             Register open generic types from the specified assemblies.
             </summary>
@@ -9207,7 +9231,7 @@
             <param name="assemblies">The set of assemblies.</param>
             <returns>A registration builder.</returns>
         </member>
-        <member name="M:Autofac.Features.Scanning.ScanningRegistrationExtensions.As``2(Autofac.Builder.IRegistrationBuilder{``0,Autofac.Features.Scanning.OpenGenericScanningActivatorData,``1},System.Func{System.Type,System.Collections.Generic.IEnumerable{Autofac.Core.Service}})">
+        <member name="M:Autofac.Features.Scanning.OpenGenericScanningRegistrationExtensions.As``2(Autofac.Builder.IRegistrationBuilder{``0,Autofac.Features.Scanning.OpenGenericScanningActivatorData,``1},System.Func{System.Type,System.Collections.Generic.IEnumerable{Autofac.Core.Service}})">
             <summary>
             Specifies how an open generic type from a scanned assembly is mapped to a service.
             </summary>
@@ -9217,7 +9241,7 @@
             <param name="serviceMapping">Function mapping types to services.</param>
             <returns>Registration builder allowing the registration to be configured.</returns>
         </member>
-        <member name="M:Autofac.Features.Scanning.ScanningRegistrationExtensions.AssignableTo``2(Autofac.Builder.IRegistrationBuilder{``0,Autofac.Features.Scanning.OpenGenericScanningActivatorData,``1},System.Type)">
+        <member name="M:Autofac.Features.Scanning.OpenGenericScanningRegistrationExtensions.AssignableTo``2(Autofac.Builder.IRegistrationBuilder{``0,Autofac.Features.Scanning.OpenGenericScanningActivatorData,``1},System.Type)">
             <summary>
             Filters the scanned types to include only those assignable to the provided.
             </summary>
@@ -9227,7 +9251,7 @@
             <param name="openGenericServiceType">The type or interface which all classes must be assignable from.</param>
             <returns>The registration builder.</returns>
         </member>
-        <member name="M:Autofac.Features.Scanning.ScanningRegistrationExtensions.AssignableTo``2(Autofac.Builder.IRegistrationBuilder{``0,Autofac.Features.Scanning.OpenGenericScanningActivatorData,``1},System.Type,System.Object)">
+        <member name="M:Autofac.Features.Scanning.OpenGenericScanningRegistrationExtensions.AssignableTo``2(Autofac.Builder.IRegistrationBuilder{``0,Autofac.Features.Scanning.OpenGenericScanningActivatorData,``1},System.Type,System.Object)">
             <summary>
             Filters the scanned types to include only those assignable to the provided.
             </summary>
@@ -9238,7 +9262,7 @@
             <param name="serviceKey">The service key.</param>
             <returns>The registration builder.</returns>
         </member>
-        <member name="M:Autofac.Features.Scanning.ScanningRegistrationExtensions.AssignableTo``2(Autofac.Builder.IRegistrationBuilder{``0,Autofac.Features.Scanning.OpenGenericScanningActivatorData,``1},System.Type,System.Func{System.Type,System.Object})">
+        <member name="M:Autofac.Features.Scanning.OpenGenericScanningRegistrationExtensions.AssignableTo``2(Autofac.Builder.IRegistrationBuilder{``0,Autofac.Features.Scanning.OpenGenericScanningActivatorData,``1},System.Type,System.Func{System.Type,System.Object})">
             <summary>
             Filters the scanned types to include only those assignable to the provided.
             </summary>
@@ -9249,7 +9273,22 @@
             <param name="serviceKeyMapping">A function to determine the service key for a given type.</param>
             <returns>The registration builder.</returns>
         </member>
-        <member name="M:Autofac.Features.Scanning.ScanningRegistrationExtensions.RegisterAssemblyTypes(Autofac.ContainerBuilder,System.Reflection.Assembly[])">
+        <member name="T:Autofac.Features.Scanning.ScanningActivatorData">
+            <summary>
+            Activation data for types located by scanning assemblies.
+            </summary>
+        </member>
+        <member name="M:Autofac.Features.Scanning.ScanningActivatorData.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Autofac.Features.Scanning.ScanningActivatorData"/> class.
+            </summary>
+        </member>
+        <member name="T:Autofac.Features.Scanning.ScanningRegistrationExtensions">
+            <summary>
+            Helper methods to assist in scanning registration.
+            </summary>
+        </member>
+        <member name="M:Autofac.Features.Scanning.ScanningRegistrationExtensions.ScanAndRegisterAssemblyTypes(Autofac.ContainerBuilder,System.Reflection.Assembly[])">
             <summary>
             Register types from the specified assemblies.
             </summary>
@@ -9257,7 +9296,7 @@
             <param name="assemblies">The set of assemblies.</param>
             <returns>A registration builder.</returns>
         </member>
-        <member name="M:Autofac.Features.Scanning.ScanningRegistrationExtensions.RegisterTypes(Autofac.ContainerBuilder,System.Type[])">
+        <member name="M:Autofac.Features.Scanning.ScanningRegistrationExtensions.ScanAndRegisterTypes(Autofac.ContainerBuilder,System.Type[])">
             <summary>
             Register the specified types.
             </summary>
@@ -9334,14 +9373,98 @@
             <param name="registration">Registration to set service mapping on.</param>
             <returns>Registration builder allowing the registration to be configured.</returns>
         </member>
-        <member name="T:Autofac.Features.Scanning.ScanningActivatorData">
+        <member name="T:Autofac.Features.Scanning.TypeExtensions">
             <summary>
-            Activation data for types located by scanning assemblies.
+            Extension methods for working with types in a scanning context.
             </summary>
         </member>
-        <member name="M:Autofac.Features.Scanning.ScanningActivatorData.#ctor">
+        <member name="M:Autofac.Features.Scanning.TypeExtensions.AllowedByActivatorFilters``2(System.Collections.Generic.IEnumerable{System.Type},Autofac.Features.Scanning.BaseScanningActivatorData{``0,``1})">
             <summary>
-            Initializes a new instance of the <see cref="T:Autofac.Features.Scanning.ScanningActivatorData"/> class.
+            Filters a list of types using the set of filters associated with the provided activator data.
+            </summary>
+            <typeparam name="TActivatorData">Activator builder type.</typeparam>
+            <typeparam name="TRegistrationStyle">Registration style type.</typeparam>
+            <param name="types">The set of types to filter.</param>
+            <param name="activatorData">The activator data with filters to run on the type list.</param>
+            <returns>
+            A filtered list of types that can be registered according to the activator data.
+            </returns>
+        </member>
+        <member name="M:Autofac.Features.Scanning.TypeExtensions.WhichAreAllowedThroughScanning(System.Collections.Generic.IEnumerable{System.Type})">
+            <summary>
+            Filters a list of types down to only those concrete types allowed by scanning registrations.
+            </summary>
+            <param name="types">
+            The types to check.
+            </param>
+            <returns>
+            A filtered set of types that remove non-concrete types (interfaces, abstract classes, etc.).
+            </returns>
+        </member>
+        <member name="M:Autofac.Features.Scanning.TypeExtensions.FilterAndRegisterConcreteTypes(System.Collections.Generic.IEnumerable{System.Type},Autofac.Core.Registration.IComponentRegistryBuilder,Autofac.Builder.IRegistrationBuilder{System.Object,Autofac.Features.Scanning.ScanningActivatorData,Autofac.Builder.DynamicRegistrationStyle})">
+            <summary>
+            Filters a list of types down to only those that are concrete
+            (<see cref="M:Autofac.Util.InternalTypeExtensions.MayAllowReflectionActivation(System.Type,System.Boolean)"/>), not open generic,
+            and allowed by the provided activator data. Registers those types into
+            the provided
+            registry.
+            </summary>
+            <param name="types">
+            The set of types to filter and register.
+            </param>
+            <param name="cr">
+            The registry builder into which the filtered types should be registered.
+            </param>
+            <param name="rb">
+            A "template" registration builder that is used to provide activator data
+            filters and serve as the basis for individual component registrations.
+            </param>
+        </member>
+        <member name="M:Autofac.Features.Scanning.TypeExtensions.RegisterUsingTemplate``3(System.Collections.Generic.IEnumerable{System.Type},Autofac.Core.Registration.IComponentRegistryBuilder,Autofac.Builder.IRegistrationBuilder{System.Object,Autofac.Features.Scanning.BaseScanningActivatorData{``0,``1},``2},System.Func{System.Type,Autofac.Builder.IRegistrationBuilder{System.Object,``0,``1}},System.Action{Autofac.Core.Registration.IComponentRegistryBuilder,Autofac.Builder.IRegistrationBuilder{System.Object,``0,``1}})">
+            <summary>
+            Executes a "template" to convert a set of types into a set of
+            registrations and then register them with the container. This is used
+            for both concrete and open generic type scanning, so the template
+            differs based on the thing being scanned.
+            </summary>
+            <typeparam name="TActivatorData">
+            Activator data type. Usually <see cref="T:Autofac.Builder.ConcreteReflectionActivatorData"/>
+            for concrete types or <see cref="T:Autofac.Builder.ReflectionActivatorData"/> for open generics.
+            </typeparam>
+            <typeparam name="TScanStyle">
+            Scanning style type. Usually <see cref="T:Autofac.Builder.SingleRegistrationStyle"/> for
+            concrete types or <see cref="T:Autofac.Builder.DynamicRegistrationStyle"/> for open
+            generics.
+            </typeparam>
+            <typeparam name="TRegistrationBuilderStyle">
+            Registration style type. Usually <see cref="T:Autofac.Builder.DynamicRegistrationStyle"/>
+            regardless of what's being registered.
+            </typeparam>
+            <param name="types">
+            The set of types to scan and register.
+            </param>
+            <param name="cr">
+            The registry builder into which the built component registrations should
+            be added.
+            </param>
+            <param name="rb">
+            A base/template registration builder for scanned registrations.
+            </param>
+            <param name="scannedConstructorFunc">
+            A function that takes a type and generates the registration for that
+            type. Will be configured based on <paramref name="rb"/>.
+            </param>
+            <param name="register">
+            A function that takes the built registration and adds it to the
+            <paramref name="cr"/> registry builder.
+            </param>
+        </member>
+        <member name="M:Autofac.Features.Scanning.TypeExtensions.ConfigureFrom``3(Autofac.Builder.IRegistrationBuilder{System.Object,``0,``1},Autofac.Builder.IRegistrationBuilder{System.Object,Autofac.Features.Scanning.BaseScanningActivatorData{``0,``1},``2},System.Type)">
+            <summary>
+            Copies all the activator data from a "template" registration into a
+            scanned registration. This is how constructor finders, parameters, and
+            other registration data gets from the top level registration call into
+            individual type registrations.
             </summary>
         </member>
         <member name="T:Autofac.Features.Variance.ContravariantRegistrationSource">
@@ -9587,77 +9710,6 @@
             <param name="configurationAction">Action on a <see cref="T:Autofac.ContainerBuilder"/>
             that adds component registrations visible only in the new scope.</param>
             <returns>A new lifetime scope.</returns>
-        </member>
-        <member name="M:Autofac.ILifetimeScope.BeginLoadContextLifetimeScope(System.Runtime.Loader.AssemblyLoadContext,System.Action{Autofac.ContainerBuilder})">
-            <summary>
-            Begin a new anonymous sub-scope, with additional components available to it that may be dynamically
-            loaded from the provided <see cref="T:System.Runtime.Loader.AssemblyLoadContext"/>.
-            Component instances created via the new scope
-            will be disposed along with it.
-            </summary>
-            <param name="loadContext">
-            A <see cref="T:System.Runtime.Loader.AssemblyLoadContext"/> to associate to the created <see cref="T:Autofac.ILifetimeScope"/>.
-            </param>
-            <param name="configurationAction">
-            Action on a <see cref="T:Autofac.ContainerBuilder"/>
-            that adds component registrations visible only in the new scope.
-            </param>
-            <returns>A new lifetime scope.</returns>
-            <example>
-            <code>
-            IContainer cr = // ...
-            AssemblyLoadContext pluginContext = // ...
-            using (var lifetime = cr.BeginLoadContextLifetimeScope(pluginContext, builder =&gt; {
-                    var assembly = pluginContext.LoadFromAssemblyPath("Plugins/plugin.dll");
-                    builder.RegisterType(assembly.GetType("PluginEntryPoint")).As&lt;IPlugin&gt;();
-            {
-                var plugin = lifetime.Resolve&lt;IPlugin&gt;();
-            }
-            </code>
-            </example>
-            <remarks>
-            When the returned lifetime scope is disposed, the provided
-            <paramref name="loadContext"/> can be unloaded, in that
-            Autofac will no longer have any references to types loaded from <paramref name="loadContext"/>.
-            However if you have captured references to types from the loaded assemblies manually, you still may not be able
-            to unload.
-            </remarks>
-        </member>
-        <member name="M:Autofac.ILifetimeScope.BeginLoadContextLifetimeScope(System.Object,System.Runtime.Loader.AssemblyLoadContext,System.Action{Autofac.ContainerBuilder})">
-            <summary>
-            Begin a new tagged sub-scope, with additional components available to it that may be dynamically
-            loaded from the provided <see cref="T:System.Runtime.Loader.AssemblyLoadContext"/>.
-            Component instances created via the new scope
-            will be disposed along with it.
-            </summary>
-            <param name="tag">The tag applied to the <see cref="T:Autofac.ILifetimeScope"/>.</param>
-            <param name="loadContext">
-            A <see cref="T:System.Runtime.Loader.AssemblyLoadContext"/> to associate to the created <see cref="T:Autofac.ILifetimeScope"/>.
-            </param>
-            <param name="configurationAction">
-            Action on a <see cref="T:Autofac.ContainerBuilder"/>
-            that adds component registrations visible only in the new scope.
-            </param>
-            <returns>A new lifetime scope.</returns>
-            <example>
-            <code>
-            IContainer cr = // ...
-            AssemblyLoadContext pluginContext = // ...
-            using (var lifetime = cr.BeginLoadContextLifetimeScope(pluginContext, builder =&gt; {
-                    var assembly = pluginContext.LoadFromAssemblyPath("Plugins/plugin.dll");
-                    builder.RegisterType(assembly.GetType("PluginEntryPoint")).As&lt;IPlugin&gt;();
-            {
-                var plugin = lifetime.Resolve&lt;IPlugin&gt;();
-            }
-            </code>
-            </example>
-            <remarks>
-            When the returned lifetime scope is disposed, the provided
-            <paramref name="loadContext"/> can be unloaded, in that
-            Autofac will no longer have any references to types loaded from <paramref name="loadContext"/>.
-            However if you have captured references to types from the loaded assemblies manually, you still may not be able
-            to unload.
-            </remarks>
         </member>
         <member name="P:Autofac.ILifetimeScope.Disposer">
             <summary>
@@ -10559,7 +10611,7 @@
         <member name="M:Autofac.RegistrationExtensions.RegisterGenericComposite(Autofac.ContainerBuilder,System.Type,System.Type)">
             <summary>
             <para>
-            Register an un-parameterised generic type, e.g. Composite&lt;&gt; to function as a composite
+            Register an un-parameterized generic type, e.g. Composite&lt;&gt; to function as a composite
             for an open generic service, e.g. IRepository&lt;&gt;. Composites will be made as they are requested,
             e.g. with Resolve&lt;IRepository&lt;int&gt;&gt;().
             </para>
@@ -11055,7 +11107,7 @@
         </member>
         <member name="M:Autofac.RegistrationExtensions.OnRegistered``2(Autofac.Builder.IRegistrationBuilder{``0,Autofac.Features.Scanning.ScanningActivatorData,``1},System.Action{Autofac.Core.ComponentRegisteredEventArgs})">
             <summary>
-            Provide a handler to be called when the component is registred.
+            Provide a handler to be called when the component is registered.
             </summary>
             <typeparam name="TLimit">Registration limit type.</typeparam>
             <typeparam name="TRegistrationStyle">Registration style.</typeparam>
@@ -11092,7 +11144,7 @@
         </member>
         <member name="M:Autofac.RegistrationExtensions.RegisterGeneric(Autofac.ContainerBuilder,System.Type)">
             <summary>
-            Register an un-parameterised generic type, e.g. Repository&lt;&gt;.
+            Register an un-parameterized generic type, e.g. Repository&lt;&gt;.
             Concrete types will be made as they are requested, e.g. with Resolve&lt;Repository&lt;int&gt;&gt;().
             </summary>
             <param name="builder">Container builder.</param>
@@ -12831,13 +12883,6 @@
             Thrown if <paramref name="assembly" /> is <see langword="null" />.
             </exception>
         </member>
-        <member name="M:Autofac.Util.AssemblyExtensions.GetPermittedTypesForAssemblyScanning(System.Reflection.Assembly)">
-            <summary>
-            Get the set of types that Autofac will allow to be loaded from the given assembly.
-            </summary>
-            <param name="assembly">The assembly to load types from.</param>
-            <returns>The set of loadable types.</returns>
-        </member>
         <member name="T:Autofac.Util.AsyncReleaseAction`1">
             <summary>
             Adapts an async action to the <see cref="T:System.IAsyncDisposable"/> interface.
@@ -13279,14 +13324,14 @@
         </member>
         <member name="M:Autofac.Util.InternalTypeExtensions.IsGenericListOrCollectionInterfaceType(System.Type)">
             <summary>
-            Checks whether a given type is a generic list of colleciton interface type, e.g. <see cref="T:System.Collections.Generic.IList`1"/>, <see cref="T:System.Collections.Generic.ICollection`1"/> and the read-only variants.
+            Checks whether a given type is a generic list of collection interface type, e.g. <see cref="T:System.Collections.Generic.IList`1"/>, <see cref="T:System.Collections.Generic.ICollection`1"/> and the read-only variants.
             </summary>
             <param name="type">The type to check.</param>
             <returns>True if the type is one of the supported list/collection types.</returns>
         </member>
         <member name="M:Autofac.Util.InternalTypeExtensions.IsGenericTypeDefinedBy(System.Type,System.Type)">
             <summary>
-            Checks whether a given type is a closed generic defined by the specifed open generic.
+            Checks whether a given type is a closed generic defined by the specified open generic.
             </summary>
             <param name="this">The type to check.</param>
             <param name="openGeneric">The open generic to check against.</param>
@@ -13299,6 +13344,27 @@
             <param name="this">The type we are checking.</param>
             <param name="type">The type to validate against.</param>
             <returns>True if <paramref name="this"/> is a open generic type of <paramref name="type"/>. False otherwise.</returns>
+        </member>
+        <member name="M:Autofac.Util.InternalTypeExtensions.MayAllowReflectionActivation(System.Type,System.Boolean)">
+            <summary>
+            Filters off interfaces, abstract types, and generally non-registerable
+            types. Largely used during type/assembly scanning, but also can
+            determine if this is something we can activate by reflection.
+            Intentionally does NOT filter out open generic definitions because this
+            gets used in both concrete and open generic scanning.
+            </summary>
+            <param name="type">
+            The type to check.
+            </param>
+            <param name="allowCompilerGenerated">
+            <see langword="true"/> to allow compiler-generated types to be
+            considered registerable. Defaults to <see langword="false"/>.
+            </param>
+            <returns>
+            <see langword="true"/> if the type is allowed to be registered during
+            scanning based on its reflection attributes; otherwise <see
+            langword="false"/>.
+            </returns>
         </member>
         <member name="M:Autofac.Util.InternalTypeExtensions.FindAssignableTypesThatClose(System.Type,System.Type)">
             <summary>
@@ -13706,6 +13772,124 @@
         <member name="P:Autofac.TypeExtensionsResources.NotOpenGenericType">
             <summary>
               Looks up a localized string similar to The type &apos;{0}&apos; is not an open generic class or interface type so it won&apos;t work with methods that act on open generics..
+            </summary>
+        </member>
+        <member name="T:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes">
+            <summary>
+            Fake version for pre-net-5.0 targets.
+            </summary>
+        </member>
+        <member name="F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.PublicParameterlessConstructor">
+            <summary>
+            Specifies the default, parameterless public constructor.
+            </summary>
+        </member>
+        <member name="F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.PublicConstructors">
+            <summary>
+            Specifies all public constructors.
+            </summary>
+        </member>
+        <member name="F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.NonPublicConstructors">
+            <summary>
+            Specifies all non-public constructors.
+            </summary>
+        </member>
+        <member name="F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.PublicMethods">
+            <summary>
+            Specifies all public methods.
+            </summary>
+        </member>
+        <member name="F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.NonPublicMethods">
+            <summary>
+            Specifies all non-public methods.
+            </summary>
+        </member>
+        <member name="F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.PublicFields">
+            <summary>
+            Specifies all public fields.
+            </summary>
+        </member>
+        <member name="F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.NonPublicFields">
+            <summary>
+            Specifies all non-public fields.
+            </summary>
+        </member>
+        <member name="F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.PublicNestedTypes">
+            <summary>
+            Specifies all public nested types.
+            </summary>
+        </member>
+        <member name="F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.NonPublicNestedTypes">
+            <summary>
+            Specifies all non-public nested types.
+            </summary>
+        </member>
+        <member name="F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.PublicProperties">
+            <summary>
+            Specifies all public properties.
+            </summary>
+        </member>
+        <member name="F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.NonPublicProperties">
+            <summary>
+            Specifies all non-public properties.
+            </summary>
+        </member>
+        <member name="F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.PublicEvents">
+            <summary>
+            Specifies all public events.
+            </summary>
+        </member>
+        <member name="F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.NonPublicEvents">
+            <summary>
+            Specifies all non-public events.
+            </summary>
+        </member>
+        <member name="T:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMembersAttribute">
+            <summary>
+            Fake attribute for older versions.
+            </summary>
+        </member>
+        <member name="M:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMembersAttribute.#ctor(System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes)">
+            <summary>
+            Initializes a new instance of the <see cref="T:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMembersAttribute"/> class
+            with the specified member types.
+            </summary>
+            <param name="memberTypes">The types of members dynamically accessed.</param>
+        </member>
+        <member name="P:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMembersAttribute.MemberTypes">
+            <summary>
+            Gets the <see cref="T:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes"/> which specifies the type
+            of members dynamically accessed.
+            </summary>
+        </member>
+        <member name="T:System.Diagnostics.CodeAnalysis.RequiresUnreferencedCodeAttribute">
+            <summary>
+            Indicates that the specified method requires dynamic access to code that is not referenced
+            statically, for example through <see cref="N:System.Reflection"/>.
+            </summary>
+            <remarks>
+            This allows tools to understand which methods are unsafe to call when removing unreferenced
+            code from an application.
+            </remarks>
+        </member>
+        <member name="M:System.Diagnostics.CodeAnalysis.RequiresUnreferencedCodeAttribute.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:System.Diagnostics.CodeAnalysis.RequiresUnreferencedCodeAttribute"/> class
+            with the specified message.
+            </summary>
+            <param name="message">
+            A message that contains information about the usage of unreferenced code.
+            </param>
+        </member>
+        <member name="P:System.Diagnostics.CodeAnalysis.RequiresUnreferencedCodeAttribute.Message">
+            <summary>
+            Gets a message that contains information about the usage of unreferenced code.
+            </summary>
+        </member>
+        <member name="P:System.Diagnostics.CodeAnalysis.RequiresUnreferencedCodeAttribute.Url">
+            <summary>
+            Gets or sets an optional URL that contains more information about the method,
+            why it requries unreferenced code, and what options a consumer has to deal with it.
             </summary>
         </member>
     </members>

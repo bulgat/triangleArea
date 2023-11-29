@@ -18,12 +18,20 @@ using System.IO;
 using System.Text;
 using System.IO.Pipes;
 using System.Runtime.InteropServices;
+using TriangleArea.Models.adapter;
+using Autofac;
 
 namespace TriangleArea.Models
 {
     public delegate void MakeNoise();
+ 
     public class AdapterProgram
     {
+        public interface IAdapter
+        {
+            string Name();
+        }
+   
         [Flags]
         enum MultiKey 
         {
@@ -34,11 +42,45 @@ namespace TriangleArea.Models
             Blue = 8
         };
         public MakeNoise makeNoise;
+        IEnumerable mass_ar;
 
+
+        Task<int> AddAsync(int a, int b)
+        {
+            return Task.FromResult(a + b);
+        }
+        int Plus(int a, int b) {
+            return a + b;
+        }
         public AdapterProgram()
         {
-            
-           // System.Diagnostics.Debug.WriteLine("=0006 " + DateTime.Now.Millisecond);
+            IContainer container = new Mersedes().GetAutofacContainer();
+            var model = container.Resolve<Auto>();
+            var beast = container.Resolve<Beast>();
+            //var anim = container.Resolve<CamelAnimal>();
+
+            int? numberOne = 67;
+            int? numberTwo = null;
+
+            var eee = numberTwo;
+
+            mass_ar = new List<int>() { 5,6 };
+            mass_ar = new int[6];
+      
+
+            System.Diagnostics.Debug.WriteLine(numberOne.HasValue+" ==000== " + numberTwo.HasValue);
+            System.Diagnostics.Debug.WriteLine(numberOne.Value + " ==010== " + numberTwo.GetValueOrDefault());
+            System.Diagnostics.Debug.WriteLine(numberOne.GetValueOrDefault() + " ==020== " );
+
+
+            var resultTask = AddAsync(4, 5);
+            int res = (int)resultTask.Result;
+            System.Diagnostics.Debug.WriteLine(res+" FFFFF = "+resultTask);
+
+            int www = Task.FromResult(Plus(5,7)).Result;
+
+            System.Diagnostics.Debug.WriteLine(  " www= " + www);
+
             ThreadWait.Main();
             ThreadMutex.Main();
             ThreadSemaphore.Main();
@@ -46,7 +88,9 @@ namespace TriangleArea.Models
             ThreadDelegate.Main();
             TaskFactory.Main();
 
-            System.Diagnostics.Debug.WriteLine("=0005 "+DateTime.Now.Millisecond);
+            int[] arr = new int[] {5,6,7 };
+            int[] arr0 = new int[] {};
+            System.Diagnostics.Debug.WriteLine("=  arr =  " + arr.Any()+ "  arr0 = " + arr0.Any());
 
             Task.Factory.StartNew(() =>
             {
@@ -101,6 +145,16 @@ namespace TriangleArea.Models
 
             ObservableCollection<string> peoplelist = new ObservableCollection<string>(new string[] { "Tom", "Bob", "Sam" });
             string[] peopleArray = { "Tom", "Sam", "Bob" };
+            object[] peopleArrayObj = { null, null, "Bob" };
+            object[] peopleArrayTwoObj = { null, null};
+            System.Diagnostics.Debug.WriteLine(peopleArray.Cast<string>().Any() + " ==020== ");
+            System.Diagnostics.Debug.WriteLine(peopleArrayObj.Cast<string>().Any() + " ==030== ");
+
+            IEnumerable<string> cast = peopleArray.Cast<string>();
+            IEnumerable<string> castTwo = peopleArrayObj.Cast<string>();
+            bool castThree = peopleArrayObj.Cast<string>().Any();
+            bool castFour = peopleArrayTwoObj.Cast<string>().Any();
+
             IEnumerator peopleEnumerator = peopleArray.GetEnumerator();
 
             while(peopleEnumerator.MoveNext())
@@ -109,6 +163,8 @@ namespace TriangleArea.Models
             }
             ////System.Diagnostics.Debug.Assert(arrStep.Length >= 4);
             Queue<string> people = new Queue<string>(new List<string> { "Tom", "Sam", "Bob" });
+            
+            
             // добавляем элементы
             people.Enqueue("Tom0");  
             people.Enqueue("Bob0"); 
@@ -175,11 +231,11 @@ System.Diagnostics.Debug.WriteLine("-00--  p = " + ttt+""+ String.Intern("kol"))
             // отправляемся в путешествие
             driver.Travel(auto);
             // встретились пески, надо использовать верблюда
-            Camel camel = new Camel("Camel_Noise", 999, 666);
+            CamelAnimal camel = new CamelAnimal("Camel_Noise", 999, 666);
             camel.Cry = "Noooo";
             Type type = camel.GetType();
             var test = camel.GetType();
-            Type test0 = typeof(Camel);
+            Type test0 = typeof(CamelAnimal);
             FieldInfo myFieldInfo = test0.GetField("Noise");
             
 

@@ -7,8 +7,8 @@ namespace TriangleArea.Models
 {
     public class CamelToTransportAdapter : ITransport
     {
-        Camel camel;
-        public CamelToTransportAdapter(Camel c)
+        CamelAnimal camel;
+        public CamelToTransportAdapter(CamelAnimal c)
         {
             camel = c;
         }
