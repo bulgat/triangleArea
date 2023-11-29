@@ -38,7 +38,7 @@ namespace TriangleArea.Models
         public AdapterProgram()
         {
             
-            System.Diagnostics.Debug.WriteLine("=0006 " + DateTime.Now.Millisecond);
+           // System.Diagnostics.Debug.WriteLine("=0006 " + DateTime.Now.Millisecond);
             ThreadWait.Main();
             ThreadMutex.Main();
             ThreadSemaphore.Main();
@@ -66,7 +66,7 @@ namespace TriangleArea.Models
                     //writer.Flush();
                 }
             });
-            System.Diagnostics.Debug.WriteLine("=0005 " + DateTime.Now.Millisecond);
+           // System.Diagnostics.Debug.WriteLine("=0005 " + DateTime.Now.Millisecond);
 
  
             System.Diagnostics.Debug.WriteLine("=0006 " + DateTime.Now.Millisecond);
@@ -74,7 +74,7 @@ namespace TriangleArea.Models
             //System.Diagnostics.Debug.WriteLine("=0006 " + DateTime.Now.Millisecond);
             //System.Diagnostics.Debug.WriteLine("=0006 " + DateTime.Now.Millisecond);
 
-            System.Diagnostics.Debug.WriteLine("0009 " );
+          //System.Diagnostics.Debug.WriteLine("0009 " );
 
             Stack<int> stackList = new Stack<int>();
             stackList.Push(1);
