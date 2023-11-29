@@ -37,9 +37,7 @@ namespace TriangleArea.Models
 
         public AdapterProgram()
         {
-            System.Diagnostics.Debug.WriteLine("=0006 " + DateTime.Now.Millisecond);
-            System.Diagnostics.Debug.WriteLine("=0006 " + DateTime.Now.Millisecond);
-            System.Diagnostics.Debug.WriteLine("=0006 " + DateTime.Now.Millisecond);
+            
             System.Diagnostics.Debug.WriteLine("=0006 " + DateTime.Now.Millisecond);
             ThreadWait.Main();
             ThreadMutex.Main();
@@ -72,9 +70,9 @@ namespace TriangleArea.Models
 
  
             System.Diagnostics.Debug.WriteLine("=0006 " + DateTime.Now.Millisecond);
-            System.Diagnostics.Debug.WriteLine("=0006 " + DateTime.Now.Millisecond);
-            System.Diagnostics.Debug.WriteLine("=0006 " + DateTime.Now.Millisecond);
-            System.Diagnostics.Debug.WriteLine("=0006 " + DateTime.Now.Millisecond);
+            //System.Diagnostics.Debug.WriteLine("=0006 " + DateTime.Now.Millisecond);
+            //System.Diagnostics.Debug.WriteLine("=0006 " + DateTime.Now.Millisecond);
+            //System.Diagnostics.Debug.WriteLine("=0006 " + DateTime.Now.Millisecond);
 
             System.Diagnostics.Debug.WriteLine("0009 " );
 
