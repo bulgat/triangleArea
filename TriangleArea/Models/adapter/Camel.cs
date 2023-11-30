@@ -8,7 +8,7 @@ namespace TriangleArea.Models
     public class Camel : Beast
     { 
         public string Noise;
-        private string Name;
+        public string Name;
         public Camel(string name) : base(name)
         {
 

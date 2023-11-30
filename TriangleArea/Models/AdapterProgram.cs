@@ -38,7 +38,7 @@ namespace TriangleArea.Models
         public AdapterProgram()
         {
             
-           // System.Diagnostics.Debug.WriteLine("=0006 " + DateTime.Now.Millisecond);
+
             ThreadWait.Main();
             ThreadMutex.Main();
             ThreadSemaphore.Main();
@@ -68,13 +68,13 @@ namespace TriangleArea.Models
             });
            // System.Diagnostics.Debug.WriteLine("=0005 " + DateTime.Now.Millisecond);
 
- 
+            List<Camel> CamelList = new List<Camel>() { new Camel("krik"),new Camel("stop")};
+            //var kol = CamelList.FirstOrDefault();
+
+            //OnConfigurePartial(kol);
+
             System.Diagnostics.Debug.WriteLine("=0006 " + DateTime.Now.Millisecond);
-            //System.Diagnostics.Debug.WriteLine("=0006 " + DateTime.Now.Millisecond);
-            //System.Diagnostics.Debug.WriteLine("=0006 " + DateTime.Now.Millisecond);
-            //System.Diagnostics.Debug.WriteLine("=0006 " + DateTime.Now.Millisecond);
-           // System.Diagnostics.Debug.WriteLine("=0006 " + DateTime.Now.Millisecond);
-           // System.Diagnostics.Debug.WriteLine("=0006 " + DateTime.Now.Millisecond);
+
             System.Diagnostics.Debug.WriteLine("=0006 " + DateTime.Now.Millisecond);
             System.Diagnostics.Debug.WriteLine("=0006 " + DateTime.Now.Millisecond);
             System.Diagnostics.Debug.WriteLine("=0006 " + DateTime.Now.Millisecond);
