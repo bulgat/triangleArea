@@ -49,7 +49,7 @@ namespace TriangleArea.Models
 
                 while (true)
                 {
-                    System.Diagnostics.Debug.WriteLine($"0244444--{DateTime.Now.ToLongDateString()} ==  Action = ");
+                    System.Diagnostics.Debug.WriteLine($"ThreadWait 02444 --{DateTime.Now.ToLongDateString()} ==  Action = ");
                     Thread.Sleep(1000);
                 }
             };
@@ -60,7 +60,7 @@ namespace TriangleArea.Models
 
             Task<bool> task0 = Task<bool>.Factory.StartNew(CountBool);
             bool result = task0.Result;
-            task0.ContinueWith(t=>Console.WriteLine("26 Complite"));
+            task0.ContinueWith(t=>Console.WriteLine("ThreadWait 26 Complite"));
         }
         public static void Count()
         {
@@ -68,7 +68,7 @@ namespace TriangleArea.Models
             x = 1;
             for (int i = 0; i < 5; i++)
             {
-                System.Diagnostics.Debug.WriteLine($"021--{Thread.CurrentThread.Name} == {x}     stop= {stop}     kol = {kol}");
+                System.Diagnostics.Debug.WriteLine($"ThreadWait 021--{Thread.CurrentThread.Name} == {x}     stop= {stop}     kol = {kol}");
                 
                 x++;
                 //Thread.Sleep(100);
@@ -80,11 +80,11 @@ namespace TriangleArea.Models
             waitHandler.Set();
         }
         public static void CountQueue(object i) {
-            System.Diagnostics.Debug.WriteLine($"02333333--{Thread.CurrentThread.Name} ==    Queue = {i}");
+            System.Diagnostics.Debug.WriteLine($"ThreadWait 02333333--{Thread.CurrentThread.Name} ==    Queue = {i}");
         }
         public static bool CountBool()
         {
-            System.Diagnostics.Debug.WriteLine($"02555555--{Thread.CurrentThread.Name} ==   Bool = ");
+            System.Diagnostics.Debug.WriteLine($"ThreadWait 02555555--{Thread.CurrentThread.Name} ==   Bool = ");
             return true;
         }
         public static void CountSecond()
@@ -93,7 +93,7 @@ namespace TriangleArea.Models
             x = 1;
             for (int i = 0; i < 5; i++)
             {
-                System.Diagnostics.Debug.WriteLine($"022222221--{Thread.CurrentThread.Name} == {x}     stop= {stop}     kol = {kol}");
+                System.Diagnostics.Debug.WriteLine($"ThreadWait 022222221--{Thread.CurrentThread.Name} == {x}     stop= {stop}     kol = {kol}");
 
                 x++;
                 Thread.Sleep(100);

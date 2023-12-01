@@ -13,11 +13,11 @@ namespace TriangleArea.Models
         {
             Thread FormInit = new Thread(delegate() { LabelChange("KOL KRIKUNOV"); });
             FormInit.Start();
-            new Thread(delegate () { System.Diagnostics.Debug.WriteLine("---444444   = "); }) { IsBackground=true, Priority=ThreadPriority.Highest}.Start();
+            new Thread(delegate () { System.Diagnostics.Debug.WriteLine("ThreadDelegate ---444444   = "); }) { IsBackground=true, Priority=ThreadPriority.Highest}.Start();
             new Thread(delegate () {
                 Action action = () =>
                 {
-                    System.Diagnostics.Debug.WriteLine("--555555  = ");
+                    System.Diagnostics.Debug.WriteLine("ThreadDelegate--555555  = ");
                 };
               
 
@@ -25,27 +25,27 @@ namespace TriangleArea.Models
             new Thread(delegate () {
                 Action action = () =>
                 {
-                    System.Diagnostics.Debug.WriteLine("--555555  = ");
+                    System.Diagnostics.Debug.WriteLine("ThreadDelegate--555555  = ");
                 };
 
 
             }).Start();
             Parallel.Invoke(
                 () => {
-                    System.Diagnostics.Debug.WriteLine("--56666  = ");
+                    System.Diagnostics.Debug.WriteLine("ThreadDelegate--56666  = ");
                 },
                 () => {
-                    System.Diagnostics.Debug.WriteLine("--57777  = ");
+                    System.Diagnostics.Debug.WriteLine("ThreadDelegate--57777  = ");
                 },
                 () => {
-                    System.Diagnostics.Debug.WriteLine("--58888  = ");
+                    System.Diagnostics.Debug.WriteLine("ThreadDelegate--58888  = ");
                 }
                 );
         }
 
         static void LabelChange(string Label)
         {
-            System.Diagnostics.Debug.WriteLine("---4   = "+ Label);
+            System.Diagnostics.Debug.WriteLine("ThreadDelegate---4   = " + Label);
         }
     }
 }

@@ -269,9 +269,7 @@ namespace TriangleArea.Models
             methodlist.Clear();
             System.Diagnostics.Debug.WriteLine("-052--   = " + methodlist.Count + "   Capacity = " + methodlist.Capacity);
             methodlist.TrimExcess();
-            System.Diagnostics.Debug.WriteLine("-053--   = " + methodlist.Count + "   Capacity = " + methodlist.Capacity);
 
-            System.Diagnostics.Debug.WriteLine("-03--  p  = " + yyy);
 
             dynamic a = "123";
             dynamic c = 50;
@@ -340,17 +338,17 @@ namespace TriangleArea.Models
         }
         public void RunTest()
         {
-            System.Diagnostics.Debug.WriteLine("__000006 ");
+
             //Client
             var client = new NamedPipeClientStream("PipesOfPiece");
             client.Connect();
             StreamReader reader = new StreamReader(client);
             StreamWriter writer = new StreamWriter(client);
-            System.Diagnostics.Debug.WriteLine("__000007 ");
+
             while (true)
             {
                 string input = Console.ReadLine();
-                System.Diagnostics.Debug.WriteLine("__000003 _________ input = " + input);
+   
                 if (String.IsNullOrEmpty(input) == false)
                 {
 
