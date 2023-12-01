@@ -11,7 +11,7 @@ namespace TriangleArea.Models
 
         public Auto()
         {
-            this.Name = "Super Mers";
+            this.Name = "SuperMers";
         }
         public void Drive()
         {
