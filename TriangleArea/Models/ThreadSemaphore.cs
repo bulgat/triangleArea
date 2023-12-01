@@ -26,11 +26,11 @@ namespace TriangleArea.Models
 
             Interlocked.Increment(ref count);
 
-            System.Diagnostics.Debug.WriteLine($"042-semaphore- {Thread.CurrentThread.Name}   START   {count}");
+            System.Diagnostics.Debug.WriteLine($"ThreadSemaphore 042-semaphore- {Thread.CurrentThread.Name}   START   {count}");
 
             Thread.Sleep(new Random().Next(500,1000));
 
-            System.Diagnostics.Debug.WriteLine($"043-semaphore- {Thread.CurrentThread.Name}   End   {count}");
+            System.Diagnostics.Debug.WriteLine($"ThreadSemaphore 043-semaphore- {Thread.CurrentThread.Name}   End   {count}");
 
             Interlocked.Decrement(ref count);
 
