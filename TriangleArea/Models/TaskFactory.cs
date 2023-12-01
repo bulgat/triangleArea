@@ -13,7 +13,7 @@ namespace TriangleArea.Models
         {
             
             Task<int> task2 = Task<int>.Factory.StartNew(SumInt, 3);
-            System.Diagnostics.Debug.WriteLine($"__________________025556- ==SUMMA Подсчет = " + task2.Result);
+            System.Diagnostics.Debug.WriteLine($"TaskFactory__________________025556- ==SUMMA Подсчет = " + task2.Result);
             task2.Dispose();
             
 
@@ -39,13 +39,13 @@ namespace TriangleArea.Models
             */
             Parallel.Invoke(SumInt2, SumInt3);
             Parallel.For(0, data.Length, Transform);
-            System.Diagnostics.Debug.WriteLine("6 SSSSSSSSSSSSSSSS = "+ data[100]);
+            System.Diagnostics.Debug.WriteLine("TaskFactory 6 SSSSSSSSSSSSSSSS = " + data[100]);
             data[101] = 999;
             var resultNum = data.AsParallel().Where(a => a == 999).FirstOrDefault();
-            System.Diagnostics.Debug.WriteLine(data[101]+"  SSSSSSSSSSumma  = " + resultNum);
+            System.Diagnostics.Debug.WriteLine(data[101]+ " TaskFactory  SSSSSSSSSSumma  = " + resultNum);
             var resultList = data.AsParallel().AsOrdered().OrderBy(a=>a).ToList();
 
-            System.Diagnostics.Debug.WriteLine( "   SSSSSSSumma  = " + resultList[0]);
+            System.Diagnostics.Debug.WriteLine("TaskFactory   SSSSSSSumma  = " + resultList[0]);
         }
        
         public static int SumInt(object Num)
@@ -54,7 +54,7 @@ namespace TriangleArea.Models
             for(var i = 0; i < 6; i++)
             {
                 Thread.Sleep(500);
-                System.Diagnostics.Debug.WriteLine($"025555- == Подсчет = "+i);
+                System.Diagnostics.Debug.WriteLine($"TaskFactory 025555- == Подсчет = " +i);
                 count++;
             }
 
@@ -66,7 +66,7 @@ namespace TriangleArea.Models
             for (var i = 0; i < 6; i++)
             {
                 Thread.Sleep(500);
-                System.Diagnostics.Debug.WriteLine($"066666- == Подсчет = " + i);
+                System.Diagnostics.Debug.WriteLine($"TaskFactory 066666- == Подсчет = " + i);
                 count++;
             }
 
@@ -78,7 +78,7 @@ namespace TriangleArea.Models
             for (var i = 0; i < 6; i++)
             {
                 Thread.Sleep(500);
-                System.Diagnostics.Debug.WriteLine($"77777- == Подсчет = " + i);
+                System.Diagnostics.Debug.WriteLine($"TaskFactory 77777- == Подсчет = " + i);
                 count++;
             }
 

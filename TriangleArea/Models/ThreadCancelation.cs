@@ -17,7 +17,7 @@ namespace TriangleArea.Models
             cancelationTask.Cancel();
             try
             {
-                System.Diagnostics.Debug.WriteLine("9998--- erro ss = " );
+                System.Diagnostics.Debug.WriteLine("ThreadCancelation 9998--- erro ss = ");
                 //await task;
             }
             catch (Exception)
