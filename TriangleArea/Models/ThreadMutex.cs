@@ -25,7 +25,7 @@ namespace TriangleArea.Models
             x = 1;
             for (int i = 0; i < 5; i++)
             {
-                System.Diagnostics.Debug.WriteLine($"031-mutex-{Thread.CurrentThread.Name} == {x}");
+                System.Diagnostics.Debug.WriteLine($"ThreadMutex 031-mutex-{Thread.CurrentThread.Name} == {x}");
                 
                 x++;
                 Thread.Sleep(100);
