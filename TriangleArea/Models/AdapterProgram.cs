@@ -37,8 +37,13 @@ namespace TriangleArea.Models
 
         public AdapterProgram()
         {
+            int? numberOne = 67;
+            int? numberTwo = null;
+            System.Diagnostics.Debug.WriteLine(numberOne.HasValue+" ==000== " + numberTwo.HasValue);
+            System.Diagnostics.Debug.WriteLine(numberOne.Value + " ==010== " + numberTwo.GetValueOrDefault());
+            System.Diagnostics.Debug.WriteLine(numberOne.GetValueOrDefault() + " ==020== " );
             
-           // System.Diagnostics.Debug.WriteLine("=0006 " + DateTime.Now.Millisecond);
+
             ThreadWait.Main();
             ThreadMutex.Main();
             ThreadSemaphore.Main();
@@ -101,6 +106,16 @@ namespace TriangleArea.Models
 
             ObservableCollection<string> peoplelist = new ObservableCollection<string>(new string[] { "Tom", "Bob", "Sam" });
             string[] peopleArray = { "Tom", "Sam", "Bob" };
+            object[] peopleArrayObj = { null, null, "Bob" };
+            object[] peopleArrayTwoObj = { null, null};
+            System.Diagnostics.Debug.WriteLine(peopleArray.Cast<string>().Any() + " ==020== ");
+            System.Diagnostics.Debug.WriteLine(peopleArrayObj.Cast<string>().Any() + " ==030== ");
+
+            IEnumerable<string> cast = peopleArray.Cast<string>();
+            IEnumerable<string> castTwo = peopleArrayObj.Cast<string>();
+            bool castThree = peopleArrayObj.Cast<string>().Any();
+            bool castFour = peopleArrayTwoObj.Cast<string>().Any();
+
             IEnumerator peopleEnumerator = peopleArray.GetEnumerator();
 
             while(peopleEnumerator.MoveNext())
@@ -109,6 +124,8 @@ namespace TriangleArea.Models
             }
             ////System.Diagnostics.Debug.Assert(arrStep.Length >= 4);
             Queue<string> people = new Queue<string>(new List<string> { "Tom", "Sam", "Bob" });
+            
+            
             // добавляем элементы
             people.Enqueue("Tom0");  
             people.Enqueue("Bob0"); 
