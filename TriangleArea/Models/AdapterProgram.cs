@@ -22,8 +22,14 @@ using System.Runtime.InteropServices;
 namespace TriangleArea.Models
 {
     public delegate void MakeNoise();
+ 
     public class AdapterProgram
     {
+        public interface IAdapter
+        {
+            string Name();
+        }
+   
         [Flags]
         enum MultiKey 
         {
@@ -39,6 +45,9 @@ namespace TriangleArea.Models
         {
             int? numberOne = 67;
             int? numberTwo = null;
+
+            var eee = numberTwo;
+
             System.Diagnostics.Debug.WriteLine(numberOne.HasValue+" ==000== " + numberTwo.HasValue);
             System.Diagnostics.Debug.WriteLine(numberOne.Value + " ==010== " + numberTwo.GetValueOrDefault());
             System.Diagnostics.Debug.WriteLine(numberOne.GetValueOrDefault() + " ==020== " );
@@ -51,7 +60,9 @@ namespace TriangleArea.Models
             ThreadDelegate.Main();
             TaskFactory.Main();
 
-            System.Diagnostics.Debug.WriteLine("=0005 "+DateTime.Now.Millisecond);
+            int[] arr = new int[] {5,6,7 };
+            int[] arr0 = new int[] {};
+            System.Diagnostics.Debug.WriteLine("=  arr =  " + arr.Any()+ "  arr0 = " + arr0.Any());
 
             Task.Factory.StartNew(() =>
             {
