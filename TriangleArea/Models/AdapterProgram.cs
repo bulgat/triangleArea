@@ -18,6 +18,8 @@ using System.IO;
 using System.Text;
 using System.IO.Pipes;
 using System.Runtime.InteropServices;
+using TriangleArea.Models.adapter;
+using Autofac;
 
 namespace TriangleArea.Models
 {
@@ -43,6 +45,10 @@ namespace TriangleArea.Models
 
         public AdapterProgram()
         {
+            IContainer container = new Mersedes().GetAutofacContainer();
+            var model = container.Resolve<Auto>();
+            var beast = container.Resolve<Beast>();
+
             int? numberOne = 67;
             int? numberTwo = null;
 
