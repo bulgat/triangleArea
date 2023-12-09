@@ -13,7 +13,7 @@ namespace TriangleArea.Models.adapter
         public Mersedes()
         {
             var builder = new ContainerBuilder();
-            builder.RegisterType<Auto>().;
+            builder.RegisterType<Auto>();
             builder.RegisterType<Beast>().UsingConstructor(typeof(string))
     .WithParameter(new NamedParameter("name","Alien")).PropertiesAutowired(); ;
             /*

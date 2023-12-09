@@ -42,7 +42,20 @@ namespace TriangleArea.Models
             Blue = 8
         };
         public MakeNoise makeNoise;
-
+        /*
+        int AddAsync(int a, int b)
+        {
+            var kol = await Task.FromResult(a + b);
+            return kol;
+        }
+        */
+        Task<int> AddAsync(int a, int b)
+        {
+            return Task.FromResult(a + b);
+        }
+        int Plus(int a, int b) {
+            return a + b;
+        }
         public AdapterProgram()
         {
             IContainer container = new Mersedes().GetAutofacContainer();
@@ -57,7 +70,15 @@ namespace TriangleArea.Models
             System.Diagnostics.Debug.WriteLine(numberOne.HasValue+" ==000== " + numberTwo.HasValue);
             System.Diagnostics.Debug.WriteLine(numberOne.Value + " ==010== " + numberTwo.GetValueOrDefault());
             System.Diagnostics.Debug.WriteLine(numberOne.GetValueOrDefault() + " ==020== " );
-            
+
+
+            var resultTask = AddAsync(4, 5);
+            int res = (int)resultTask.Result;
+            System.Diagnostics.Debug.WriteLine(res+" FFFFF = "+resultTask);
+
+            int www = Task.FromResult(Plus(5,7)).Result;
+
+            System.Diagnostics.Debug.WriteLine(  " www= " + www);
 
             ThreadWait.Main();
             ThreadMutex.Main();
