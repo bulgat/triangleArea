@@ -424,7 +424,7 @@
     <Compile Include="Models\adapter\AbstractAuto.cs" />
     <Compile Include="Models\adapter\Auto.cs" />
     <Compile Include="Models\adapter\Beast.cs" />
-    <Compile Include="Models\adapter\Camel.cs" />
+    <Compile Include="Models\adapter\CamelAnimal.cs" />
     <Compile Include="Models\adapter\CamelToTransportAdapter.cs" />
     <Compile Include="Models\adapter\Driver.cs" />
     <Compile Include="Models\adapter\IAnimal.cs" />

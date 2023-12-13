@@ -5,17 +5,17 @@ using System.Web;
 
 namespace TriangleArea.Models
 {
-    public class Camel : Beast
+    public class CamelAnimal : Beast, IAnimal
     { 
         public string Noise;
         private string Name;
-        public Camel(string name) : base(name)
+        public CamelAnimal(string name) : base(name)
         {
 
             this.Name = name;
         }
 
-        public Camel(string name, params int[] argument_ar) : this(name)
+        public CamelAnimal(string name, params int[] argument_ar) : this(name)
         {
             
    

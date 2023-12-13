@@ -20,7 +20,7 @@ namespace TriangleArea.Models
                 Thread thread = new Thread(Count);
                 thread.Name = $" name  {i}";
                 thread.Start();
-                Thread.Sleep(500);
+                //Thread.Sleep(500);
                 stop = true;
                 kol = true;
 
@@ -29,6 +29,7 @@ namespace TriangleArea.Models
                 //IAsyncResult asyncResult =  myDelegate.BeginInvoke(null,null);
                 //myDelegate.EndInvoke(asyncResult);
                 Task task = new Task(myDelegate);
+           
                 task.RunSynchronously();
 
                 for (int z = 0; z < 5; z++)

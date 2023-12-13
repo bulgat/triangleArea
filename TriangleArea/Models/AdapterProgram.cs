@@ -42,13 +42,9 @@ namespace TriangleArea.Models
             Blue = 8
         };
         public MakeNoise makeNoise;
-        /*
-        int AddAsync(int a, int b)
-        {
-            var kol = await Task.FromResult(a + b);
-            return kol;
-        }
-        */
+        IEnumerable mass_ar;
+
+
         Task<int> AddAsync(int a, int b)
         {
             return Task.FromResult(a + b);
@@ -61,11 +57,16 @@ namespace TriangleArea.Models
             IContainer container = new Mersedes().GetAutofacContainer();
             var model = container.Resolve<Auto>();
             var beast = container.Resolve<Beast>();
+            //var anim = container.Resolve<CamelAnimal>();
 
             int? numberOne = 67;
             int? numberTwo = null;
 
             var eee = numberTwo;
+
+            mass_ar = new List<int>() { 5,6 };
+            mass_ar = new int[6];
+      
 
             System.Diagnostics.Debug.WriteLine(numberOne.HasValue+" ==000== " + numberTwo.HasValue);
             System.Diagnostics.Debug.WriteLine(numberOne.Value + " ==010== " + numberTwo.GetValueOrDefault());
@@ -230,11 +231,11 @@ System.Diagnostics.Debug.WriteLine("-00--  p = " + ttt+""+ String.Intern("kol"))
             // отправляемся в путешествие
             driver.Travel(auto);
             // встретились пески, надо использовать верблюда
-            Camel camel = new Camel("Camel_Noise", 999, 666);
+            CamelAnimal camel = new CamelAnimal("Camel_Noise", 999, 666);
             camel.Cry = "Noooo";
             Type type = camel.GetType();
             var test = camel.GetType();
-            Type test0 = typeof(Camel);
+            Type test0 = typeof(CamelAnimal);
             FieldInfo myFieldInfo = test0.GetField("Noise");
             
 
