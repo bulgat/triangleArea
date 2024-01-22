@@ -13,7 +13,7 @@ namespace TriangleArea.Models
         }
         public virtual void Move()
         {
-            System.Diagnostics.Debug.WriteLine("-Beast идет по пескам пустыни = "+ this.SuperName);
+            System.Diagnostics.Debug.WriteLine("-Beast по пескам пустыни = "+ this.SuperName);
         }
     }
 }
