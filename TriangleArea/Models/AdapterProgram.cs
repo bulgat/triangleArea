@@ -33,7 +33,7 @@ namespace TriangleArea.Models
         }
    
         [Flags]
-        enum MultiKey 
+        enum MultiKey
         {
             None = 0,
             Black = 1,
@@ -108,25 +108,38 @@ namespace TriangleArea.Models
                 StreamWriter writer = new StreamWriter(server);
                 while (true)
                 {
-                    System.Diagnostics.Debug.WriteLine("__0000092  StartServer  " + reader);
+
                     System.Diagnostics.Debug.WriteLine("__0000093  StartServer  " + reader.ReadLine());
                     string line = reader.ReadLine();
                     System.Diagnostics.Debug.WriteLine("__0000094 Server line = " + line);
                     writer.WriteLine(String.Join("", line.Reverse()));
-                    
+
                     //writer.Flush();
                 }
             });
- 
-          
+           // System.Diagnostics.Debug.WriteLine("=0005 " + DateTime.Now.Millisecond);
 
+ 
+            System.Diagnostics.Debug.WriteLine("=0006 " + DateTime.Now.Millisecond);
+            //System.Diagnostics.Debug.WriteLine("=0006 " + DateTime.Now.Millisecond);
+            //System.Diagnostics.Debug.WriteLine("=0006 " + DateTime.Now.Millisecond);
+            //System.Diagnostics.Debug.WriteLine("=0006 " + DateTime.Now.Millisecond);
+           // System.Diagnostics.Debug.WriteLine("=0006 " + DateTime.Now.Millisecond);
+           // System.Diagnostics.Debug.WriteLine("=0006 " + DateTime.Now.Millisecond);
+            System.Diagnostics.Debug.WriteLine("=0006 " + DateTime.Now.Millisecond);
+            System.Diagnostics.Debug.WriteLine("=0006 " + DateTime.Now.Millisecond);
+            System.Diagnostics.Debug.WriteLine("=0006 " + DateTime.Now.Millisecond);
+            System.Diagnostics.Debug.WriteLine("=0006 " + DateTime.Now.Millisecond);
+            System.Diagnostics.Debug.WriteLine("=0006 " + DateTime.Now.Millisecond);
+
+          //System.Diagnostics.Debug.WriteLine("0009 " );
 
             Stack<int> stackList = new Stack<int>();
             stackList.Push(1);
             stackList.Push(2);
             stackList.Push(3);
             var ttt = stackList.Pop();
-            
+
 
             int[] arrStep = new int[3];
             Array.Resize(ref arrStep, 10);
@@ -151,18 +164,18 @@ namespace TriangleArea.Models
 
             IEnumerator peopleEnumerator = peopleArray.GetEnumerator();
 
-            while(peopleEnumerator.MoveNext())
+            while (peopleEnumerator.MoveNext())
             {
-               System.Diagnostics.Debug.WriteLine("-02-  val = "+ ((MultiKey)8) + "  = " + peopleEnumerator.Current); 
+                System.Diagnostics.Debug.WriteLine("-02-  val = " + ((MultiKey)8) + "  = " + peopleEnumerator.Current);
             }
 
             Queue<string> people = new Queue<string>(new List<string> { "Tom", "Sam", "Bob" });
             
             
             // добавляем элементы
-            people.Enqueue("Tom0");  
-            people.Enqueue("Bob0"); 
-            people.Enqueue("Sam0"); 
+            people.Enqueue("Tom0");
+            people.Enqueue("Bob0");
+            people.Enqueue("Sam0");
 
             // получаем элемент из самого начала очереди 
             var firstPerson = people.Peek();
@@ -195,10 +208,10 @@ namespace TriangleArea.Models
             peoplelist.RemoveAt(1);                 // удаляем элемент
             peoplelist[0] = "Eugene";
 
-System.Diagnostics.Debug.WriteLine("-00--  p = " + ttt+""+ String.Intern("kol"));
+            System.Diagnostics.Debug.WriteLine("-00--  p = " + ttt + "" + String.Intern("kol"));
 
 
-            System.Diagnostics.Debug.WriteLine("-02--   = " + ("Tom"+String.Intern(peoplelist[0])));
+            System.Diagnostics.Debug.WriteLine("-02--   = " + ("Tom" + String.Intern(peoplelist[0])));
 
             SortedList mySL = new SortedList();
             mySL.Add("Third", "!");
@@ -210,7 +223,7 @@ System.Diagnostics.Debug.WriteLine("-00--  p = " + ttt+""+ String.Intern("kol"))
             "Deinonychus",    "Dilophosaurus",  "Gallimimus",
             "Triceratopsz" };
 
-            System.Diagnostics.Debug.WriteLine("-033--   = "+Array.FindIndex(dinosaurs, TrueWi));
+            System.Diagnostics.Debug.WriteLine("-033--   = " + Array.FindIndex(dinosaurs, TrueWi));
             System.Diagnostics.Debug.WriteLine("-033--   = " + Array.FindIndex(dinosaurs, FalseWi));
 
             LinkedListMain();
@@ -230,7 +243,7 @@ System.Diagnostics.Debug.WriteLine("-00--  p = " + ttt+""+ String.Intern("kol"))
             var test = camel.GetType();
             Type test0 = typeof(CamelAnimal);
             FieldInfo myFieldInfo = test0.GetField("Noise");
-            
+
 
             // используем адаптер
             ITransport camelTransport = new CamelToTransportAdapter(camel);
@@ -239,17 +252,17 @@ System.Diagnostics.Debug.WriteLine("-00--  p = " + ttt+""+ String.Intern("kol"))
 
             MyMethod(new List<string>() { "ko", "test" });
             List<int> methodlist = new List<int>() { 1, 4, 7, 8 };
-            System.Diagnostics.Debug.WriteLine("-050--   = " + methodlist.Count+ "   Capacity = " + methodlist.Capacity);
-            methodlist.Capacity=20;
-            System.Diagnostics.Debug.WriteLine("-051--   = " + methodlist.Count+ "   Capacity = " + methodlist.Capacity);
+            System.Diagnostics.Debug.WriteLine("-050--   = " + methodlist.Count + "   Capacity = " + methodlist.Capacity);
+            methodlist.Capacity = 20;
+            System.Diagnostics.Debug.WriteLine("-051--   = " + methodlist.Count + "   Capacity = " + methodlist.Capacity);
             MyMethod(methodlist);
- 
+
             var i = 5;
             var enumerator = FillEnumerator(i);
 
             var yyy = methodlist.Where(b => b == 4).FirstOrDefault();
 
-            foreach(var itemF in methodlist.Where(z=>z>0))
+            foreach (var itemF in methodlist.Where(z => z > 0))
             {
                 System.Diagnostics.Debug.WriteLine("- 777   = " + itemF);
             }
@@ -265,7 +278,7 @@ System.Diagnostics.Debug.WriteLine("-00--  p = " + ttt+""+ String.Intern("kol"))
             dynamic kol = a + c;
             string result = (string)kol;
             double d = 465.97443464564;
-            
+
             result = null;
             var koll = result ?? "---5  erro = ";
 
@@ -283,15 +296,15 @@ System.Diagnostics.Debug.WriteLine("-00--  p = " + ttt+""+ String.Intern("kol"))
             bool isSuccessful_0 = number_ar.TryDequeue(out item);
 
 
-            Dictionary<Type,int> map = new Dictionary<Type,int>();
+            Dictionary<Type, int> map = new Dictionary<Type, int>();
             map.Add(typeof(int), 1);
             map.Add(typeof(string), 999);
 
-            System.Diagnostics.Debug.WriteLine(map[typeof(int)] +"-000010--  pe = " + map[typeof(string)]);
+            System.Diagnostics.Debug.WriteLine(map[typeof(int)] + "-000010--  pe = " + map[typeof(string)]);
 
             Fire();
             FireFlash();
-            System.Diagnostics.Debug.WriteLine(  "-000011--  = " );
+            System.Diagnostics.Debug.WriteLine("-000011--  = ");
             new Thread(new ThreadStart(RunTest)).Start();
         }
         public void Fire()
@@ -312,7 +325,7 @@ System.Diagnostics.Debug.WriteLine("-00--  p = " + ttt+""+ String.Intern("kol"))
         private static bool TrueWi(String s)
         {
             System.Diagnostics.Debug.WriteLine("-041--   = " + s);
-            return s.IndexOf('z')>-1;
+            return s.IndexOf('z') > -1;
         }
         private static bool FalseWi(String s)
         {
@@ -321,9 +334,9 @@ System.Diagnostics.Debug.WriteLine("-00--  p = " + ttt+""+ String.Intern("kol"))
 
         void People_CollectionChanged(object sender, NotifyCollectionChangedEventArgs e)
         {
-            
 
-            
+
+
         }
         public void RunTest()
         {
@@ -338,15 +351,15 @@ System.Diagnostics.Debug.WriteLine("-00--  p = " + ttt+""+ String.Intern("kol"))
             {
                 string input = Console.ReadLine();
                 System.Diagnostics.Debug.WriteLine("__000003 _________ input = " + input);
-                if (String.IsNullOrEmpty(input)==false)
+                if (String.IsNullOrEmpty(input) == false)
                 {
 
                     writer.WriteLine(input);
                     writer.Flush();
                     System.Diagnostics.Debug.WriteLine("__000004  " + reader.ReadLine());
                 }
-                else 
-                { 
+                else
+                {
 
                     System.Diagnostics.Debug.WriteLine("__000005 Break  ");
                     break;
@@ -357,7 +370,7 @@ System.Diagnostics.Debug.WriteLine("-00--  p = " + ttt+""+ String.Intern("kol"))
 
         private IEnumerable<string> FillEnumerator(int i)
         {
-            System.Diagnostics.Debug.WriteLine("-  person = " );
+            System.Diagnostics.Debug.WriteLine("-  person = ");
             var result = new List<string>();
 
             string[] peopleArray = { "Tom", "Sam", "Bob" };
@@ -372,7 +385,7 @@ System.Diagnostics.Debug.WriteLine("-00--  p = " + ttt+""+ String.Intern("kol"))
             }
 
         }
-        public IEnumerable<int> GetEnumerator(int X,int Y,int Z)
+        public IEnumerable<int> GetEnumerator(int X, int Y, int Z)
         {
             yield return X;
             yield return Y;
@@ -382,27 +395,30 @@ System.Diagnostics.Debug.WriteLine("-00--  p = " + ttt+""+ String.Intern("kol"))
         void MyMethod<T>(List<T> list)
         {
             //Do stuff
-            
+
         }
 
-        private void LinkedListMain() { 
-            
+        private void LinkedListMain()
+        {
+
             var employees = new List<string> { "Tom", "Sam", "Bob" };
 
             LinkedList<string> people = new LinkedList<string>(employees);
             foreach (string person in people)
             {
-                
+
             }
             char[] strList = "zzzasdaf".ToCharArray();
-             Array.Reverse(strList);
+            Array.Reverse(strList);
             strList = strList.Distinct().ToArray();
-            for(int i=0; i< strList.Length;i++)
+            for (int i = 0; i < strList.Length; i++)
             {
-                
+
             }
 
         }
     }
+
+
 
 }
