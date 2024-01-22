@@ -1,0 +1,11 @@
+﻿################################################################################
+# Данный GITIGNORE-файл был автоматически создан Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs/TriangleArea/v17/.suo
+/LibraryTriangleArea/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
+/LibraryTriangleArea/obj/Debug/LibraryTriangleArea.csproj.AssemblyReference.cache
+/TriangleArea/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
+/TriangleArea/obj/Debug/TriangleArea.csproj.AssemblyReference.cache
+/UnitTestTriangleArea/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
+/UnitTestTriangleArea/obj/Debug/UnitTestTriangleArea.csproj.AssemblyReference.cache
