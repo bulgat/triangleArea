@@ -18,7 +18,7 @@ namespace TriangleArea.Models.adapter
             builder.RegisterType<Auto>();
             builder.RegisterType<Beast>().UsingConstructor(typeof(string))
     .WithParameter(new NamedParameter("name","Animal")).PropertiesAutowired(); ;
-            //builder.RegisterAssemblyTypes(Assembly.GetExecutingAssembly()).Where(a => a.Name.EndsWith("Animal")).AsImplementedInterfaces().SingleInstance();
+      
             var queriesAssemblyName = Assembly.GetEntryAssembly() ?? Assembly.GetCallingAssembly();
 
             System.Diagnostics.Debug.WriteLine(queriesAssemblyName.GetName().Name+"  name = " + queriesAssemblyName.GetName());
@@ -33,13 +33,7 @@ namespace TriangleArea.Models.adapter
 
             var types = assemblies.Where(t =>t.GetName().Name.EndsWith("Animal")).FirstOrDefault();
 
-            //builder.RegisterAssemblyTypes(Queryable.Ass).Where(a => a.Name.EndsWith("Animal")).AsImplementedInterfaces().SingleInstance();
 
-
-            /*
-            builder.RegisterSource(
-  new Auto());
-*/
             container = builder.Build();
         
 System.Diagnostics.Debug.WriteLine("00==="+ container.IsRegistered(typeof(Auto)));

@@ -110,15 +110,9 @@ namespace TriangleArea.Models
                     //writer.Flush();
                 }
             });
-           // System.Diagnostics.Debug.WriteLine("=0005 " + DateTime.Now.Millisecond);
-
  
             System.Diagnostics.Debug.WriteLine("=0006 " + DateTime.Now.Millisecond);
-            //System.Diagnostics.Debug.WriteLine("=0006 " + DateTime.Now.Millisecond);
-            //System.Diagnostics.Debug.WriteLine("=0006 " + DateTime.Now.Millisecond);
-            //System.Diagnostics.Debug.WriteLine("=0006 " + DateTime.Now.Millisecond);
-           // System.Diagnostics.Debug.WriteLine("=0006 " + DateTime.Now.Millisecond);
-           // System.Diagnostics.Debug.WriteLine("=0006 " + DateTime.Now.Millisecond);
+           
             System.Diagnostics.Debug.WriteLine("=0006 " + DateTime.Now.Millisecond);
             System.Diagnostics.Debug.WriteLine("=0006 " + DateTime.Now.Millisecond);
             System.Diagnostics.Debug.WriteLine("=0006 " + DateTime.Now.Millisecond);
