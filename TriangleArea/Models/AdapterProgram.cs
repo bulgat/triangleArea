@@ -119,7 +119,6 @@ namespace TriangleArea.Models
             System.Diagnostics.Debug.WriteLine("=0006 " + DateTime.Now.Millisecond);
             System.Diagnostics.Debug.WriteLine("=0006 " + DateTime.Now.Millisecond);
 
-          //System.Diagnostics.Debug.WriteLine("0009 " );
 
             Stack<int> stackList = new Stack<int>();
             stackList.Push(1);
@@ -131,7 +130,7 @@ namespace TriangleArea.Models
             int[] arrStep = new int[3];
             Array.Resize(ref arrStep, 10);
             System.Diagnostics.Debug.WriteLine("-01--"+ MultiKey.Red.ToString() + " ____ val = "+ ((MultiKey)5) + " = " + arrStep.Length);
-            //System.Diagnostics.Debug.Assert(arrStep.Length>=3);
+
             Expression<Func<int>> add = () => 1 + 2;
             var func = add.Compile(); // Create Delegate
             var answer = func(); // Invoke Delegate
@@ -155,7 +154,7 @@ namespace TriangleArea.Models
             {
                System.Diagnostics.Debug.WriteLine("-02-  val = "+ ((MultiKey)8) + "  = " + peopleEnumerator.Current); 
             }
-            ////System.Diagnostics.Debug.Assert(arrStep.Length >= 4);
+
             Queue<string> people = new Queue<string>(new List<string> { "Tom", "Sam", "Bob" });
             
             
@@ -169,14 +168,13 @@ namespace TriangleArea.Models
             System.Diagnostics.Debug.WriteLine("val =" + ((MultiKey)3) + "    firstPerson = " + firstPerson); // Tom
 
             // удаляем элементы
-            //System.Diagnostics.Debug.WriteLine("VAL= "+ MultiKey.Blue + "    count = " + people.Count);
+
             var person1 = people.Dequeue();  // people = { Bob, Sam  }
-            //System.Diagnostics.Debug.WriteLine("person1 = " + person1); // Tom
+  
             var person2 = people.Dequeue();  // people = { Sam  }
-            //System.Diagnostics.Debug.WriteLine("person2 = " + person2); // Bob
+
             var person3 = people.Dequeue();  // people = {  }
-            //System.Diagnostics.Debug.WriteLine("person3 = " + person3); // Sam
-            //System.Diagnostics.Debug.WriteLine("count = " + people.Count);
+
 
             int index;
 
@@ -263,7 +261,7 @@ System.Diagnostics.Debug.WriteLine("-00--  p = " + ttt+""+ String.Intern("kol"))
 
             dynamic a = "123";
             dynamic c = 50;
-            dynamic kol = a + c;//.toString();
+            dynamic kol = a + c;
             string result = (string)kol;
             double d = 465.97443464564;
             
