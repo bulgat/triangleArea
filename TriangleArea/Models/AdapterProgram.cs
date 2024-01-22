@@ -34,6 +34,7 @@ namespace TriangleArea.Models
    
         [Flags]
         enum MultiKey
+        enum MultiKey
         {
             None = 0,
             Black = 1,
@@ -117,22 +118,7 @@ namespace TriangleArea.Models
                     //writer.Flush();
                 }
             });
-           // System.Diagnostics.Debug.WriteLine("=0005 " + DateTime.Now.Millisecond);
 
- 
-            System.Diagnostics.Debug.WriteLine("=0006 " + DateTime.Now.Millisecond);
-            //System.Diagnostics.Debug.WriteLine("=0006 " + DateTime.Now.Millisecond);
-            //System.Diagnostics.Debug.WriteLine("=0006 " + DateTime.Now.Millisecond);
-            //System.Diagnostics.Debug.WriteLine("=0006 " + DateTime.Now.Millisecond);
-           // System.Diagnostics.Debug.WriteLine("=0006 " + DateTime.Now.Millisecond);
-           // System.Diagnostics.Debug.WriteLine("=0006 " + DateTime.Now.Millisecond);
-            System.Diagnostics.Debug.WriteLine("=0006 " + DateTime.Now.Millisecond);
-            System.Diagnostics.Debug.WriteLine("=0006 " + DateTime.Now.Millisecond);
-            System.Diagnostics.Debug.WriteLine("=0006 " + DateTime.Now.Millisecond);
-            System.Diagnostics.Debug.WriteLine("=0006 " + DateTime.Now.Millisecond);
-            System.Diagnostics.Debug.WriteLine("=0006 " + DateTime.Now.Millisecond);
-
-          //System.Diagnostics.Debug.WriteLine("0009 " );
 
             Stack<int> stackList = new Stack<int>();
             stackList.Push(1);
