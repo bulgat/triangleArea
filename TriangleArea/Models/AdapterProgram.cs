@@ -54,6 +54,15 @@ namespace TriangleArea.Models
         }
         public AdapterProgram()
         {
+
+            System.Diagnostics.Debug.WriteLine("=0006 "  );
+
+            System.Diagnostics.Debug.WriteLine("=0006 "  );
+            System.Diagnostics.Debug.WriteLine("=0006 "  );
+            System.Diagnostics.Debug.WriteLine("=0006 "  );
+            System.Diagnostics.Debug.WriteLine("=0006 "  );
+            System.Diagnostics.Debug.WriteLine("=0006 "  );
+
             IContainer container = new Mersedes().GetAutofacContainer();
             var model = container.Resolve<Auto>();
             var beast = container.Resolve<Beast>();
@@ -111,13 +120,7 @@ namespace TriangleArea.Models
                 }
             });
  
-            System.Diagnostics.Debug.WriteLine("=0006 " + DateTime.Now.Millisecond);
-           
-            System.Diagnostics.Debug.WriteLine("=0006 " + DateTime.Now.Millisecond);
-            System.Diagnostics.Debug.WriteLine("=0006 " + DateTime.Now.Millisecond);
-            System.Diagnostics.Debug.WriteLine("=0006 " + DateTime.Now.Millisecond);
-            System.Diagnostics.Debug.WriteLine("=0006 " + DateTime.Now.Millisecond);
-            System.Diagnostics.Debug.WriteLine("=0006 " + DateTime.Now.Millisecond);
+          
 
 
             Stack<int> stackList = new Stack<int>();
