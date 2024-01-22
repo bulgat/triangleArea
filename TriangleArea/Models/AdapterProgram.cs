@@ -54,6 +54,13 @@ namespace TriangleArea.Models
         }
         public AdapterProgram()
         {
+            System.Diagnostics.Debug.WriteLine(";;;;;;;;;;;;;;;;;;;;=0006 " );
+            System.Diagnostics.Debug.WriteLine(";;;;;;;;;;;;;;;;;;;;=0006 "  );
+            System.Diagnostics.Debug.WriteLine(";;;;;;;;;;;;;;;;;;;;=0006 ");
+            System.Diagnostics.Debug.WriteLine(";;;;;;;;;;;;;;;;;;;;=0006 ");
+            System.Diagnostics.Debug.WriteLine(";;;;;;;;;;;;;;;;;;;;=0006 ");
+            System.Diagnostics.Debug.WriteLine(";;;;;;;;;;;;;;;;;;;;=0006 ");
+
             IContainer container = new Mersedes().GetAutofacContainer();
             var model = container.Resolve<Auto>();
             var beast = container.Resolve<Beast>();
