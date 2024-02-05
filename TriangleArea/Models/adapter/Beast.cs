@@ -15,5 +15,9 @@ namespace TriangleArea.Models
         {
             System.Diagnostics.Debug.WriteLine("-Beast идет по пескам пустыни = "+ this.SuperName);
         }
+        public virtual void Execute()
+        {
+            System.Diagnostics.Debug.WriteLine("zzzz GAV zzzz");
+        }
     }
 }

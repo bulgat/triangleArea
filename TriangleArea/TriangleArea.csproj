@@ -401,6 +401,7 @@
     <Compile Include="Models\adapter\Beast.cs" />
     <Compile Include="Models\adapter\Camel.cs" />
     <Compile Include="Models\adapter\CamelToTransportAdapter.cs" />
+    <Compile Include="Models\adapter\Cat.cs" />
     <Compile Include="Models\adapter\Driver.cs" />
     <Compile Include="Models\adapter\IAnimal.cs" />
     <Compile Include="Models\adapter\IMoto.cs" />

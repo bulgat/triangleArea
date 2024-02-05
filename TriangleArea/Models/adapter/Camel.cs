@@ -30,5 +30,8 @@ namespace TriangleArea.Models
             set { Noise = value; }
             get { return Noise; }
         }
+        public override void Execute() {
+            System.Diagnostics.Debug.WriteLine("zzzz CAMEL tpu!! zzzz");
+        }
     }
 }

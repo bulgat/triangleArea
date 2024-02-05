@@ -9,5 +9,6 @@ namespace TriangleArea.Models
     interface IAnimal
     {
         void Move();
+        //void Execute();
     }
 }

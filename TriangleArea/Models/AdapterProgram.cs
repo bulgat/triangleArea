@@ -18,6 +18,7 @@ using System.IO;
 using System.Text;
 using System.IO.Pipes;
 using System.Runtime.InteropServices;
+using TriangleArea.Models.adapter;
 
 namespace TriangleArea.Models
 {
@@ -37,7 +38,8 @@ namespace TriangleArea.Models
 
         public AdapterProgram()
         {
-
+            Cat camelCat = new Cat("Верблюд");
+            camelCat.Execute();
 
             ThreadWait.Main();
             ThreadMutex.Main();
