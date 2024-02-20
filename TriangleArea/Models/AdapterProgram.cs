@@ -38,6 +38,19 @@ namespace TriangleArea.Models
 
         public AdapterProgram()
         {
+            Stack<int> stackList = new Stack<int>();
+            stackList.Push(1);
+            stackList.Push(2);
+            stackList.Push(3);
+            var ttt = stackList.Pop();
+            var anyList = new List<int>();
+            System.Diagnostics.Debug.WriteLine("-0001--" + stackList.Any() + "");
+            System.Diagnostics.Debug.WriteLine("-0002--" + anyList.Any() + "");
+            System.Diagnostics.Debug.WriteLine("-0003--" + stackList.Any(t => t > 1) + "");
+            System.Diagnostics.Debug.WriteLine("-0004--" + stackList.Any(t => t > 100) + "");
+            int[] arrStep = new int[3];
+            Array.Resize(ref arrStep, 10);
+
             Cat camelCat = new Cat("Верблюд");
             camelCat.Execute();
 
@@ -70,15 +83,9 @@ namespace TriangleArea.Models
             });
 
 
-            Stack<int> stackList = new Stack<int>();
-            stackList.Push(1);
-            stackList.Push(2);
-            stackList.Push(3);
-            var ttt = stackList.Pop();
 
 
-            int[] arrStep = new int[3];
-            Array.Resize(ref arrStep, 10);
+         
             System.Diagnostics.Debug.WriteLine("-01--" + MultiKey.Red.ToString() + " ____ val = " + ((MultiKey)5) + " = " + arrStep.Length);
             //System.Diagnostics.Debug.Assert(arrStep.Length>=3);
             Expression<Func<int>> add = () => 1 + 2;
