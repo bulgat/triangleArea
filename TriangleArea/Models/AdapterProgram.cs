@@ -20,6 +20,7 @@ using System.IO.Pipes;
 using System.Runtime.InteropServices;
 using TriangleArea.Models.adapter;
 using Autofac;
+using static TriangleArea.Models.CamelAnimal;
 
 namespace TriangleArea.Models
 {
@@ -52,14 +53,32 @@ namespace TriangleArea.Models
         int Plus(int a, int b) {
             return a + b;
         }
+        //void ICamelAnimal.Kick(int n){
+           // ICamelAnimal.Kick(777) { }
+         //}
+        //void Kick(int yyy)
+        //{
+
+        //}
         public AdapterProgram()
         {
-            System.Diagnostics.Debug.WriteLine(";;;;;;;;;;;;;;;;;;;;=0006 " );
+            CamelAnimal kkol = new CamelAnimal("ssss");
+            //ICamelAnimal.Kick();
+            
             System.Diagnostics.Debug.WriteLine(";;;;;;;;;;;;;;;;;;;;=0006 "  );
-            System.Diagnostics.Debug.WriteLine(";;;;;;;;;;;;;;;;;;;;=0006 ");
-            System.Diagnostics.Debug.WriteLine(";;;;;;;;;;;;;;;;;;;;=0006 ");
-            System.Diagnostics.Debug.WriteLine(";;;;;;;;;;;;;;;;;;;;=0006 ");
-            System.Diagnostics.Debug.WriteLine(";;;;;;;;;;;;;;;;;;;;=0006 ");
+            Type test000 = typeof(CamelAnimal);
+            PropertyInfo stop = typeof(CamelAnimal).GetProperty("Cry");
+            PropertyInfo[] props = kkol.GetType().GetProperties();
+            var ett = props.Where(s => s.Name == "Cry").FirstOrDefault();
+            System.Diagnostics.Debug.WriteLine(";;;;;;;;;;;;;;;;;;;;=  "+ test000);
+            System.Diagnostics.Debug.WriteLine(";;;;;;;;;;;;;;;;;;;;=  "+ stop);
+            System.Diagnostics.Debug.WriteLine(";;;;;;;;;;;;;;;;; = "+ props.Where(s=>s.Name=="Cry").FirstOrDefault());
+
+            Auto auto0 = new Auto();
+            auto0.Zavod += OnFinish;
+            auto0.SuperMove();
+
+            System.Diagnostics.Debug.WriteLine(";;;;;;;;;;;;;;;;;;;;=  "+ ett);
 
             IContainer container = new Mersedes().GetAutofacContainer();
             var model = container.Resolve<Auto>();
@@ -291,9 +310,15 @@ System.Diagnostics.Debug.WriteLine("-00--  p = " + ttt+""+ String.Intern("kol"))
 
             Fire();
             FireFlash();
-            System.Diagnostics.Debug.WriteLine(  "-000011--  = " );
+            
             new Thread(new ThreadStart(RunTest)).Start();
         }
+        public void OnFinish(object sender, EventArgs arg)
+        {
+            System.Diagnostics.Debug.WriteLine("-000012--  = "+ sender);
+            System.Diagnostics.Debug.WriteLine(";;;;;;;;;;;;;;;;;;;;=0006 "+ arg);
+        }
+
         public void Fire()
         {
             makeNoise += MakeFlash;
