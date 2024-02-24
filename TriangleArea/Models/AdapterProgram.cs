@@ -54,11 +54,16 @@ namespace TriangleArea.Models
         }
         public AdapterProgram()
         {
-            System.Diagnostics.Debug.WriteLine(";;;;;;;;;;;;;;;;;;;;=0006 " );
+            
             System.Diagnostics.Debug.WriteLine(";;;;;;;;;;;;;;;;;;;;=0006 "  );
             System.Diagnostics.Debug.WriteLine(";;;;;;;;;;;;;;;;;;;;=0006 ");
             System.Diagnostics.Debug.WriteLine(";;;;;;;;;;;;;;;;;;;;=0006 ");
             System.Diagnostics.Debug.WriteLine(";;;;;;;;;;;;;;;;;;;;=0006 ");
+
+            Auto auto0 = new Auto();
+            auto0.Zavod += OnFinish;
+            auto0.SuperMove();
+
             System.Diagnostics.Debug.WriteLine(";;;;;;;;;;;;;;;;;;;;=0006 ");
 
             IContainer container = new Mersedes().GetAutofacContainer();
@@ -291,9 +296,15 @@ System.Diagnostics.Debug.WriteLine("-00--  p = " + ttt+""+ String.Intern("kol"))
 
             Fire();
             FireFlash();
-            System.Diagnostics.Debug.WriteLine(  "-000011--  = " );
+            
             new Thread(new ThreadStart(RunTest)).Start();
         }
+        public void OnFinish(object sender, EventArgs arg)
+        {
+            System.Diagnostics.Debug.WriteLine("-000012--  = "+ sender);
+            System.Diagnostics.Debug.WriteLine(";;;;;;;;;;;;;;;;;;;;=0006 "+ arg);
+        }
+
         public void Fire()
         {
             makeNoise += MakeFlash;
