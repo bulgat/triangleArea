@@ -19,14 +19,21 @@ using System.Text;
 using System.IO.Pipes;
 using System.Runtime.InteropServices;
 using TriangleArea.Models.adapter;
+using Autofac;
 
 namespace TriangleArea.Models
 {
     public delegate void MakeNoise();
+ 
     public class AdapterProgram
     {
+        public interface IAdapter
+        {
+            string Name();
+        }
+   
         [Flags]
-        enum MultiKey
+        enum MultiKey 
         {
             None = 0,
             Black = 1,
@@ -35,7 +42,16 @@ namespace TriangleArea.Models
             Blue = 8
         };
         public MakeNoise makeNoise;
+        IEnumerable mass_ar;
 
+
+        Task<int> AddAsync(int a, int b)
+        {
+            return Task.FromResult(a + b);
+        }
+        int Plus(int a, int b) {
+            return a + b;
+        }
         public AdapterProgram()
         {
             
@@ -50,8 +66,32 @@ namespace TriangleArea.Models
 
             System.Diagnostics.Debug.WriteLine(";;;;;;;;;;;;;;;;;;;;=0006 ");
 
-            Cat camelCat = new Cat("Верблюд");
-            camelCat.Execute();
+            IContainer container = new Mersedes().GetAutofacContainer();
+            var model = container.Resolve<Auto>();
+            var beast = container.Resolve<Beast>();
+            //var anim = container.Resolve<CamelAnimal>();
+
+            int? numberOne = 67;
+            int? numberTwo = null;
+
+            var eee = numberTwo;
+
+            mass_ar = new List<int>() { 5,6 };
+            mass_ar = new int[6];
+      
+
+            System.Diagnostics.Debug.WriteLine(numberOne.HasValue+" ==000== " + numberTwo.HasValue);
+            System.Diagnostics.Debug.WriteLine(numberOne.Value + " ==010== " + numberTwo.GetValueOrDefault());
+            System.Diagnostics.Debug.WriteLine(numberOne.GetValueOrDefault() + " ==020== " );
+
+
+            var resultTask = AddAsync(4, 5);
+            int res = (int)resultTask.Result;
+            System.Diagnostics.Debug.WriteLine(res+" FFFFF = "+resultTask);
+
+            int www = Task.FromResult(Plus(5,7)).Result;
+
+            System.Diagnostics.Debug.WriteLine(  " www= " + www);
 
             ThreadWait.Main();
             ThreadMutex.Main();
@@ -60,7 +100,9 @@ namespace TriangleArea.Models
             ThreadDelegate.Main();
             TaskFactory.Main();
 
-            System.Diagnostics.Debug.WriteLine("=0005 " + DateTime.Now.Millisecond);
+            int[] arr = new int[] {5,6,7 };
+            int[] arr0 = new int[] {};
+            System.Diagnostics.Debug.WriteLine("=  arr =  " + arr.Any()+ "  arr0 = " + arr0.Any());
 
             Task.Factory.StartNew(() =>
             {
@@ -71,22 +113,30 @@ namespace TriangleArea.Models
                 StreamWriter writer = new StreamWriter(server);
                 while (true)
                 {
-
+                    System.Diagnostics.Debug.WriteLine("__0000092  StartServer  " + reader);
                     System.Diagnostics.Debug.WriteLine("__0000093  StartServer  " + reader.ReadLine());
                     string line = reader.ReadLine();
                     System.Diagnostics.Debug.WriteLine("__0000094 Server line = " + line);
                     writer.WriteLine(String.Join("", line.Reverse()));
-
+                    
                     //writer.Flush();
                 }
             });
+ 
+          
 
 
+            Stack<int> stackList = new Stack<int>();
+            stackList.Push(1);
+            stackList.Push(2);
+            stackList.Push(3);
+            var ttt = stackList.Pop();
+            
 
+            int[] arrStep = new int[3];
+            Array.Resize(ref arrStep, 10);
+            System.Diagnostics.Debug.WriteLine("-01--"+ MultiKey.Red.ToString() + " ____ val = "+ ((MultiKey)5) + " = " + arrStep.Length);
 
-         
-            System.Diagnostics.Debug.WriteLine("-01--" + MultiKey.Red.ToString() + " ____ val = " + ((MultiKey)5) + " = " );
-            //System.Diagnostics.Debug.Assert(arrStep.Length>=3);
             Expression<Func<int>> add = () => 1 + 2;
             var func = add.Compile(); // Create Delegate
             var answer = func(); // Invoke Delegate
@@ -94,29 +144,41 @@ namespace TriangleArea.Models
 
             ObservableCollection<string> peoplelist = new ObservableCollection<string>(new string[] { "Tom", "Bob", "Sam" });
             string[] peopleArray = { "Tom", "Sam", "Bob" };
+            object[] peopleArrayObj = { null, null, "Bob" };
+            object[] peopleArrayTwoObj = { null, null};
+            System.Diagnostics.Debug.WriteLine(peopleArray.Cast<string>().Any() + " ==020== ");
+            System.Diagnostics.Debug.WriteLine(peopleArrayObj.Cast<string>().Any() + " ==030== ");
+
+            IEnumerable<string> cast = peopleArray.Cast<string>();
+            IEnumerable<string> castTwo = peopleArrayObj.Cast<string>();
+            bool castThree = peopleArrayObj.Cast<string>().Any();
+            bool castFour = peopleArrayTwoObj.Cast<string>().Any();
+
             IEnumerator peopleEnumerator = peopleArray.GetEnumerator();
 
-            while (peopleEnumerator.MoveNext())
+            while(peopleEnumerator.MoveNext())
             {
-                System.Diagnostics.Debug.WriteLine("-02-  val = " + ((MultiKey)8) + "  = " + peopleEnumerator.Current);
+               System.Diagnostics.Debug.WriteLine("-02-  val = "+ ((MultiKey)8) + "  = " + peopleEnumerator.Current); 
             }
-            ////System.Diagnostics.Debug.Assert(arrStep.Length >= 4);
+
             Queue<string> people = new Queue<string>(new List<string> { "Tom", "Sam", "Bob" });
+            
+            
             // добавляем элементы
-            people.Enqueue("Tom0");
-            people.Enqueue("Bob0");
-            people.Enqueue("Sam0");
+            people.Enqueue("Tom0");  
+            people.Enqueue("Bob0"); 
+            people.Enqueue("Sam0"); 
 
             // получаем элемент из самого начала очереди 
             var firstPerson = people.Peek();
             System.Diagnostics.Debug.WriteLine("val =" + ((MultiKey)3) + "    firstPerson = " + firstPerson); // Tom
 
             // удаляем элементы
-            //System.Diagnostics.Debug.WriteLine("VAL= "+ MultiKey.Blue + "    count = " + people.Count);
+
             var person1 = people.Dequeue();  // people = { Bob, Sam  }
-            //System.Diagnostics.Debug.WriteLine("person1 = " + person1); // Tom
+  
             var person2 = people.Dequeue();  // people = { Sam  }
-            //System.Diagnostics.Debug.WriteLine("person2 = " + person2); // Bob
+
             var person3 = people.Dequeue();  // people = {  }
 
 
@@ -138,10 +200,10 @@ namespace TriangleArea.Models
             peoplelist.RemoveAt(1);                 // удаляем элемент
             peoplelist[0] = "Eugene";
 
-            System.Diagnostics.Debug.WriteLine("-00--  p = " + String.Intern("kol"));
+System.Diagnostics.Debug.WriteLine("-00--  p = " + ttt+""+ String.Intern("kol"));
 
 
-            System.Diagnostics.Debug.WriteLine("-02--   = " + ("Tom" + String.Intern(peoplelist[0])));
+            System.Diagnostics.Debug.WriteLine("-02--   = " + ("Tom"+String.Intern(peoplelist[0])));
 
             SortedList mySL = new SortedList();
             mySL.Add("Third", "!");
@@ -153,7 +215,7 @@ namespace TriangleArea.Models
             "Deinonychus",    "Dilophosaurus",  "Gallimimus",
             "Triceratopsz" };
 
-            System.Diagnostics.Debug.WriteLine("-033--   = " + Array.FindIndex(dinosaurs, TrueWi));
+            System.Diagnostics.Debug.WriteLine("-033--   = "+Array.FindIndex(dinosaurs, TrueWi));
             System.Diagnostics.Debug.WriteLine("-033--   = " + Array.FindIndex(dinosaurs, FalseWi));
 
             LinkedListMain();
@@ -167,13 +229,13 @@ namespace TriangleArea.Models
             // отправляемся в путешествие
             driver.Travel(auto);
             // встретились пески, надо использовать верблюда
-            Camel camel = new Camel("Camel_Noise", 999, 666);
+            CamelAnimal camel = new CamelAnimal("Camel_Noise", 999, 666);
             camel.Cry = "Noooo";
             Type type = camel.GetType();
             var test = camel.GetType();
-            Type test0 = typeof(Camel);
+            Type test0 = typeof(CamelAnimal);
             FieldInfo myFieldInfo = test0.GetField("Noise");
-
+            
 
             // используем адаптер
             ITransport camelTransport = new CamelToTransportAdapter(camel);
@@ -182,31 +244,33 @@ namespace TriangleArea.Models
 
             MyMethod(new List<string>() { "ko", "test" });
             List<int> methodlist = new List<int>() { 1, 4, 7, 8 };
-            System.Diagnostics.Debug.WriteLine("-050--   = " + methodlist.Count + "   Capacity = " + methodlist.Capacity);
-            methodlist.Capacity = 20;
-            System.Diagnostics.Debug.WriteLine("-051--   = " + methodlist.Count + "   Capacity = " + methodlist.Capacity);
+            System.Diagnostics.Debug.WriteLine("-050--   = " + methodlist.Count+ "   Capacity = " + methodlist.Capacity);
+            methodlist.Capacity=20;
+            System.Diagnostics.Debug.WriteLine("-051--   = " + methodlist.Count+ "   Capacity = " + methodlist.Capacity);
             MyMethod(methodlist);
-
+ 
             var i = 5;
             var enumerator = FillEnumerator(i);
 
             var yyy = methodlist.Where(b => b == 4).FirstOrDefault();
 
-            foreach (var itemF in methodlist.Where(z => z > 0))
+            foreach(var itemF in methodlist.Where(z=>z>0))
             {
                 System.Diagnostics.Debug.WriteLine("- 777   = " + itemF);
             }
             methodlist.Clear();
             System.Diagnostics.Debug.WriteLine("-052--   = " + methodlist.Count + "   Capacity = " + methodlist.Capacity);
             methodlist.TrimExcess();
+            System.Diagnostics.Debug.WriteLine("-053--   = " + methodlist.Count + "   Capacity = " + methodlist.Capacity);
 
+            System.Diagnostics.Debug.WriteLine("-03--  p  = " + yyy);
 
             dynamic a = "123";
             dynamic c = 50;
-            dynamic kol = a + c;//.toString();
+            dynamic kol = a + c;
             string result = (string)kol;
             double d = 465.97443464564;
-
+            
             result = null;
             var koll = result ?? "---5  erro = ";
 
@@ -224,11 +288,11 @@ namespace TriangleArea.Models
             bool isSuccessful_0 = number_ar.TryDequeue(out item);
 
 
-            Dictionary<Type, int> map = new Dictionary<Type, int>();
+            Dictionary<Type,int> map = new Dictionary<Type,int>();
             map.Add(typeof(int), 1);
             map.Add(typeof(string), 999);
 
-            System.Diagnostics.Debug.WriteLine(map[typeof(int)] + "-000010--  pe = " + map[typeof(string)]);
+            System.Diagnostics.Debug.WriteLine(map[typeof(int)] +"-000010--  pe = " + map[typeof(string)]);
 
             Fire();
             FireFlash();
@@ -259,7 +323,7 @@ namespace TriangleArea.Models
         private static bool TrueWi(String s)
         {
             System.Diagnostics.Debug.WriteLine("-041--   = " + s);
-            return s.IndexOf('z') > -1;
+            return s.IndexOf('z')>-1;
         }
         private static bool FalseWi(String s)
         {
@@ -268,32 +332,32 @@ namespace TriangleArea.Models
 
         void People_CollectionChanged(object sender, NotifyCollectionChangedEventArgs e)
         {
+            
 
-
-
+            
         }
         public void RunTest()
         {
-
+            System.Diagnostics.Debug.WriteLine("__000006 ");
             //Client
             var client = new NamedPipeClientStream("PipesOfPiece");
             client.Connect();
             StreamReader reader = new StreamReader(client);
             StreamWriter writer = new StreamWriter(client);
-
+            System.Diagnostics.Debug.WriteLine("__000007 ");
             while (true)
             {
                 string input = Console.ReadLine();
-   
-                if (String.IsNullOrEmpty(input) == false)
+                System.Diagnostics.Debug.WriteLine("__000003 _________ input = " + input);
+                if (String.IsNullOrEmpty(input)==false)
                 {
 
                     writer.WriteLine(input);
                     writer.Flush();
                     System.Diagnostics.Debug.WriteLine("__000004  " + reader.ReadLine());
                 }
-                else
-                {
+                else 
+                { 
 
                     System.Diagnostics.Debug.WriteLine("__000005 Break  ");
                     break;
@@ -304,7 +368,7 @@ namespace TriangleArea.Models
 
         private IEnumerable<string> FillEnumerator(int i)
         {
-            System.Diagnostics.Debug.WriteLine("-  person = ");
+            System.Diagnostics.Debug.WriteLine("-  person = " );
             var result = new List<string>();
 
             string[] peopleArray = { "Tom", "Sam", "Bob" };
@@ -319,7 +383,7 @@ namespace TriangleArea.Models
             }
 
         }
-        public IEnumerable<int> GetEnumerator(int X, int Y, int Z)
+        public IEnumerable<int> GetEnumerator(int X,int Y,int Z)
         {
             yield return X;
             yield return Y;
@@ -329,30 +393,27 @@ namespace TriangleArea.Models
         void MyMethod<T>(List<T> list)
         {
             //Do stuff
-
+            
         }
 
-        private void LinkedListMain()
-        {
-
+        private void LinkedListMain() { 
+            
             var employees = new List<string> { "Tom", "Sam", "Bob" };
 
             LinkedList<string> people = new LinkedList<string>(employees);
             foreach (string person in people)
             {
-
+                
             }
             char[] strList = "zzzasdaf".ToCharArray();
-            Array.Reverse(strList);
+             Array.Reverse(strList);
             strList = strList.Distinct().ToArray();
-            for (int i = 0; i < strList.Length; i++)
+            for(int i=0; i< strList.Length;i++)
             {
-
+                
             }
 
         }
     }
-
-
 
 }
