@@ -38,18 +38,17 @@ namespace TriangleArea.Models
 
         public AdapterProgram()
         {
-            Stack<int> stackList = new Stack<int>();
-            stackList.Push(1);
-            stackList.Push(2);
-            stackList.Push(3);
-            var ttt = stackList.Pop();
-            var anyList = new List<int>();
-            System.Diagnostics.Debug.WriteLine("-0001--" + stackList.Any() + "");
-            System.Diagnostics.Debug.WriteLine("-0002--" + anyList.Any() + "");
-            System.Diagnostics.Debug.WriteLine("-0003--" + stackList.Any(t => t > 1) + "");
-            System.Diagnostics.Debug.WriteLine("-0004--" + stackList.Any(t => t > 100) + "");
-            int[] arrStep = new int[3];
-            Array.Resize(ref arrStep, 10);
+            
+            System.Diagnostics.Debug.WriteLine(";;;;;;;;;;;;;;;;;;;;=0006 "  );
+            System.Diagnostics.Debug.WriteLine(";;;;;;;;;;;;;;;;;;;;=0006 ");
+            System.Diagnostics.Debug.WriteLine(";;;;;;;;;;;;;;;;;;;;=0006 ");
+            System.Diagnostics.Debug.WriteLine(";;;;;;;;;;;;;;;;;;;;=0006 ");
+
+            Auto auto0 = new Auto();
+            auto0.Zavod += OnFinish;
+            auto0.SuperMove();
+
+            System.Diagnostics.Debug.WriteLine(";;;;;;;;;;;;;;;;;;;;=0006 ");
 
             Cat camelCat = new Cat("Верблюд");
             camelCat.Execute();
@@ -233,9 +232,15 @@ namespace TriangleArea.Models
 
             Fire();
             FireFlash();
-            System.Diagnostics.Debug.WriteLine("-000011--  = ");
+            
             new Thread(new ThreadStart(RunTest)).Start();
         }
+        public void OnFinish(object sender, EventArgs arg)
+        {
+            System.Diagnostics.Debug.WriteLine("-000012--  = "+ sender);
+            System.Diagnostics.Debug.WriteLine(";;;;;;;;;;;;;;;;;;;;=0006 "+ arg);
+        }
+
         public void Fire()
         {
             makeNoise += MakeFlash;

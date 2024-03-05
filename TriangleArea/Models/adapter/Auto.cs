@@ -9,9 +9,11 @@ namespace TriangleArea.Models
     public class Auto : AbstractAuto,ITransport,IMoto
     {
         protected string Name= "Mers";
+        public event EventHandler Zavod;
 
         public Auto() {
             CheckKey();
+            
         }
         public void Drive()
         {
@@ -24,7 +26,7 @@ namespace TriangleArea.Models
 
         public void SuperMove()
         {
-            throw new NotImplementedException();
+            Zavod.Invoke(this, EventArgs.Empty);
         }
     }
 }
