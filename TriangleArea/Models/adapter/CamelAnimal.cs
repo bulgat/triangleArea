@@ -2,10 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using static TriangleArea.Models.CamelAnimal;
 
 namespace TriangleArea.Models
 {
-    public class CamelAnimal : Beast, IAnimal
+    public class CamelAnimal : Beast, IAnimal, ICamelAnimal
     { 
         public string Noise;
         private string Name;
@@ -25,10 +26,23 @@ namespace TriangleArea.Models
         {
             System.Diagnostics.Debug.WriteLine("--Верблюд идет по пескам пустыни");
         }
+
+        public void Kick(int Num)
+        {
+            //throw new NotImplementedException();
+            System.Diagnostics.Debug.WriteLine("--Верблюд идет по пескам пустыни");
+        }
+
         public string Cry
         {
             set { Noise = value; }
             get { return Noise; }
         }
+        public string Speech { set; get; }
+        public interface ICamelAnimal
+        {
+            void Kick(int Num);
+        }
     }
+    
 }
