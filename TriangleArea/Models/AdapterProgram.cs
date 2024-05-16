@@ -70,9 +70,7 @@ namespace TriangleArea.Models
             PropertyInfo stop = typeof(CamelAnimal).GetProperty("Cry");
             PropertyInfo[] props = kkol.GetType().GetProperties();
             var ett = props.Where(s => s.Name == "Cry").FirstOrDefault();
-            System.Diagnostics.Debug.WriteLine(";;;;;;;;;;;;;;;;;;;;=  "+ test000);
-            System.Diagnostics.Debug.WriteLine(";;;;;;;;;;;;;;;;;;;;=  "+ stop);
-            System.Diagnostics.Debug.WriteLine(";;;;;;;;;;;;;;;;; = "+ props.Where(s=>s.Name=="Cry").FirstOrDefault());
+   
 
             Auto auto0 = new Auto();
             auto0.Zavod += OnFinish;
