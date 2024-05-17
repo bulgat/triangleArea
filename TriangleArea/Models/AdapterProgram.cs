@@ -53,19 +53,14 @@ namespace TriangleArea.Models
         int Plus(int a, int b) {
             return a + b;
         }
-        //void ICamelAnimal.Kick(int n){
-           // ICamelAnimal.Kick(777) { }
-         //}
-        //void Kick(int yyy)
-        //{
 
-        //}
         public AdapterProgram()
         {
+            //kol
             CamelAnimal kkol = new CamelAnimal("ssss");
-            //ICamelAnimal.Kick();
+    
             
-            System.Diagnostics.Debug.WriteLine(";;;;;;;;;;;;;;;;;;;;=0006 "  );
+
             Type test000 = typeof(CamelAnimal);
             PropertyInfo stop = typeof(CamelAnimal).GetProperty("Cry");
             PropertyInfo[] props = kkol.GetType().GetProperties();
@@ -76,7 +71,6 @@ namespace TriangleArea.Models
             auto0.Zavod += OnFinish;
             auto0.SuperMove();
 
-            System.Diagnostics.Debug.WriteLine(";;;;;;;;;;;;;;;;;;;;=  "+ ett);
 
             IContainer container = new Mersedes().GetAutofacContainer();
             var model = container.Resolve<Auto>();
@@ -90,12 +84,6 @@ namespace TriangleArea.Models
 
             mass_ar = new List<int>() { 5,6 };
             mass_ar = new int[6];
-      
-
-            System.Diagnostics.Debug.WriteLine(numberOne.HasValue+" ==000== " + numberTwo.HasValue);
-            System.Diagnostics.Debug.WriteLine(numberOne.Value + " ==010== " + numberTwo.GetValueOrDefault());
-            System.Diagnostics.Debug.WriteLine(numberOne.GetValueOrDefault() + " ==020== " );
-
 
             var resultTask = AddAsync(4, 5);
             int res = (int)resultTask.Result;
