@@ -21,6 +21,8 @@ using System.Runtime.InteropServices;
 using TriangleArea.Models.adapter;
 using Autofac;
 using static TriangleArea.Models.CamelAnimal;
+using BenchmarkDotNet.Running;
+using BenchmarkDotNet.Attributes;
 
 namespace TriangleArea.Models
 {
@@ -53,13 +55,14 @@ namespace TriangleArea.Models
         int Plus(int a, int b) {
             return a + b;
         }
-
+        
         public AdapterProgram()
         {
             //kol
+            var proc = Process.Start(@"C:\robot_505_d4w\player\Parients_3d_rotation.bat");
             CamelAnimal kkol = new CamelAnimal("ssss");
-    
-            
+
+            LinkedListMain();
 
             Type test000 = typeof(CamelAnimal);
             PropertyInfo stop = typeof(CamelAnimal).GetProperty("Cry");
@@ -91,7 +94,7 @@ namespace TriangleArea.Models
 
             int www = Task.FromResult(Plus(5,7)).Result;
 
-            System.Diagnostics.Debug.WriteLine(  " www= " + www);
+            
 
             ThreadWait.Main();
             ThreadMutex.Main();
@@ -336,6 +339,7 @@ System.Diagnostics.Debug.WriteLine("-00--  p = " + ttt+""+ String.Intern("kol"))
 
             
         }
+        
         public void RunTest()
         {
             System.Diagnostics.Debug.WriteLine("__000006 ");
@@ -392,12 +396,14 @@ System.Diagnostics.Debug.WriteLine("-00--  p = " + ttt+""+ String.Intern("kol"))
 
         void MyMethod<T>(List<T> list)
         {
-            //Do stuff
-            
+            //BenchmarkRunner.Run<LinkedListMain>();
+
         }
 
-        private void LinkedListMain() { 
-            
+        [Benchmark(Description = "TestName")]
+        public void LinkedListMain() {
+
+            System.Diagnostics.Debug.WriteLine(" www= "  );
             var employees = new List<string> { "Tom", "Sam", "Bob" };
 
             LinkedList<string> people = new LinkedList<string>(employees);
@@ -414,6 +420,7 @@ System.Diagnostics.Debug.WriteLine("-00--  p = " + ttt+""+ String.Intern("kol"))
             }
 
         }
+      
     }
 
 }
