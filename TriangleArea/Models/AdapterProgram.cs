@@ -41,8 +41,7 @@ namespace TriangleArea.Models
             
             System.Diagnostics.Debug.WriteLine(";;;;;;;;;;;;;;;;;;;;=0006 "  );
             System.Diagnostics.Debug.WriteLine(";;;;;;;;;;;;;;;;;;;;=0006 ");
-            System.Diagnostics.Debug.WriteLine(";;;;;;;;;;;;;;;;;;;;=0006 ");
-            System.Diagnostics.Debug.WriteLine(";;;;;;;;;;;;;;;;;;;;=0006 ");
+        
 
             Auto auto0 = new Auto();
             auto0.Zavod += OnFinish;
@@ -95,6 +94,8 @@ namespace TriangleArea.Models
             ObservableCollection<string> peoplelist = new ObservableCollection<string>(new string[] { "Tom", "Bob", "Sam" });
             string[] peopleArray = { "Tom", "Sam", "Bob" };
             IEnumerator peopleEnumerator = peopleArray.GetEnumerator();
+
+            //var ttt = peoplelist.FindAll()
 
             while (peopleEnumerator.MoveNext())
             {
@@ -179,8 +180,14 @@ namespace TriangleArea.Models
             ITransport camelTransport = new CamelToTransportAdapter(camel);
             // продолжаем путь по пескам пустыни
             driver.Travel(camelTransport);
+            var list = new List<string>() { "ko", "test","ttt" };
 
-            MyMethod(new List<string>() { "ko", "test" });
+            var wq0 = list.FindAll(y => y.Contains("t"));
+            var wq1 = list.Where(s => s.Contains("t"));
+            System.Diagnostics.Debug.WriteLine("048;;;;;;;;;;;;;;; =  "+ wq0);
+            System.Diagnostics.Debug.WriteLine("049;;;;;;;;;;;;;;; =  " + wq1);
+
+            MyMethod(list);
             List<int> methodlist = new List<int>() { 1, 4, 7, 8 };
             System.Diagnostics.Debug.WriteLine("-050--   = " + methodlist.Count + "   Capacity = " + methodlist.Capacity);
             methodlist.Capacity = 20;
