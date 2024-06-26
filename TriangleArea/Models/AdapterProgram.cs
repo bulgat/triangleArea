@@ -21,8 +21,8 @@ using System.Runtime.InteropServices;
 using TriangleArea.Models.adapter;
 using Autofac;
 using static TriangleArea.Models.CamelAnimal;
-using BenchmarkDotNet.Running;
-using BenchmarkDotNet.Attributes;
+//using BenchmarkDotNet.Running;
+//using BenchmarkDotNet.Attributes;
 
 namespace TriangleArea.Models
 {
@@ -59,8 +59,13 @@ namespace TriangleArea.Models
         public AdapterProgram()
         {
             //kol
-            var proc = Process.Start(@"C:\robot_505_d4w\player\Parients_3d_rotation.bat");
+            
             CamelAnimal kkol = new CamelAnimal("ssss");
+            kkol = kkol ?? new CamelAnimal("Cross");
+            System.Diagnostics.Debug.WriteLine("__000 erver = " + kkol.GetName());
+            kkol = null;
+            kkol = kkol ?? new CamelAnimal("Cross");
+            System.Diagnostics.Debug.WriteLine("__001 erver = "+ kkol.GetName());
 
             LinkedListMain();
 
@@ -73,6 +78,8 @@ namespace TriangleArea.Models
             Auto auto0 = new Auto();
             auto0.Zavod += OnFinish;
             auto0.SuperMove();
+
+
 
 
             IContainer container = new Mersedes().GetAutofacContainer();
@@ -105,11 +112,11 @@ namespace TriangleArea.Models
 
             int[] arr = new int[] {5,6,7 };
             int[] arr0 = new int[] {};
-            System.Diagnostics.Debug.WriteLine("=  arr =  " + arr.Any()+ "  arr0 = " + arr0.Any());
+
 
             Task.Factory.StartNew(() =>
             {
-                System.Diagnostics.Debug.WriteLine("__000008  Server");
+                
                 var server = new NamedPipeServerStream("PipesOfPiece");
                 server.WaitForConnection();
                 StreamReader reader = new StreamReader(server);
@@ -301,6 +308,12 @@ System.Diagnostics.Debug.WriteLine("-00--  p = " + ttt+""+ String.Intern("kol"))
             FireFlash();
             
             new Thread(new ThreadStart(RunTest)).Start();
+
+            var proc = Process.Start(@"C:\robot_505_d4w\player\Parients_3d_rotation.bat");
+        }
+        public interface IKol
+        {
+            void Move();
         }
         public void OnFinish(object sender, EventArgs arg)
         {
@@ -400,7 +413,7 @@ System.Diagnostics.Debug.WriteLine("-00--  p = " + ttt+""+ String.Intern("kol"))
 
         }
 
-        [Benchmark(Description = "TestName")]
+        //[Benchmark(Description = "TestName")]
         public void LinkedListMain() {
 
             System.Diagnostics.Debug.WriteLine(" www= "  );
