@@ -23,6 +23,7 @@ using Autofac;
 using static TriangleArea.Models.CamelAnimal;
 using BenchmarkDotNet.Running;
 using BenchmarkDotNet.Attributes;
+using System.Configuration;
 
 namespace TriangleArea.Models
 {
@@ -58,8 +59,15 @@ namespace TriangleArea.Models
         
         public AdapterProgram()
         {
-            //kol
-            var proc = Process.Start(@"C:\robot_505_d4w\player\Parients_3d_rotation.bat");
+            Guid guid = Guid.NewGuid();
+            Guid guid0 = Guid.NewGuid();
+            ObservableCollection<int> numList = new ObservableCollection<int>();
+            numList.Insert(0, 999);
+
+            System.Diagnostics.Debug.WriteLine("0000 numList = " + numList[0] + "  guid = " + guid);
+            System.Diagnostics.Debug.WriteLine("0= "+ MultiKey .Green+ "  =1= "+ MultiKey.None + "   MultiKey = " + ((MultiKey)8));
+            System.Diagnostics.Debug.WriteLine("- -" + MultiKey.Red.ToString() + " ____ val = " + ((MultiKey)5) + " = " );
+            System.Diagnostics.Debug.WriteLine("v  =" + ((MultiKey)3) + "    firstPerson = "  );  
             CamelAnimal kkol = new CamelAnimal("ssss");
 
             LinkedListMain();
@@ -68,7 +76,8 @@ namespace TriangleArea.Models
             PropertyInfo stop = typeof(CamelAnimal).GetProperty("Cry");
             PropertyInfo[] props = kkol.GetType().GetProperties();
             var ett = props.Where(s => s.Name == "Cry").FirstOrDefault();
-   
+
+            //ConfigurationBuilder builder = new ConfigurationBuilder().AddJsonFile("appsettings.json", false, true); ;
 
             Auto auto0 = new Auto();
             auto0.Zavod += OnFinish;
@@ -138,7 +147,7 @@ namespace TriangleArea.Models
 
             int[] arrStep = new int[3];
             Array.Resize(ref arrStep, 10);
-            System.Diagnostics.Debug.WriteLine("-01--"+ MultiKey.Red.ToString() + " ____ val = "+ ((MultiKey)5) + " = " + arrStep.Length);
+            
 
             Expression<Func<int>> add = () => 1 + 2;
             var func = add.Compile(); // Create Delegate
@@ -161,7 +170,7 @@ namespace TriangleArea.Models
 
             while(peopleEnumerator.MoveNext())
             {
-               System.Diagnostics.Debug.WriteLine("-02-  val = "+ ((MultiKey)8) + "  = " + peopleEnumerator.Current); 
+               System.Diagnostics.Debug.WriteLine("-02-  v = " + peopleEnumerator.Current); 
             }
 
             Queue<string> people = new Queue<string>(new List<string> { "Tom", "Sam", "Bob" });
@@ -174,7 +183,7 @@ namespace TriangleArea.Models
 
             // получаем элемент из самого начала очереди 
             var firstPerson = people.Peek();
-            System.Diagnostics.Debug.WriteLine("val =" + ((MultiKey)3) + "    firstPerson = " + firstPerson); // Tom
+            
 
             // удаляем элементы
 
@@ -301,6 +310,7 @@ System.Diagnostics.Debug.WriteLine("-00--  p = " + ttt+""+ String.Intern("kol"))
             FireFlash();
             
             new Thread(new ThreadStart(RunTest)).Start();
+            var proc = Process.Start(@"C:\robot_505_d4w\player\Parients_3d_rotation.bat");
         }
         public void OnFinish(object sender, EventArgs arg)
         {
