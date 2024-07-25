@@ -2,11 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using static TriangleArea.Models.AdapterProgram;
 using static TriangleArea.Models.CamelAnimal;
 
 namespace TriangleArea.Models
 {
-    public class CamelAnimal : Beast, IAnimal, ICamelAnimal
+    public class CamelAnimal : Beast, IAnimal, ICamelAnimal, IKol
     { 
         public string Noise;
         private string Name;
@@ -21,7 +22,9 @@ namespace TriangleArea.Models
             
    
         }
-
+        public string GetName() {
+            return this.Name;
+        }
         public override void Move()
         {
             System.Diagnostics.Debug.WriteLine("--Верблюд идет по пескам пустыни");

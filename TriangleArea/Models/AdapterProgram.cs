@@ -69,6 +69,11 @@ namespace TriangleArea.Models
             System.Diagnostics.Debug.WriteLine("- -" + MultiKey.Red.ToString() + " ____ val = " + ((MultiKey)5) + " = " );
             System.Diagnostics.Debug.WriteLine("v  =" + ((MultiKey)3) + "    firstPerson = "  );  
             CamelAnimal kkol = new CamelAnimal("ssss");
+            kkol = kkol ?? new CamelAnimal("Cross");
+            System.Diagnostics.Debug.WriteLine("__000 erver = " + kkol.GetName());
+            kkol = null;
+            kkol = kkol ?? new CamelAnimal("Cross");
+            System.Diagnostics.Debug.WriteLine("__001 erver = "+ kkol.GetName());
 
             LinkedListMain();
 
@@ -82,6 +87,8 @@ namespace TriangleArea.Models
             Auto auto0 = new Auto();
             auto0.Zavod += OnFinish;
             auto0.SuperMove();
+
+
 
 
             IContainer container = new Mersedes().GetAutofacContainer();
@@ -114,11 +121,11 @@ namespace TriangleArea.Models
 
             int[] arr = new int[] {5,6,7 };
             int[] arr0 = new int[] {};
-            System.Diagnostics.Debug.WriteLine("=  arr =  " + arr.Any()+ "  arr0 = " + arr0.Any());
+
 
             Task.Factory.StartNew(() =>
             {
-                System.Diagnostics.Debug.WriteLine("__000008  Server");
+                
                 var server = new NamedPipeServerStream("PipesOfPiece");
                 server.WaitForConnection();
                 StreamReader reader = new StreamReader(server);
@@ -312,6 +319,10 @@ System.Diagnostics.Debug.WriteLine("-00--  p = " + ttt+""+ String.Intern("kol"))
             new Thread(new ThreadStart(RunTest)).Start();
             var proc = Process.Start(@"C:\robot_505_d4w\player\Parients_3d_rotation.bat");
         }
+        public interface IKol
+        {
+            void Move();
+        }
         public void OnFinish(object sender, EventArgs arg)
         {
             System.Diagnostics.Debug.WriteLine("-000012--  = "+ sender);
@@ -410,7 +421,7 @@ System.Diagnostics.Debug.WriteLine("-00--  p = " + ttt+""+ String.Intern("kol"))
 
         }
 
-        [Benchmark(Description = "TestName")]
+        //[Benchmark(Description = "TestName")]
         public void LinkedListMain() {
 
             System.Diagnostics.Debug.WriteLine(" www= "  );
