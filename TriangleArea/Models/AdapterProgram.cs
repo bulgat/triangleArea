@@ -21,8 +21,7 @@ using System.Runtime.InteropServices;
 using TriangleArea.Models.adapter;
 using Autofac;
 using static TriangleArea.Models.CamelAnimal;
-using BenchmarkDotNet.Running;
-using BenchmarkDotNet.Attributes;
+
 using System.Configuration;
 
 namespace TriangleArea.Models
