@@ -427,6 +427,7 @@
     <Compile Include="Models\adapter\CamelAnimal.cs" />
     <Compile Include="Models\adapter\CamelToTransportAdapter.cs" />
     <Compile Include="Models\adapter\Driver.cs" />
+    <Compile Include="Models\adapter\EqualityComparerKol.cs" />
     <Compile Include="Models\adapter\IAnimal.cs" />
     <Compile Include="Models\adapter\IMoto.cs" />
     <Compile Include="Models\adapter\Mersedes.benc.cs" />

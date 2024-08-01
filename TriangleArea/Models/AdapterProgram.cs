@@ -179,7 +179,11 @@ namespace TriangleArea.Models
                System.Diagnostics.Debug.WriteLine("-02-  v = " + peopleEnumerator.Current); 
             }
 
-            Queue<string> people = new Queue<string>(new List<string> { "Tom", "Sam", "Bob" });
+            List<string> indexList = new List<string> { "Tom", "Sam", "Bob" };
+            List<string> exceptList = new List<string> {  "Sam" };
+            var ss = indexList.Except(exceptList, new EqualityComparerKol()).ToList();
+            int wwww = indexList.FindIndex(z => z.Contains("b"));
+            Queue<string> people = new Queue<string>(indexList);
             
             
             // добавляем элементы
@@ -318,6 +322,7 @@ System.Diagnostics.Debug.WriteLine("-00--  p = " + ttt+""+ String.Intern("kol"))
             new Thread(new ThreadStart(RunTest)).Start();
             var proc = Process.Start(@"C:\robot_505_d4w\player\Parients_3d_rotation.bat");
         }
+     
         public interface IKol
         {
             void Move();
@@ -442,5 +447,6 @@ System.Diagnostics.Debug.WriteLine("-00--  p = " + ttt+""+ String.Intern("kol"))
         }
       
     }
+    
 
 }
