@@ -11,10 +11,13 @@ namespace TriangleArea.Models
     { 
         public string Noise;
         private string Name;
-        public CamelAnimal(string name) : base(name)
+        public List<Tourist> TouristList = new List<Tourist>();
+        public CamelAnimal(string name, Tourist tourist=null,string noise =null) : base(name)
         {
 
             this.Name = name;
+            this.Noise = noise;
+            this.TouristList.Add(tourist);
         }
 
         public CamelAnimal(string name, params int[] argument_ar) : this(name)

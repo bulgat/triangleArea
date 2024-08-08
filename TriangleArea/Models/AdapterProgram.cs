@@ -63,7 +63,23 @@ namespace TriangleArea.Models
             ObservableCollection<int> numList = new ObservableCollection<int>();
             numList.Insert(0, 999);
 
-            System.Diagnostics.Debug.WriteLine("0000 numList = " + numList[0] + "  guid = " + guid);
+            var companies = new List<CamelAnimal>
+{
+    new CamelAnimal("Microsoft",new Tourist("meat"),"kva"),
+    new CamelAnimal("Google",new Tourist("aqua"),"stop"),
+};
+            var employees = companies.SelectMany(g => g.TouristList).ToList();
+
+            foreach (var emp in employees)
+            {
+                System.Diagnostics.Debug.WriteLine($"--------{emp}");
+            
+            }
+
+    
+
+
+        System.Diagnostics.Debug.WriteLine("0000 numList = " + numList[0] + "  guid = " + guid);
             System.Diagnostics.Debug.WriteLine("0= "+ MultiKey .Green+ "  =1= "+ MultiKey.None + "   MultiKey = " + ((MultiKey)8));
             System.Diagnostics.Debug.WriteLine("- -" + MultiKey.Red.ToString() + " ____ val = " + ((MultiKey)5) + " = " );
             System.Diagnostics.Debug.WriteLine("v  =" + ((MultiKey)3) + "    firstPerson = "  );  
@@ -242,7 +258,7 @@ System.Diagnostics.Debug.WriteLine("-00--  p = " + ttt+""+ String.Intern("kol"))
 
             LinkedListMain();
 
-            Tourist tourist = new Tourist();
+            Tourist tourist = new Tourist("krik");
             // путешественник
             Driver driver = new Driver();
             // машина

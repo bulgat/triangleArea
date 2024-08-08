@@ -7,6 +7,10 @@ namespace TriangleArea.Models
 {
     public class Tourist:IBrute<Auto>
     {
+        public string Name;
+        public Tourist(string name) {
+        this.Name = name;
+        }
         public void Travel()
         {
             System.Diagnostics.Debug.WriteLine("Tourist");
