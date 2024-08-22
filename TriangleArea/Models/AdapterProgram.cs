@@ -58,6 +58,12 @@ namespace TriangleArea.Models
         
         public AdapterProgram()
         {
+            IList adapterList = new List<string>() { "kol","zed","quiet" };
+            IReadOnlyCollection<string> readList = new List<string>() { "kol", "zed", "quiet" };
+
+            var dictCapacity = new Dictionary<string, string>(5);
+      
+
             Guid guid = Guid.NewGuid();
             Guid guid0 = Guid.NewGuid();
             ObservableCollection<int> numList = new ObservableCollection<int>();
