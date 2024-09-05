@@ -55,14 +55,20 @@ namespace TriangleArea.Models
         int Plus(int a, int b) {
             return a + b;
         }
-        
+        int Plus(int a)
+        {
+            return a;
+        }
+
         public AdapterProgram()
         {
             IList adapterList = new List<string>() { "kol","zed","quiet" };
             IReadOnlyCollection<string> readList = new List<string>() { "kol", "zed", "quiet" };
 
             var dictCapacity = new Dictionary<string, string>(5);
-      
+
+            Jeep Jeep = new Jeep();
+            Jeep.SetFunc(() => Plus(5));
 
             Guid guid = Guid.NewGuid();
             Guid guid0 = Guid.NewGuid();

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using System.Web;
 
 namespace TriangleArea.Models
@@ -11,8 +12,15 @@ namespace TriangleArea.Models
         {
             Auto auto = new Auto();
             Jeep jeep = new Jeep();
-            System.Diagnostics.Debug.WriteLine(jeep.Equals(auto) +" =0003  car = " + jeep.Name); ;
+            var equal = jeep.Equals(auto);
+      
             ;
         }
+        public void SetFunc(Func<int> func)
+        {
+            var kol = func();
+      System.Diagnostics.Debug.WriteLine(kol +" =  car   func = " + func);
+        }
+
     }
 }
