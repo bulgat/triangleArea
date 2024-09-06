@@ -62,10 +62,22 @@ namespace TriangleArea.Models
 
         public AdapterProgram()
         {
-            IList adapterList = new List<string>() { "kol","zed","quiet" };
-            IReadOnlyCollection<string> readList = new List<string>() { "kol", "zed", "quiet" };
+            List<string> adapterList = new List<string>() { "kol","zed","quiet","stop" };
+            List<string> adapterList0 = new List<string>() { "kol", "zed", "quiet0" };
+            IReadOnlyCollection<string> readList = new List<string>() { "kol", "zed", "quiet0" };
+
+            var dict = readList.ToLookup(z=>z,z=>z);
+            foreach(var ite in dict)
+            {
+                System.Diagnostics.Debug.WriteLine("  nu List = " + ite.Key + "  guid = " + dict[ite.Key].First());
+            }
+
+            var unionList = adapterList.Union(adapterList0).ToList();
+
 
             var dictCapacity = new Dictionary<string, string>(5);
+
+          
 
             Jeep Jeep = new Jeep();
             Jeep.SetFunc(() => Plus(5));
@@ -91,7 +103,7 @@ namespace TriangleArea.Models
     
 
 
-        System.Diagnostics.Debug.WriteLine("0000 numList = " + numList[0] + "  guid = " + guid);
+        
             System.Diagnostics.Debug.WriteLine("0= "+ MultiKey .Green+ "  =1= "+ MultiKey.None + "   MultiKey = " + ((MultiKey)8));
             System.Diagnostics.Debug.WriteLine("- -" + MultiKey.Red.ToString() + " ____ val = " + ((MultiKey)5) + " = " );
             System.Diagnostics.Debug.WriteLine("v  =" + ((MultiKey)3) + "    firstPerson = "  );  
