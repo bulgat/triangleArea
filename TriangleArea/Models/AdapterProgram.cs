@@ -66,10 +66,12 @@ namespace TriangleArea.Models
             List<string> adapterList0 = new List<string>() { "kol", "zed", "quiet0" };
             IReadOnlyCollection<string> readList = new List<string>() { "kol", "zed", "quiet0" };
 
+            var zed = (object)DBNull.Value;
+            
             var dict = readList.ToLookup(z=>z,z=>z);
             foreach(var ite in dict)
             {
-                System.Diagnostics.Debug.WriteLine("  nu List = " + ite.Key + "  guid = " + dict[ite.Key].First());
+                System.Diagnostics.Debug.WriteLine(zed+"  u List = " + ite.Key + "  guid = " + dict[ite.Key].First());
             }
 
             var unionList = adapterList.Union(adapterList0).ToList();
