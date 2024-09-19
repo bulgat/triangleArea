@@ -23,6 +23,7 @@ using Autofac;
 using static TriangleArea.Models.CamelAnimal;
 
 using System.Configuration;
+using System.ComponentModel;
 
 namespace TriangleArea.Models
 {
@@ -38,6 +39,7 @@ namespace TriangleArea.Models
         [Flags]
         enum MultiKey 
         {
+            [Description("Белое мороженое")]
             None = 0,
             Black = 1,
             Red = 2,
@@ -67,11 +69,16 @@ namespace TriangleArea.Models
             IReadOnlyCollection<string> readList = new List<string>() { "kol", "zed", "quiet0" };
 
             var zed = (object)DBNull.Value;
-            
+
+            Auto auto01 = new Auto();
+            auto01.Drive();
+       
+
             var dict = readList.ToLookup(z=>z,z=>z);
             foreach(var ite in dict)
             {
-                System.Diagnostics.Debug.WriteLine(zed+"  u List = " + ite.Key + "  guid = " + dict[ite.Key].First());
+
+                System.Diagnostics.Debug.WriteLine(zed+"  u List = " + ite.Key + "  g "+ MultiKey.None+ " id = " + dict[ite.Key].First());
             }
 
             var unionList = adapterList.Union(adapterList0).ToList();
@@ -128,11 +135,11 @@ namespace TriangleArea.Models
             Auto auto0 = new Auto();
             auto0.Zavod += OnFinish;
             auto0.SuperMove();
+          
 
 
 
-
-            IContainer container = new Mersedes().GetAutofacContainer();
+            Autofac.IContainer container = new Mersedes().GetAutofacContainer();
             var model = container.Resolve<Auto>();
             var beast = container.Resolve<Beast>();
             //var anim = container.Resolve<CamelAnimal>();
