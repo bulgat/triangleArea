@@ -109,13 +109,13 @@ namespace TriangleArea.Models
             
             }
 
-    
+            MultiKey testtt = (MultiKey)2;
 
 
-        
+
             System.Diagnostics.Debug.WriteLine("0= "+ MultiKey .Green+ "  =1= "+ MultiKey.None + "   MultiKey = " + ((MultiKey)8));
             System.Diagnostics.Debug.WriteLine("- -" + MultiKey.Red.ToString() + " ____ val = " + ((MultiKey)5) + " = " );
-            System.Diagnostics.Debug.WriteLine("v  =" + ((MultiKey)3) + "    firstPerson = "  );  
+            System.Diagnostics.Debug.WriteLine("v  =" + ((MultiKey)3) + "    firstPers  = " + testtt);  
             CamelAnimal kkol = new CamelAnimal("ssss");
             kkol = kkol ?? new CamelAnimal("Cross");
             System.Diagnostics.Debug.WriteLine("__000 erver = " + kkol.GetName());
