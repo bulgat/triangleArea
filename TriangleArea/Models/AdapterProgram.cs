@@ -68,6 +68,9 @@ namespace TriangleArea.Models
             List<string> adapterList0 = new List<string>() { "kol", "zed", "quiet0" };
             IReadOnlyCollection<string> readList = new List<string>() { "kol", "zed", "quiet0" };
 
+            CustomerValidator customerValidator = new CustomerValidator();
+
+
             var zed = (object)DBNull.Value;
 
             Auto auto01 = new Auto();
