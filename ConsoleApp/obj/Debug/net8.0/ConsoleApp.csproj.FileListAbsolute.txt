@@ -1,0 +1,15 @@
+C:\Users\Pizza\Documents\GitHub\triangleArea\ConsoleApp\bin\Debug\net8.0\ConsoleApp.exe
+C:\Users\Pizza\Documents\GitHub\triangleArea\ConsoleApp\bin\Debug\net8.0\ConsoleApp.deps.json
+C:\Users\Pizza\Documents\GitHub\triangleArea\ConsoleApp\bin\Debug\net8.0\ConsoleApp.runtimeconfig.json
+C:\Users\Pizza\Documents\GitHub\triangleArea\ConsoleApp\bin\Debug\net8.0\ConsoleApp.dll
+C:\Users\Pizza\Documents\GitHub\triangleArea\ConsoleApp\bin\Debug\net8.0\ConsoleApp.pdb
+C:\Users\Pizza\Documents\GitHub\triangleArea\ConsoleApp\obj\Debug\net8.0\ConsoleApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Pizza\Documents\GitHub\triangleArea\ConsoleApp\obj\Debug\net8.0\ConsoleApp.AssemblyInfoInputs.cache
+C:\Users\Pizza\Documents\GitHub\triangleArea\ConsoleApp\obj\Debug\net8.0\ConsoleApp.AssemblyInfo.cs
+C:\Users\Pizza\Documents\GitHub\triangleArea\ConsoleApp\obj\Debug\net8.0\ConsoleApp.csproj.CoreCompileInputs.cache
+C:\Users\Pizza\Documents\GitHub\triangleArea\ConsoleApp\obj\Debug\net8.0\ConsoleApp.sourcelink.json
+C:\Users\Pizza\Documents\GitHub\triangleArea\ConsoleApp\obj\Debug\net8.0\ConsoleApp.dll
+C:\Users\Pizza\Documents\GitHub\triangleArea\ConsoleApp\obj\Debug\net8.0\refint\ConsoleApp.dll
+C:\Users\Pizza\Documents\GitHub\triangleArea\ConsoleApp\obj\Debug\net8.0\ConsoleApp.pdb
+C:\Users\Pizza\Documents\GitHub\triangleArea\ConsoleApp\obj\Debug\net8.0\ConsoleApp.genruntimeconfig.cache
+C:\Users\Pizza\Documents\GitHub\triangleArea\ConsoleApp\obj\Debug\net8.0\ref\ConsoleApp.dll
