@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Genesis\\Documents\\GitHub\\triangleArea\\TriangleDocker.csproj": {}
+    "C:\\Users\\Pizza\\Documents\\GitHub\\triangleArea\\TriangleDocker.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Genesis\\Documents\\GitHub\\triangleArea\\TriangleDocker.csproj": {
+    "C:\\Users\\Pizza\\Documents\\GitHub\\triangleArea\\TriangleDocker.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Genesis\\Documents\\GitHub\\triangleArea\\TriangleDocker.csproj",
+        "projectUniqueName": "C:\\Users\\Pizza\\Documents\\GitHub\\triangleArea\\TriangleDocker.csproj",
         "projectName": "TriangleDocker",
-        "projectPath": "C:\\Users\\Genesis\\Documents\\GitHub\\triangleArea\\TriangleDocker.csproj",
-        "packagesPath": "C:\\Users\\Genesis\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Genesis\\Documents\\GitHub\\triangleArea\\obj\\",
+        "projectPath": "C:\\Users\\Pizza\\Documents\\GitHub\\triangleArea\\TriangleDocker.csproj",
+        "packagesPath": "C:\\Users\\Pizza\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Pizza\\Documents\\GitHub\\triangleArea\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Genesis\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Pizza\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -50,6 +50,26 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "dependencies": {
+            "HotChocolate": {
+              "target": "Package",
+              "version": "[15.1.11, )"
+            },
+            "HotChocolate.AspNetCore": {
+              "target": "Package",
+              "version": "[15.1.11, )"
+            },
+            "HotChocolate.Data": {
+              "target": "Package",
+              "version": "[15.1.11, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[9.0.11, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[9.0.11, )"
+            },
             "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": {
               "target": "Package",
               "version": "[1.22.1, )"
@@ -74,7 +94,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.306/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.302/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

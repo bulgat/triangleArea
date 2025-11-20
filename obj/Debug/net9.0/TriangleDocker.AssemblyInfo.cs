@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TriangleDocker")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+32b72fe2a960bf1d6849a4facd3c0ddd3ee29607")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a55da8ea44c6fc0d6f2137bad36e66de21f7b465")]
 [assembly: System.Reflection.AssemblyProductAttribute("TriangleDocker")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TriangleDocker")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

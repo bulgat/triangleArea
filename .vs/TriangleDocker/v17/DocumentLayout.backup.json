@@ -1,7 +1,36 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Genesis\\Documents\\GitHub\\triangleArea\\",
-  "Documents": [],
+  "WorkspaceRootPath": "C:\\Users\\Pizza\\Documents\\GitHub\\triangleArea\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{51E6F3F0-A0A9-468B-B892-134896C248D9}|TriangleDocker.csproj|c:\\users\\pizza\\documents\\github\\trianglearea\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{51E6F3F0-A0A9-468B-B892-134896C248D9}|TriangleDocker.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{51E6F3F0-A0A9-468B-B892-134896C248D9}|TriangleDocker.csproj|c:\\users\\pizza\\documents\\github\\trianglearea\\models\\graphql\\author.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{51E6F3F0-A0A9-468B-B892-134896C248D9}|TriangleDocker.csproj|solutionrelative:models\\graphql\\author.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{51E6F3F0-A0A9-468B-B892-134896C248D9}|TriangleDocker.csproj|c:\\users\\pizza\\documents\\github\\trianglearea\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{51E6F3F0-A0A9-468B-B892-134896C248D9}|TriangleDocker.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{51E6F3F0-A0A9-468B-B892-134896C248D9}|TriangleDocker.csproj|c:\\users\\pizza\\documents\\github\\trianglearea\\models\\graphql\\queries.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{51E6F3F0-A0A9-468B-B892-134896C248D9}|TriangleDocker.csproj|solutionrelative:models\\graphql\\queries.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{51E6F3F0-A0A9-468B-B892-134896C248D9}|TriangleDocker.csproj|c:\\users\\pizza\\documents\\github\\trianglearea\\databasa\\appdbcontent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{51E6F3F0-A0A9-468B-B892-134896C248D9}|TriangleDocker.csproj|solutionrelative:databasa\\appdbcontent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{51E6F3F0-A0A9-468B-B892-134896C248D9}|TriangleDocker.csproj|c:\\users\\pizza\\documents\\github\\trianglearea\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{51E6F3F0-A0A9-468B-B892-134896C248D9}|TriangleDocker.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{51E6F3F0-A0A9-468B-B892-134896C248D9}|TriangleDocker.csproj|c:\\users\\pizza\\documents\\github\\trianglearea\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{51E6F3F0-A0A9-468B-B892-134896C248D9}|TriangleDocker.csproj|solutionrelative:dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,8 +38,12 @@
       "DocumentGroups": [
         {
           "DockedWidth": 48,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 11,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{004be353-6879-467c-9d1e-9ac23cdf6d49}"
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
@@ -28,8 +61,105 @@
               "Name": "ST:0:0:{007a3a6b-b5b2-454d-a2bd-cf929f989be2}"
             },
             {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AppDBcontent.cs",
+              "DocumentMoniker": "C:\\Users\\Pizza\\Documents\\GitHub\\triangleArea\\dataBasa\\AppDBcontent.cs",
+              "RelativeDocumentMoniker": "dataBasa\\AppDBcontent.cs",
+              "ToolTip": "C:\\Users\\Pizza\\Documents\\GitHub\\triangleArea\\dataBasa\\AppDBcontent.cs",
+              "RelativeToolTip": "dataBasa\\AppDBcontent.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-20T20:48:54.192Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Pizza\\Documents\\GitHub\\triangleArea\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Users\\Pizza\\Documents\\GitHub\\triangleArea\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-11-20T20:45:15.062Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\Pizza\\Documents\\GitHub\\triangleArea\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\Pizza\\Documents\\GitHub\\triangleArea\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAIBJwA0AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-20T20:43:39.59Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Author.cs",
+              "DocumentMoniker": "C:\\Users\\Pizza\\Documents\\GitHub\\triangleArea\\Models\\graphQL\\Author.cs",
+              "RelativeDocumentMoniker": "Models\\graphQL\\Author.cs",
+              "ToolTip": "C:\\Users\\Pizza\\Documents\\GitHub\\triangleArea\\Models\\graphQL\\Author.cs",
+              "RelativeToolTip": "Models\\graphQL\\Author.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-20T20:41:15.668Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Queries.cs",
+              "DocumentMoniker": "C:\\Users\\Pizza\\Documents\\GitHub\\triangleArea\\Models\\graphQL\\Queries.cs",
+              "RelativeDocumentMoniker": "Models\\graphQL\\Queries.cs",
+              "ToolTip": "C:\\Users\\Pizza\\Documents\\GitHub\\triangleArea\\Models\\graphQL\\Queries.cs",
+              "RelativeToolTip": "Models\\graphQL\\Queries.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-20T20:39:59.364Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Dockerfile",
+              "DocumentMoniker": "C:\\Users\\Pizza\\Documents\\GitHub\\triangleArea\\Dockerfile",
+              "RelativeDocumentMoniker": "Dockerfile",
+              "ToolTip": "C:\\Users\\Pizza\\Documents\\GitHub\\triangleArea\\Dockerfile",
+              "RelativeToolTip": "Dockerfile",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAkwBIAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-11-10T18:38:21.516Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Pizza\\Documents\\GitHub\\triangleArea\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\Pizza\\Documents\\GitHub\\triangleArea\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAACYAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-10T18:34:02.622Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 852,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
+              "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
             }
           ]
         }
