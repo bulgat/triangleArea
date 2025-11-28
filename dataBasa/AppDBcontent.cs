@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using AngularStrike.Server.model;
+using Microsoft.EntityFrameworkCore;
 using TriangleDocker.Models.graphQL;
 
 
@@ -11,7 +12,7 @@ namespace TriangleDocker.dataBasa
         {
 
         }
-        
+        public DbSet<Score> Score { get; set; }
         public Microsoft.EntityFrameworkCore.DbSet<Author> Authors { get; set; }
         //public Microsoft.EntityFrameworkCore.DbSet<Articles> Player { get; set; }
 
