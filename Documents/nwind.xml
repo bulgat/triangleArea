@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xml_database>
+  <!-- Example truncated for brevity. You can find the full XML data structure in the referenced web documents. -->
+  <Customers>
+    <CustomerID>ALFKI</CustomerID>
+    <CompanyName>Alfreds Futterkiste</CompanyName>
+    <ContactName>Maria Anders</ContactName>
+  </Customers>
+  <Products>
+    <ProductID>1</ProductID>
+    <ProductName>Chai</ProductName>
+    <UnitPrice>18.0000</UnitPrice>
+  </Products>
+  <Orders>
+    <OrderID>10248</OrderID>
+    <CustomerID>VINET</CustomerID>
+  </Orders>
+</xml_database>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Report ScriptLanguage="CSharp" ReportInfo.Name="Simple List" ReportInfo.Author="Fast Reports Inc" CreatorVersion="2026.1.0">
+  <Dictionary>
+    <!-- Регистрация таблиц из источника данных NorthWind (nwind.xml) -->
+    <XmlDataConnection Name="NorthWind" ConnectionString="XsdFile=;XmlFile=nwind.xml">
+      <TableDataSource Name="Customers" DataType="System.Int32" Enabled="true" TableName="Customers">
+        <Column Name="CustomerID" DataType="System.String"/>
+        <Column Name="CompanyName" DataType="System.String"/>
+        <Column Name="ContactName" DataType="System.String"/>
+      </TableDataSource>
+    </XmlDataConnection>
+  </Dictionary>
+  
+  <ReportPage Name="Page1" Watermark.Enabled="False">
+    <!-- Заголовок самого отчета (выводится один раз в начале) -->
+    <ReportTitleBand Name="ReportTitle1" Width="718.2" Height="37.8">
+      <TextObject Name="TextHeading" Left="9.45" Top="9.45" Width="264.6" Height="18.9" Text="СПИСОК КЛИЕНТОВ" Font="Arial, 14pt, FontStyle=Bold"/>
+    </ReportTitleBand>
+    
+    <!-- Шапка таблицы (выводится вверху каждой страницы) -->
+    <PageHeaderBand Name="PageHeader1" Top="41.8" Width="718.2" Height="28.35">
+      <TextObject Name="TextH1" Left="9.45" Top="9.45" Width="94.5" Height="18.9" Text="ID Компании" Font="Arial, 10pt, FontStyle=Bold"/>
+      <TextObject Name="TextH2" Left="113.4" Top="9.45" Width="283.5" Height="18.9" Text="Название компании" Font="Arial, 10pt, FontStyle=Bold"/>
+    </PageHeaderBand>
+    
+    <!-- Дата-бэнд: циклический вывод строк из таблицы Customers -->
+    <DataBand Name="Data1" Top="74.15" Width="718.2" Height="18.9" DataSource="Customers">
+      <TextObject Name="TextCell1" Left="9.45" Width="94.5" Height="18.9" Text="[Customers.CustomerID]" Font="Arial, 10pt"/>
+      <TextObject Name="TextCell2" Left="113.4" Width="557.55" Height="18.9" Text="[Customers.CompanyName]" Font="Arial, 10pt"/>
+    </DataBand>
+    
+    <!-- Подвал страницы -->
+    <PageFooterBand Name="PageFooter1" Top="97.05" Width="718.2" Height="18.9">
+      <TextObject Name="TextPageNum" Left="623.7" Width="94.5" Height="18.9" Text="[PageN]" HorzAlign="Right" Font="Arial, 9pt"/>
+    </PageFooterBand>
+  </ReportPage>
+</Report>
