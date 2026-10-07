@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  <PropertyGroup>
+    <_FRProductType>FastReport.Core</_FRProductType>
+    <_FR_GraphicsEngine>Skia</_FR_GraphicsEngine>
+    <_FRProductTypeWithEngine>$(_FRProductType).$(_FR_GraphicsEngine)</_FRProductTypeWithEngine>
+  </PropertyGroup>
+
+</Project>

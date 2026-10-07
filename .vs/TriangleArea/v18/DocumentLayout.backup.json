@@ -1,0 +1,377 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Cruiser\\Documents\\GitHub\\triangleArea\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{0E23F892-17BE-454A-A410-BE9C195E7DC4}|LibraryTriangleArea\\LibraryTriangleArea.csproj|c:\\users\\cruiser\\documents\\github\\trianglearea\\librarytrianglearea\\packages.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{0E23F892-17BE-454A-A410-BE9C195E7DC4}|LibraryTriangleArea\\LibraryTriangleArea.csproj|solutionrelative:librarytrianglearea\\packages.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{742F83F7-F8EA-494F-AD2F-4CD735EAA329}|TriangleArea\\TriangleArea.csproj|c:\\users\\cruiser\\documents\\github\\trianglearea\\trianglearea\\models\\adapterprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{742F83F7-F8EA-494F-AD2F-4CD735EAA329}|TriangleArea\\TriangleArea.csproj|solutionrelative:trianglearea\\models\\adapterprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{742F83F7-F8EA-494F-AD2F-4CD735EAA329}|TriangleArea\\TriangleArea.csproj|C:\\Users\\Cruiser\\Documents\\GitHub\\triangleArea\\trianglearea\\models\\adapter\\abstractauto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{742F83F7-F8EA-494F-AD2F-4CD735EAA329}|TriangleArea\\TriangleArea.csproj|solutionrelative:trianglearea\\models\\adapter\\abstractauto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{742F83F7-F8EA-494F-AD2F-4CD735EAA329}|TriangleArea\\TriangleArea.csproj|C:\\Users\\Cruiser\\Documents\\GitHub\\triangleArea\\trianglearea\\content\\sitekol.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{742F83F7-F8EA-494F-AD2F-4CD735EAA329}|TriangleArea\\TriangleArea.csproj|solutionrelative:trianglearea\\content\\sitekol.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{742F83F7-F8EA-494F-AD2F-4CD735EAA329}|TriangleArea\\TriangleArea.csproj|C:\\Users\\Cruiser\\Documents\\GitHub\\triangleArea\\trianglearea\\homewebform.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{742F83F7-F8EA-494F-AD2F-4CD735EAA329}|TriangleArea\\TriangleArea.csproj|solutionrelative:trianglearea\\homewebform.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{742F83F7-F8EA-494F-AD2F-4CD735EAA329}|TriangleArea\\TriangleArea.csproj|C:\\Users\\Cruiser\\Documents\\GitHub\\triangleArea\\trianglearea\\homewebform.aspx.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{742F83F7-F8EA-494F-AD2F-4CD735EAA329}|TriangleArea\\TriangleArea.csproj|solutionrelative:trianglearea\\homewebform.aspx.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{742F83F7-F8EA-494F-AD2F-4CD735EAA329}|TriangleArea\\TriangleArea.csproj|C:\\Users\\Cruiser\\Documents\\GitHub\\triangleArea\\trianglearea\\default.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{742F83F7-F8EA-494F-AD2F-4CD735EAA329}|TriangleArea\\TriangleArea.csproj|solutionrelative:trianglearea\\default.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{742F83F7-F8EA-494F-AD2F-4CD735EAA329}|TriangleArea\\TriangleArea.csproj|C:\\Users\\Cruiser\\Documents\\GitHub\\triangleArea\\trianglearea\\models\\adapter\\auto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{742F83F7-F8EA-494F-AD2F-4CD735EAA329}|TriangleArea\\TriangleArea.csproj|solutionrelative:trianglearea\\models\\adapter\\auto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{742F83F7-F8EA-494F-AD2F-4CD735EAA329}|TriangleArea\\TriangleArea.csproj|C:\\Users\\Cruiser\\Documents\\GitHub\\triangleArea\\trianglearea\\models\\adapter\\jeep.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{742F83F7-F8EA-494F-AD2F-4CD735EAA329}|TriangleArea\\TriangleArea.csproj|solutionrelative:trianglearea\\models\\adapter\\jeep.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{742F83F7-F8EA-494F-AD2F-4CD735EAA329}|TriangleArea\\TriangleArea.csproj|C:\\Users\\Cruiser\\Documents\\GitHub\\triangleArea\\trianglearea\\models\\adapter\\cameltotransportadapter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{742F83F7-F8EA-494F-AD2F-4CD735EAA329}|TriangleArea\\TriangleArea.csproj|solutionrelative:trianglearea\\models\\adapter\\cameltotransportadapter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{742F83F7-F8EA-494F-AD2F-4CD735EAA329}|TriangleArea\\TriangleArea.csproj|C:\\Users\\Cruiser\\Documents\\GitHub\\triangleArea\\trianglearea\\models\\adapter\\camel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{742F83F7-F8EA-494F-AD2F-4CD735EAA329}|TriangleArea\\TriangleArea.csproj|solutionrelative:trianglearea\\models\\adapter\\camel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{742F83F7-F8EA-494F-AD2F-4CD735EAA329}|TriangleArea\\TriangleArea.csproj|C:\\Users\\Cruiser\\Documents\\GitHub\\triangleArea\\trianglearea\\models\\adapter\\itransport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{742F83F7-F8EA-494F-AD2F-4CD735EAA329}|TriangleArea\\TriangleArea.csproj|solutionrelative:trianglearea\\models\\adapter\\itransport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{742F83F7-F8EA-494F-AD2F-4CD735EAA329}|TriangleArea\\TriangleArea.csproj|C:\\Users\\Cruiser\\Documents\\GitHub\\triangleArea\\trianglearea\\models\\adapter\\imoto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{742F83F7-F8EA-494F-AD2F-4CD735EAA329}|TriangleArea\\TriangleArea.csproj|solutionrelative:trianglearea\\models\\adapter\\imoto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{742F83F7-F8EA-494F-AD2F-4CD735EAA329}|TriangleArea\\TriangleArea.csproj|C:\\Users\\Cruiser\\Documents\\GitHub\\triangleArea\\trianglearea\\models\\adapter\\ianimal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{742F83F7-F8EA-494F-AD2F-4CD735EAA329}|TriangleArea\\TriangleArea.csproj|solutionrelative:trianglearea\\models\\adapter\\ianimal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{742F83F7-F8EA-494F-AD2F-4CD735EAA329}|TriangleArea\\TriangleArea.csproj|C:\\Users\\Cruiser\\Documents\\GitHub\\triangleArea\\trianglearea\\models\\threadmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{742F83F7-F8EA-494F-AD2F-4CD735EAA329}|TriangleArea\\TriangleArea.csproj|solutionrelative:trianglearea\\models\\threadmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{742F83F7-F8EA-494F-AD2F-4CD735EAA329}|TriangleArea\\TriangleArea.csproj|C:\\Users\\Cruiser\\Documents\\GitHub\\triangleArea\\trianglearea\\default.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{742F83F7-F8EA-494F-AD2F-4CD735EAA329}|TriangleArea\\TriangleArea.csproj|solutionrelative:trianglearea\\default.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{742F83F7-F8EA-494F-AD2F-4CD735EAA329}|TriangleArea\\TriangleArea.csproj|C:\\Users\\Cruiser\\Documents\\GitHub\\triangleArea\\trianglearea\\scripts\\indext.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{742F83F7-F8EA-494F-AD2F-4CD735EAA329}|TriangleArea\\TriangleArea.csproj|solutionrelative:trianglearea\\scripts\\indext.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{742F83F7-F8EA-494F-AD2F-4CD735EAA329}|TriangleArea\\TriangleArea.csproj|C:\\Users\\Cruiser\\Documents\\GitHub\\triangleArea\\trianglearea\\models\\stream\\streamtread.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{742F83F7-F8EA-494F-AD2F-4CD735EAA329}|TriangleArea\\TriangleArea.csproj|solutionrelative:trianglearea\\models\\stream\\streamtread.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{742F83F7-F8EA-494F-AD2F-4CD735EAA329}|TriangleArea\\TriangleArea.csproj|C:\\Users\\Cruiser\\Documents\\GitHub\\triangleArea\\trianglearea\\account\\addphonenumber.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{742F83F7-F8EA-494F-AD2F-4CD735EAA329}|TriangleArea\\TriangleArea.csproj|solutionrelative:trianglearea\\account\\addphonenumber.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{742F83F7-F8EA-494F-AD2F-4CD735EAA329}|TriangleArea\\TriangleArea.csproj|C:\\Users\\Cruiser\\Documents\\GitHub\\triangleArea\\trianglearea\\account\\managepassword.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{742F83F7-F8EA-494F-AD2F-4CD735EAA329}|TriangleArea\\TriangleArea.csproj|solutionrelative:trianglearea\\account\\managepassword.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{742F83F7-F8EA-494F-AD2F-4CD735EAA329}|TriangleArea\\TriangleArea.csproj|C:\\Users\\Cruiser\\Documents\\GitHub\\triangleArea\\trianglearea\\account\\openauthproviders.ascx||{F390D63C-F7D8-4E74-AA04-57C1ECF53D4D}",
+      "RelativeMoniker": "D:0:0:{742F83F7-F8EA-494F-AD2F-4CD735EAA329}|TriangleArea\\TriangleArea.csproj|solutionrelative:trianglearea\\account\\openauthproviders.ascx||{F390D63C-F7D8-4E74-AA04-57C1ECF53D4D}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "packages.config",
+              "DocumentMoniker": "C:\\Users\\Cruiser\\Documents\\GitHub\\triangleArea\\LibraryTriangleArea\\packages.config",
+              "RelativeDocumentMoniker": "LibraryTriangleArea\\packages.config",
+              "ToolTip": "C:\\Users\\Cruiser\\Documents\\GitHub\\triangleArea\\LibraryTriangleArea\\packages.config",
+              "RelativeToolTip": "LibraryTriangleArea\\packages.config",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2026-08-15T21:21:15.273Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Default.aspx",
+              "DocumentMoniker": "C:\\Users\\Cruiser\\Documents\\GitHub\\triangleArea\\TriangleArea\\Default.aspx",
+              "RelativeDocumentMoniker": "TriangleArea\\Default.aspx",
+              "ToolTip": "C:\\Users\\Cruiser\\Documents\\GitHub\\triangleArea\\TriangleArea\\Default.aspx",
+              "RelativeToolTip": "TriangleArea\\Default.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2026-08-15T21:20:08.08Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AdapterProgram.cs",
+              "DocumentMoniker": "C:\\Users\\Cruiser\\Documents\\GitHub\\triangleArea\\TriangleArea\\Models\\AdapterProgram.cs",
+              "RelativeDocumentMoniker": "TriangleArea\\Models\\AdapterProgram.cs",
+              "ToolTip": "C:\\Users\\Cruiser\\Documents\\GitHub\\triangleArea\\TriangleArea\\Models\\AdapterProgram.cs",
+              "RelativeToolTip": "TriangleArea\\Models\\AdapterProgram.cs",
+              "ViewState": "AgIAADkAAAAAAAAAAAAAAEYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-15T21:20:09.426Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "SiteKol.css",
+              "DocumentMoniker": "C:\\Users\\Cruiser\\Documents\\GitHub\\triangleArea\\TriangleArea\\Content\\SiteKol.css",
+              "RelativeDocumentMoniker": "TriangleArea\\Content\\SiteKol.css",
+              "ToolTip": "C:\\Users\\Cruiser\\Documents\\GitHub\\triangleArea\\TriangleArea\\Content\\SiteKol.css",
+              "RelativeToolTip": "TriangleArea\\Content\\SiteKol.css",
+              "ViewState": "AgIAACEAAAAAAAAAAAAAADAAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-08-15T21:20:11.205Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "HomeWebForm.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\Cruiser\\Documents\\GitHub\\triangleArea\\TriangleArea\\HomeWebForm.aspx.cs",
+              "RelativeDocumentMoniker": "TriangleArea\\HomeWebForm.aspx.cs",
+              "ToolTip": "C:\\Users\\Cruiser\\Documents\\GitHub\\triangleArea\\TriangleArea\\HomeWebForm.aspx.cs",
+              "RelativeToolTip": "TriangleArea\\HomeWebForm.aspx.cs",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAwwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-15T21:20:11.206Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "IMoto.cs",
+              "DocumentMoniker": "C:\\Users\\Cruiser\\Documents\\GitHub\\triangleArea\\TriangleArea\\Models\\adapter\\IMoto.cs",
+              "RelativeDocumentMoniker": "TriangleArea\\Models\\adapter\\IMoto.cs",
+              "ToolTip": "C:\\Users\\Cruiser\\Documents\\GitHub\\triangleArea\\TriangleArea\\Models\\adapter\\IMoto.cs",
+              "RelativeToolTip": "TriangleArea\\Models\\adapter\\IMoto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-15T21:20:11.207Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Auto.cs",
+              "DocumentMoniker": "C:\\Users\\Cruiser\\Documents\\GitHub\\triangleArea\\TriangleArea\\Models\\adapter\\Auto.cs",
+              "RelativeDocumentMoniker": "TriangleArea\\Models\\adapter\\Auto.cs",
+              "ToolTip": "C:\\Users\\Cruiser\\Documents\\GitHub\\triangleArea\\TriangleArea\\Models\\adapter\\Auto.cs",
+              "RelativeToolTip": "TriangleArea\\Models\\adapter\\Auto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-15T21:20:11.207Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AbstractAuto.cs",
+              "DocumentMoniker": "C:\\Users\\Cruiser\\Documents\\GitHub\\triangleArea\\TriangleArea\\Models\\adapter\\AbstractAuto.cs",
+              "RelativeDocumentMoniker": "TriangleArea\\Models\\adapter\\AbstractAuto.cs",
+              "ToolTip": "C:\\Users\\Cruiser\\Documents\\GitHub\\triangleArea\\TriangleArea\\Models\\adapter\\AbstractAuto.cs",
+              "RelativeToolTip": "TriangleArea\\Models\\adapter\\AbstractAuto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-15T21:20:11.208Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Jeep.cs",
+              "DocumentMoniker": "C:\\Users\\Cruiser\\Documents\\GitHub\\triangleArea\\TriangleArea\\Models\\adapter\\Jeep.cs",
+              "RelativeDocumentMoniker": "TriangleArea\\Models\\adapter\\Jeep.cs",
+              "ToolTip": "C:\\Users\\Cruiser\\Documents\\GitHub\\triangleArea\\TriangleArea\\Models\\adapter\\Jeep.cs",
+              "RelativeToolTip": "TriangleArea\\Models\\adapter\\Jeep.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-15T21:20:11.208Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "CamelToTransportAdapter.cs",
+              "DocumentMoniker": "C:\\Users\\Cruiser\\Documents\\GitHub\\triangleArea\\TriangleArea\\Models\\adapter\\CamelToTransportAdapter.cs",
+              "RelativeDocumentMoniker": "TriangleArea\\Models\\adapter\\CamelToTransportAdapter.cs",
+              "ToolTip": "C:\\Users\\Cruiser\\Documents\\GitHub\\triangleArea\\TriangleArea\\Models\\adapter\\CamelToTransportAdapter.cs",
+              "RelativeToolTip": "TriangleArea\\Models\\adapter\\CamelToTransportAdapter.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwBQAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-15T21:20:11.208Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Camel.cs",
+              "DocumentMoniker": "C:\\Users\\Cruiser\\Documents\\GitHub\\triangleArea\\TriangleArea\\Models\\adapter\\Camel.cs",
+              "RelativeDocumentMoniker": "TriangleArea\\Models\\adapter\\Camel.cs",
+              "ToolTip": "C:\\Users\\Cruiser\\Documents\\GitHub\\triangleArea\\TriangleArea\\Models\\adapter\\Camel.cs",
+              "RelativeToolTip": "TriangleArea\\Models\\adapter\\Camel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-15T21:20:11.209Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "ManagePassword.aspx",
+              "DocumentMoniker": "C:\\Users\\Cruiser\\Documents\\GitHub\\triangleArea\\TriangleArea\\Account\\ManagePassword.aspx",
+              "RelativeDocumentMoniker": "TriangleArea\\Account\\ManagePassword.aspx",
+              "ToolTip": "C:\\Users\\Cruiser\\Documents\\GitHub\\triangleArea\\TriangleArea\\Account\\ManagePassword.aspx",
+              "RelativeToolTip": "TriangleArea\\Account\\ManagePassword.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2026-08-15T21:20:11.209Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "OpenAuthProviders.ascx",
+              "DocumentMoniker": "C:\\Users\\Cruiser\\Documents\\GitHub\\triangleArea\\TriangleArea\\Account\\OpenAuthProviders.ascx",
+              "RelativeDocumentMoniker": "TriangleArea\\Account\\OpenAuthProviders.ascx",
+              "ToolTip": "C:\\Users\\Cruiser\\Documents\\GitHub\\triangleArea\\TriangleArea\\Account\\OpenAuthProviders.ascx",
+              "RelativeToolTip": "TriangleArea\\Account\\OpenAuthProviders.ascx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003302|",
+              "WhenOpened": "2026-08-15T21:20:11.21Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "HomeWebForm.aspx.designer.cs",
+              "DocumentMoniker": "C:\\Users\\Cruiser\\Documents\\GitHub\\triangleArea\\TriangleArea\\HomeWebForm.aspx.designer.cs",
+              "RelativeDocumentMoniker": "TriangleArea\\HomeWebForm.aspx.designer.cs",
+              "ToolTip": "C:\\Users\\Cruiser\\Documents\\GitHub\\triangleArea\\TriangleArea\\HomeWebForm.aspx.designer.cs",
+              "RelativeToolTip": "TriangleArea\\HomeWebForm.aspx.designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-15T21:20:11.21Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ITransport.cs",
+              "DocumentMoniker": "C:\\Users\\Cruiser\\Documents\\GitHub\\triangleArea\\TriangleArea\\Models\\adapter\\ITransport.cs",
+              "RelativeDocumentMoniker": "TriangleArea\\Models\\adapter\\ITransport.cs",
+              "ToolTip": "C:\\Users\\Cruiser\\Documents\\GitHub\\triangleArea\\TriangleArea\\Models\\adapter\\ITransport.cs",
+              "RelativeToolTip": "TriangleArea\\Models\\adapter\\ITransport.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-15T21:20:11.211Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "IAnimal.cs",
+              "DocumentMoniker": "C:\\Users\\Cruiser\\Documents\\GitHub\\triangleArea\\TriangleArea\\Models\\adapter\\IAnimal.cs",
+              "RelativeDocumentMoniker": "TriangleArea\\Models\\adapter\\IAnimal.cs",
+              "ToolTip": "C:\\Users\\Cruiser\\Documents\\GitHub\\triangleArea\\TriangleArea\\Models\\adapter\\IAnimal.cs",
+              "RelativeToolTip": "TriangleArea\\Models\\adapter\\IAnimal.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-15T21:20:11.211Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Default.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\Cruiser\\Documents\\GitHub\\triangleArea\\TriangleArea\\Default.aspx.cs",
+              "RelativeDocumentMoniker": "TriangleArea\\Default.aspx.cs",
+              "ToolTip": "C:\\Users\\Cruiser\\Documents\\GitHub\\triangleArea\\TriangleArea\\Default.aspx.cs",
+              "RelativeToolTip": "TriangleArea\\Default.aspx.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAQwCwAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-15T21:20:11.211Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "ThreadMain.cs",
+              "DocumentMoniker": "C:\\Users\\Cruiser\\Documents\\GitHub\\triangleArea\\TriangleArea\\Models\\ThreadMain.cs",
+              "RelativeDocumentMoniker": "TriangleArea\\Models\\ThreadMain.cs",
+              "ToolTip": "C:\\Users\\Cruiser\\Documents\\GitHub\\triangleArea\\TriangleArea\\Models\\ThreadMain.cs",
+              "RelativeToolTip": "TriangleArea\\Models\\ThreadMain.cs",
+              "ViewState": "AgIAAHkAAAAAAAAAAAAgwIkAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-15T21:20:11.212Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "indexT.js",
+              "DocumentMoniker": "C:\\Users\\Cruiser\\Documents\\GitHub\\triangleArea\\TriangleArea\\Scripts\\indexT.js",
+              "RelativeDocumentMoniker": "TriangleArea\\Scripts\\indexT.js",
+              "ToolTip": "C:\\Users\\Cruiser\\Documents\\GitHub\\triangleArea\\TriangleArea\\Scripts\\indexT.js",
+              "RelativeToolTip": "TriangleArea\\Scripts\\indexT.js",
+              "ViewState": "AgIAABsAAAAAAAAAAAA5wDIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2026-08-15T21:20:11.212Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "AddPhoneNumber.aspx",
+              "DocumentMoniker": "C:\\Users\\Cruiser\\Documents\\GitHub\\triangleArea\\TriangleArea\\Account\\AddPhoneNumber.aspx",
+              "RelativeDocumentMoniker": "TriangleArea\\Account\\AddPhoneNumber.aspx",
+              "ToolTip": "C:\\Users\\Cruiser\\Documents\\GitHub\\triangleArea\\TriangleArea\\Account\\AddPhoneNumber.aspx",
+              "RelativeToolTip": "TriangleArea\\Account\\AddPhoneNumber.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2026-08-15T21:20:11.213Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "StreamTread.cs",
+              "DocumentMoniker": "C:\\Users\\Cruiser\\Documents\\GitHub\\triangleArea\\TriangleArea\\Models\\stream\\StreamTread.cs",
+              "RelativeDocumentMoniker": "TriangleArea\\Models\\stream\\StreamTread.cs",
+              "ToolTip": "C:\\Users\\Cruiser\\Documents\\GitHub\\triangleArea\\TriangleArea\\Models\\stream\\StreamTread.cs",
+              "RelativeToolTip": "TriangleArea\\Models\\stream\\StreamTread.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-15T21:20:11.213Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
