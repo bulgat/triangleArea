@@ -21,11 +21,11 @@ namespace fastreport10.Controllers
             var middle = new List<int> { 1, 5, 7, 90 }.Average();
             ViewBag.middle = middle;
             int max = (int)middle;
-            //checked
-            //{
+            checked
+            {
                 max = int.MaxValue; // 2147483647
-                int result = max + 1;
-            //}
+                int result = max + 1;// -2147483648
+            }
             ViewBag.max = max;
             return View();
         }
