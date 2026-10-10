@@ -18,25 +18,31 @@ namespace fastreport10.Controllers
         [System.Diagnostics.Conditional("DEBUG")]
         static void ShowDebugInfo(string message)
         {
-            #line hidden
-            System.Diagnostics.Debug.WriteLine("test = "+ message.ToString());
+#line hidden
+            System.Diagnostics.Debug.WriteLine("test = " + message.ToString());
         }
+        public IActionResult Log()
+        {
+            var middle = new List<int> { 1, 5, 7, 90 }.Average();
+            ViewBag.middle = middle;
 
+            return View();
+        }
         public IActionResult Index()
         {
             ShowDebugInfo("string kol");
 
-#pragma warning disable
+            #pragma warning disable
             RunOldInternalLogic();
-#pragma warning restore
+            #pragma warning restore
 
-
+            string userProfile = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile);
 
             var report = new WebReport();
             var data = new DataSet();
-            data.ReadXml($"C:/nwind.xml");
+            data.ReadXml(Path.Combine(userProfile, "Documents", "nwind.xml"));
             report.Report.RegisterData(data);
-            report.Report.Load($"C:/Simple List.frx");
+            report.Report.Load(Path.Combine(userProfile, "Documents", "Simple List.frx"));
             ViewBag.WebReport = report;
             return View();
         }
